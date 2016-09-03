@@ -10,9 +10,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.MediaView;
 import javafx.stage.FileChooser;
 import xml.Categories;
+import xml.Melody;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -24,18 +24,24 @@ import java.io.*;
  * Created by Dmitriy on 20.08.2016.
  */
 public class SettingsTour1Category1Pane {
+    private TextField title10TextField;
+    private TextField author10TextField;
+    private TextField title20TextField;
+    private TextField author20TextField;
+    private TextField title30TextField;
+    private TextField author30TextField;
+    private TextField title40TextField;
+    private TextField author40TextField;
     private Pane settingsTour1Category1Pane;
     private Scene settingsTour1Category1Scene;
     private TextField categoryTextField;
     private Button saveCategoryButton;
     private Label backLabel;
     private FileChooser fileChooser;
-    private Button openFileChooserButton;
-    private Button playButton;
-    private Button pauseButton;
-    private Media media;
-    private MediaPlayer mediaPlayer;
-    private MediaView mediaView;
+    private Button openMelody10Button;
+    private Button openMelody20Button;
+    private Button openMelody30Button;
+    private Button openMelody40Button;
     private Categories categories;
     private Separator separatorV1;
     private Separator separatorV2;
@@ -46,6 +52,30 @@ public class SettingsTour1Category1Pane {
     private Label category30;
     private Label category40;
     private ImageView settingsCategoriesBackground;
+    private File melody10;
+    private File melody20;
+    private File melody30;
+    private File melody40;
+    private Media media10;
+    private MediaPlayer mediaPlayer10;
+    private Media media20;
+    private MediaPlayer mediaPlayer20;
+    private Media media30;
+    private MediaPlayer mediaPlayer30;
+    private Media media40;
+    private MediaPlayer mediaPlayer40;
+    private Button save10Button;
+    private Button save20Button;
+    private Button save30Button;
+    private Button save40Button;
+    private Melody melody1;
+    private Melody melody2;
+    private Melody melody3;
+    private Melody melody4;
+    private Button play10Button;
+    private Button pause10Button;
+    private ImageView playImageView;
+    private ImageView pauseImageView;
 
     public SettingsTour1Category1Pane() {
         settingsTour1Category1Pane = new Pane();
@@ -53,10 +83,44 @@ public class SettingsTour1Category1Pane {
         settingsCategoriesBackground.setFitHeight(Main.SCREEN_SIZE.getHeight());//подгон под высоту
         settingsCategoriesBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         settingsCategoriesBackground.setSmooth(true);//сглаживание
+        playImageView = new ImageView(new Image(Main.getResource("images/play.png")));
+        playImageView.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
+        playImageView.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
+        pauseImageView = new ImageView(new Image(Main.getResource("images/pause.png")));
+        pauseImageView.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
+        pauseImageView.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
         try (FileReader fileReader = new FileReader("settings/categories1.xml")) {
             JAXBContext jaxbContext = JAXBContext.newInstance(Categories.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             categories = (Categories) unmarshaller.unmarshal(fileReader);
+        } catch (IOException | JAXBException e) {
+            e.printStackTrace();
+        }
+        try (FileReader fileReader = new FileReader("musics/tour1/category1/points10/10.xml")) {
+            JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            melody1 = (Melody) unmarshaller.unmarshal(fileReader);
+        } catch (IOException | JAXBException e) {
+            e.printStackTrace();
+        }
+        try (FileReader fileReader = new FileReader("musics/tour1/category1/points20/20.xml")) {
+            JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            melody2 = (Melody) unmarshaller.unmarshal(fileReader);
+        } catch (IOException | JAXBException e) {
+            e.printStackTrace();
+        }
+        try (FileReader fileReader = new FileReader("musics/tour1/category1/points30/30.xml")) {
+            JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            melody3 = (Melody) unmarshaller.unmarshal(fileReader);
+        } catch (IOException | JAXBException e) {
+            e.printStackTrace();
+        }
+        try (FileReader fileReader = new FileReader("musics/tour1/category1/points40/40.xml")) {
+            JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            melody4 = (Melody) unmarshaller.unmarshal(fileReader);
         } catch (IOException | JAXBException e) {
             e.printStackTrace();
         }
@@ -73,11 +137,12 @@ public class SettingsTour1Category1Pane {
         saveCategoryButton.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
         saveCategoryButton.setOnMouseClicked(event -> {
             categories.setCategory1(categoryTextField.getText().equals("") ? "Категория 1" : categoryTextField.getText());
+            categoryTextField.setText(categories.getCategory1());
             try (FileWriter fileWriter = new FileWriter("settings/categories1.xml")) {
                 JAXBContext jaxbContext = JAXBContext.newInstance(Categories.class);
                 Marshaller marshaller = jaxbContext.createMarshaller();
                 marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);//отступы
-                marshaller.marshal(new Categories(categories.getCategory1(), categories.getCategory2(), categories.getCategory3(), categories.getCategory4()), fileWriter);
+                marshaller.marshal(categories, fileWriter);
             } catch (IOException | JAXBException e) {
                 e.printStackTrace();
             }
@@ -122,47 +187,101 @@ public class SettingsTour1Category1Pane {
         fileChooser = new FileChooser();
         fileChooser.setTitle("Выбрать мелодию для загрузки");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Audio Files", "*.mp3"));
-        openFileChooserButton = new Button("Выбрать");
-        openFileChooserButton.setCursor(Cursor.HAND);
-        openFileChooserButton.getStyleClass().add("saveButton");
-        openFileChooserButton.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
-        openFileChooserButton.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.2);
-        openFileChooserButton.setOnMouseClicked(event -> {
-            File melody10 = fileChooser.showOpenDialog(getSettingsTour1Category1Scene().getWindow());
-            try (FileInputStream fileInputStream = new FileInputStream(melody10);
-                 FileOutputStream fileOutputStream = new FileOutputStream("musics/tour1/category1/points10/10.mp3")) {
-                byte[] bytes = new byte[1024];
-                while (fileInputStream.read(bytes) != -1) {
-                    fileOutputStream.write(bytes);
-                    fileOutputStream.flush();
+        openMelody10Button = new Button("Выбрать");
+        openMelody10Button.setCursor(Cursor.HAND);
+        openMelody10Button.getStyleClass().add("unselectedButton");
+        openMelody10Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
+        openMelody10Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
+        openMelody10Button.setOnMouseClicked(event -> {
+            melody10 = fileChooser.showOpenDialog(getSettingsTour1Category1Scene().getWindow());
+            if (melody10 != null) {
+                openMelody10Button.getStyleClass().add("selectedButton");
+            }
+        });
+        title10TextField = new TextField();
+        title10TextField.setPromptText("Название песни");
+        title10TextField.setText(melody1.getTitle());
+        title10TextField.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
+        title10TextField.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.6);
+        title10TextField.setPrefWidth(Main.SCREEN_SIZE.getWidth() * 0.2);
+        author10TextField = new TextField();
+        author10TextField.setPromptText("Автор песни");
+        author10TextField.setText(melody1.getAuthor());
+        author10TextField.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
+        author10TextField.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.7);
+        author10TextField.setPrefWidth(Main.SCREEN_SIZE.getWidth() * 0.2);
+        save10Button = new Button("Сохранить");
+        save10Button.setCursor(Cursor.HAND);
+        save10Button.getStyleClass().add("saveButton");
+        save10Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
+        save10Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.8);
+        save10Button.setOnMouseClicked(event -> {
+            if (melody10 != null) {
+                play10Button.setDisable(false);
+                pause10Button.setDisable(false);
+                try (FileInputStream fileInputStream = new FileInputStream(melody10);
+                     FileOutputStream fileOutputStream = new FileOutputStream("musics/tour1/category1/points10/10.mp3")) {
+                    byte[] bytes = new byte[1024];
+                    while (fileInputStream.read(bytes) != -1) {
+                        fileOutputStream.write(bytes);
+                        fileOutputStream.flush();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-            } catch (IOException e) {
+                melody10 = null;
+                File melody10 = new File("musics/tour1/category1/points10/10.mp3");
+                media10 = new Media(melody10.toURI().toString());
+                mediaPlayer10 = new MediaPlayer(media10);
+                openMelody10Button.getStyleClass().remove("selectedButton");
+            }
+            melody1.setTitle(title10TextField.getText());
+            melody1.setAuthor(author10TextField.getText());
+            try (FileWriter fileWriter = new FileWriter("musics/tour1/category1/points10/10.xml")) {
+                JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
+                Marshaller marshaller = jaxbContext.createMarshaller();
+                marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);//отступы
+                marshaller.marshal(melody1, fileWriter);
+            } catch (IOException | JAXBException e) {
                 e.printStackTrace();
             }
         });
-        playButton = new Button("Играть");
-        pauseButton = new Button("Пауза");
-        playButton.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
-        playButton.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
-        pauseButton.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
-        pauseButton.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
-        File file = new File("musics/tour1/category1/points10");
-        File[] files = file.listFiles();
-        media = new Media(files[0].toURI().toString());//если нет мелодии,тоже ошибка!!!исправить
-        mediaPlayer = new MediaPlayer(media);
-        mediaView = new MediaView(mediaPlayer);
-        //TODO сделать,чтобы при изменении мелодии потом проигрывалась изменённая(старой не будет и mediaPlayer выдаст ошибку)
-        playButton.setOnMouseClicked(event -> {
-            mediaPlayer.play();
+        play10Button = new Button();
+        play10Button.getStyleClass().add("playButton");
+        play10Button.setGraphic(playImageView);
+        play10Button.setCursor(Cursor.HAND);
+        play10Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
+        play10Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.43);
+        pause10Button = new Button();
+        pause10Button.getStyleClass().add("pauseButton");
+        pause10Button.setGraphic(pauseImageView);
+        pause10Button.setCursor(Cursor.HAND);
+        pause10Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.04 + playImageView.getFitWidth());
+        pause10Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.43);
+        File melody10 = new File("musics/tour1/category1/points10/10.mp3");
+        if (melody10.exists()) {
+            media10 = new Media(melody10.toURI().toString());
+            mediaPlayer10 = new MediaPlayer(media10);
+            play10Button.setDisable(false);
+            pause10Button.setDisable(false);
+        } else {
+            media10 = null;
+            mediaPlayer10 = null;
+            play10Button.setDisable(true);
+            pause10Button.setDisable(true);
+        }
+        play10Button.setOnMouseClicked(event -> {
+            mediaPlayer10.play();
         });
-        pauseButton.setOnMouseClicked(event -> {
-            mediaPlayer.pause();
+        pause10Button.setOnMouseClicked(event -> {
+            mediaPlayer10.pause();
         });
+        //TODO сделать, чтобы при изменении мелодии потом проигрывалась изменённая(старой не будет и mediaPlayer выдаст ошибку)
         settingsTour1Category1Scene = new Scene(settingsTour1Category1Pane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
         settingsTour1Category1Scene.getStylesheets().addAll(Main.getResource("css/style.css"));
         settingsTour1Category1Pane.getChildren().addAll(settingsCategoriesBackground, categoryTextField, saveCategoryButton,
-                getBackLabel(), openFileChooserButton, playButton, pauseButton, mediaView, separatorV1, separatorV2, separatorV3,
-                category10, category20, category30, category40, separatorH);
+                getBackLabel(), openMelody10Button, save10Button, separatorV1, separatorV2, separatorV3,
+                category10, category20, category30, category40, separatorH, title10TextField, author10TextField, play10Button, pause10Button);
     }
 
     public Scene getSettingsTour1Category1Scene() {

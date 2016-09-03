@@ -1,9 +1,9 @@
 import javafx.application.Application;
 import javafx.scene.image.Image;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import xml.Categories;
+import xml.Melody;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -50,17 +50,36 @@ public class Main extends Application {
         if (!points10.exists()) {
             points10.mkdir();
         }
+        JAXBContext jс = JAXBContext.newInstance(Melody.class);
+        Marshaller m = jс.createMarshaller();
+        m.setProperty("jaxb.formatted.output", Boolean.TRUE);//отступы
+        File melody10 = new File("musics/tour1/category1/points10/10.xml");
+        if (!melody10.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody10);
+        }
         File points20 = new File("musics/tour1/category1/points20");
         if (!points20.exists()) {
             points20.mkdir();
+        }
+        File melody20 = new File("musics/tour1/category1/points20/20.xml");
+        if (!melody20.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody20);
         }
         File points30 = new File("musics/tour1/category1/points30");
         if (!points30.exists()) {
             points30.mkdir();
         }
+        File melody30 = new File("musics/tour1/category1/points30/30.xml");
+        if (!melody30.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody30);
+        }
         File points40 = new File("musics/tour1/category1/points40");
         if (!points40.exists()) {
             points40.mkdir();
+        }
+        File melody40 = new File("musics/tour1/category1/points40/40.xml");
+        if (!melody40.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody40);
         }
         File category2 = new File("musics/tour1/category2");
         if (!category2.exists()) {
@@ -70,17 +89,33 @@ public class Main extends Application {
         if (!points10.exists()) {
             points10.mkdir();
         }
+        melody10 = new File("musics/tour1/category2/points10/10.xml");
+        if (!melody10.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody10);
+        }
         points20 = new File("musics/tour1/category2/points20");
         if (!points20.exists()) {
             points20.mkdir();
+        }
+        melody20 = new File("musics/tour1/category2/points20/20.xml");
+        if (!melody20.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody20);
         }
         points30 = new File("musics/tour1/category2/points30");
         if (!points30.exists()) {
             points30.mkdir();
         }
+        melody30 = new File("musics/tour1/category2/points30/30.xml");
+        if (!melody30.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody30);
+        }
         points40 = new File("musics/tour1/category2/points40");
         if (!points40.exists()) {
             points40.mkdir();
+        }
+        melody40 = new File("musics/tour1/category2/points40/40.xml");
+        if (!melody40.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody40);
         }
         File category3 = new File("musics/tour1/category3");
         if (!category3.exists()) {
@@ -90,17 +125,33 @@ public class Main extends Application {
         if (!points10.exists()) {
             points10.mkdir();
         }
+        melody10 = new File("musics/tour1/category3/points10/10.xml");
+        if (!melody10.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody10);
+        }
         points20 = new File("musics/tour1/category3/points20");
         if (!points20.exists()) {
             points20.mkdir();
+        }
+        melody20 = new File("musics/tour1/category3/points20/20.xml");
+        if (!melody20.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody20);
         }
         points30 = new File("musics/tour1/category3/points30");
         if (!points30.exists()) {
             points30.mkdir();
         }
+        melody30 = new File("musics/tour1/category3/points30/30.xml");
+        if (!melody30.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody30);
+        }
         points40 = new File("musics/tour1/category3/points40");
         if (!points40.exists()) {
             points40.mkdir();
+        }
+        melody40 = new File("musics/tour1/category3/points40/40.xml");
+        if (!melody40.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody40);
         }
         File category4 = new File("musics/tour1/category4");
         if (!category4.exists()) {
@@ -110,17 +161,33 @@ public class Main extends Application {
         if (!points10.exists()) {
             points10.mkdir();
         }
+        melody10 = new File("musics/tour1/category4/points10/10.xml");
+        if (!melody10.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody10);
+        }
         points20 = new File("musics/tour1/category4/points20");
         if (!points20.exists()) {
             points20.mkdir();
+        }
+        melody20 = new File("musics/tour1/category4/points20/20.xml");
+        if (!melody20.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody20);
         }
         points30 = new File("musics/tour1/category4/points30");
         if (!points30.exists()) {
             points30.mkdir();
         }
+        melody30 = new File("musics/tour1/category4/points30/30.xml");
+        if (!melody30.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody30);
+        }
         points40 = new File("musics/tour1/category4/points40");
         if (!points40.exists()) {
             points40.mkdir();
+        }
+        melody40 = new File("musics/tour1/category4/points40/40.xml");
+        if (!melody40.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody40);
         }
         File tour2 = new File("musics/tour2");
         if (!tour2.exists()) {
@@ -134,17 +201,33 @@ public class Main extends Application {
         if (!points10.exists()) {
             points10.mkdir();
         }
+        melody10 = new File("musics/tour2/category1/points10/10.xml");
+        if (!melody10.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody10);
+        }
         points20 = new File("musics/tour2/category1/points20");
         if (!points20.exists()) {
             points20.mkdir();
+        }
+        melody20 = new File("musics/tour2/category1/points20/20.xml");
+        if (!melody20.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody20);
         }
         points30 = new File("musics/tour2/category1/points30");
         if (!points30.exists()) {
             points30.mkdir();
         }
+        melody30 = new File("musics/tour2/category1/points30/30.xml");
+        if (!melody30.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody30);
+        }
         points40 = new File("musics/tour2/category1/points40");
         if (!points40.exists()) {
             points40.mkdir();
+        }
+        melody40 = new File("musics/tour2/category1/points40/40.xml");
+        if (!melody40.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody40);
         }
         category2 = new File("musics/tour2/category2");
         if (!category2.exists()) {
@@ -154,17 +237,33 @@ public class Main extends Application {
         if (!points10.exists()) {
             points10.mkdir();
         }
+        melody10 = new File("musics/tour2/category2/points10/10.xml");
+        if (!melody10.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody10);
+        }
         points20 = new File("musics/tour2/category2/points20");
         if (!points20.exists()) {
             points20.mkdir();
+        }
+        melody20 = new File("musics/tour2/category2/points20/20.xml");
+        if (!melody20.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody20);
         }
         points30 = new File("musics/tour2/category2/points30");
         if (!points30.exists()) {
             points30.mkdir();
         }
+        melody30 = new File("musics/tour2/category2/points30/30.xml");
+        if (!melody30.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody30);
+        }
         points40 = new File("musics/tour2/category2/points40");
         if (!points40.exists()) {
             points40.mkdir();
+        }
+        melody40 = new File("musics/tour2/category2/points40/40.xml");
+        if (!melody40.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody40);
         }
         category3 = new File("musics/tour2/category3");
         if (!category3.exists()) {
@@ -174,17 +273,33 @@ public class Main extends Application {
         if (!points10.exists()) {
             points10.mkdir();
         }
+        melody10 = new File("musics/tour2/category3/points10/10.xml");
+        if (!melody10.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody10);
+        }
         points20 = new File("musics/tour2/category3/points20");
         if (!points20.exists()) {
             points20.mkdir();
+        }
+        melody20 = new File("musics/tour2/category3/points20/20.xml");
+        if (!melody20.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody20);
         }
         points30 = new File("musics/tour2/category3/points30");
         if (!points30.exists()) {
             points30.mkdir();
         }
+        melody30 = new File("musics/tour2/category3/points30/30.xml");
+        if (!melody30.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody30);
+        }
         points40 = new File("musics/tour2/category3/points40");
         if (!points40.exists()) {
             points40.mkdir();
+        }
+        melody40 = new File("musics/tour2/category3/points40/40.xml");
+        if (!melody40.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody40);
         }
         category4 = new File("musics/tour2/category4");
         if (!category4.exists()) {
@@ -194,17 +309,33 @@ public class Main extends Application {
         if (!points10.exists()) {
             points10.mkdir();
         }
+        melody10 = new File("musics/tour2/category4/points10/10.xml");
+        if (!melody10.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody10);
+        }
         points20 = new File("musics/tour2/category4/points20");
         if (!points20.exists()) {
             points20.mkdir();
+        }
+        melody20 = new File("musics/tour2/category4/points20/20.xml");
+        if (!melody20.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody20);
         }
         points30 = new File("musics/tour2/category4/points30");
         if (!points30.exists()) {
             points30.mkdir();
         }
+        melody30 = new File("musics/tour2/category4/points30/30.xml");
+        if (!melody30.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody30);
+        }
         points40 = new File("musics/tour2/category4/points40");
         if (!points40.exists()) {
             points40.mkdir();
+        }
+        melody40 = new File("musics/tour2/category4/points40/40.xml");
+        if (!melody40.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody40);
         }
         File tour3 = new File("musics/tour3");
         if (!tour3.exists()) {
@@ -218,17 +349,33 @@ public class Main extends Application {
         if (!points10.exists()) {
             points10.mkdir();
         }
+        melody10 = new File("musics/tour3/category1/points10/10.xml");
+        if (!melody10.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody10);
+        }
         points20 = new File("musics/tour3/category1/points20");
         if (!points20.exists()) {
             points20.mkdir();
+        }
+        melody20 = new File("musics/tour3/category1/points20/20.xml");
+        if (!melody20.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody20);
         }
         points30 = new File("musics/tour3/category1/points30");
         if (!points30.exists()) {
             points30.mkdir();
         }
+        melody30 = new File("musics/tour3/category1/points30/30.xml");
+        if (!melody30.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody30);
+        }
         points40 = new File("musics/tour3/category1/points40");
         if (!points40.exists()) {
             points40.mkdir();
+        }
+        melody40 = new File("musics/tour3/category1/points40/40.xml");
+        if (!melody40.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody40);
         }
         category2 = new File("musics/tour3/category2");
         if (!category2.exists()) {
@@ -238,17 +385,33 @@ public class Main extends Application {
         if (!points10.exists()) {
             points10.mkdir();
         }
+        melody10 = new File("musics/tour3/category2/points10/10.xml");
+        if (!melody10.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody10);
+        }
         points20 = new File("musics/tour3/category2/points20");
         if (!points20.exists()) {
             points20.mkdir();
+        }
+        melody20 = new File("musics/tour3/category2/points20/20.xml");
+        if (!melody20.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody20);
         }
         points30 = new File("musics/tour3/category2/points30");
         if (!points30.exists()) {
             points30.mkdir();
         }
+        melody30 = new File("musics/tour3/category2/points30/30.xml");
+        if (!melody30.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody30);
+        }
         points40 = new File("musics/tour3/category2/points40");
         if (!points40.exists()) {
             points40.mkdir();
+        }
+        melody40 = new File("musics/tour3/category2/points40/40.xml");
+        if (!melody40.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody40);
         }
         category3 = new File("musics/tour3/category3");
         if (!category3.exists()) {
@@ -258,17 +421,33 @@ public class Main extends Application {
         if (!points10.exists()) {
             points10.mkdir();
         }
+        melody10 = new File("musics/tour3/category3/points10/10.xml");
+        if (!melody10.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody10);
+        }
         points20 = new File("musics/tour3/category3/points20");
         if (!points20.exists()) {
             points20.mkdir();
+        }
+        melody20 = new File("musics/tour3/category3/points20/20.xml");
+        if (!melody20.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody20);
         }
         points30 = new File("musics/tour3/category3/points30");
         if (!points30.exists()) {
             points30.mkdir();
         }
+        melody30 = new File("musics/tour3/category3/points30/30.xml");
+        if (!melody30.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody30);
+        }
         points40 = new File("musics/tour3/category3/points40");
         if (!points40.exists()) {
             points40.mkdir();
+        }
+        melody40 = new File("musics/tour3/category3/points40/40.xml");
+        if (!melody40.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody40);
         }
         category4 = new File("musics/tour3/category4");
         if (!category4.exists()) {
@@ -278,17 +457,33 @@ public class Main extends Application {
         if (!points10.exists()) {
             points10.mkdir();
         }
+        melody10 = new File("musics/tour3/category4/points10/10.xml");
+        if (!melody10.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody10);
+        }
         points20 = new File("musics/tour3/category4/points20");
         if (!points20.exists()) {
             points20.mkdir();
+        }
+        melody20 = new File("musics/tour3/category4/points20/20.xml");
+        if (!melody20.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody20);
         }
         points30 = new File("musics/tour3/category4/points30");
         if (!points30.exists()) {
             points30.mkdir();
         }
+        melody30 = new File("musics/tour3/category4/points30/30.xml");
+        if (!melody30.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody30);
+        }
         points40 = new File("musics/tour3/category4/points40");
         if (!points40.exists()) {
             points40.mkdir();
+        }
+        melody40 = new File("musics/tour3/category4/points40/40.xml");
+        if (!melody40.exists()) {
+            m.marshal(new Melody("Название", "Автор"), melody40);
         }
         File supergame = new File("musics/supergame");
         if (!supergame.exists()) {

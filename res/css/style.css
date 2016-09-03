@@ -83,3 +83,38 @@
     -fx-text-fill: blue;
 }
 
+.unselectedButton {
+    -fx-background-radius: 10;
+    -fx-border-radius: 8;
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe Print";
+}
+
+.unselectedButton:pressed {
+    -fx-background-color: orangered;
+    -fx-border-color: red;
+}
+
+.selectedButton {
+    -fx-background-radius: 10;
+    -fx-border-radius: 8;
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe Print";
+}
+
+.selectedButton:pressed {
+    -fx-background-color: limegreen;
+    -fx-border-color: green;
+}
+
+.playButton, .pauseButton {
+    -fx-background-color: white;
+}
+
+.playButton:pressed, .pauseButton:pressed {
+    -fx-border-color: blue;
+}
