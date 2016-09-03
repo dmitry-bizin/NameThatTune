@@ -1,0 +1,85 @@
+.saveButton {
+    -fx-background-radius: 10;
+    -fx-border-radius: 8;
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe Print";
+}
+
+.saveButton:pressed {
+    -fx-background-color: deepskyblue;
+    -fx-border-color: blue;
+}
+
+.mainPaneLabel {
+    -fx-font-size: 23pt;
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: blue;
+}
+
+.mainPaneLabel:hover, .mainPaneLabel:pressed {
+    -fx-text-fill: red;
+}
+
+.settingsPaneLabel {
+    -fx-font-size: 23pt;
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: white;
+}
+
+.settingsPaneLabel:hover, .settingsPaneLabel:pressed {
+    -fx-text-fill: yellow;
+}
+
+.gamePaneLabel {
+    -fx-font-size: 23pt;
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: blue;
+}
+
+.gamePaneLabel:hover, .gamePaneLabel:pressed {
+    -fx-text-fill: red;
+}
+
+.settingsToursPaneLabel {
+    -fx-font-size: 23pt;
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: yellow;
+}
+
+.settingsToursPaneLabel:hover, .settingsToursPaneLabel:pressed {
+    -fx-text-fill: white;
+}
+
+.settingsToursCategoriesPaneLabel {
+    -fx-font-size: 23pt;
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: blue;
+}
+
+.settingsToursCategoriesPaneLabel:hover, .settingsToursCategoriesPaneLabel:pressed {
+    -fx-text-fill: red;
+}
+
+.text-field {
+    -fx-background-radius: 10;
+    -fx-border-radius: 8;
+    -fx-border-width: 1pt;
+    -fx-border-color: deepskyblue;
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: deepskyblue;
+}
+
+.text-field:focused {
+    -fx-border-color: blue;
+    -fx-text-fill: blue;
+}
+
+.scoresLabel {
+    -fx-font-size: 23pt;
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: blue;
+}
+

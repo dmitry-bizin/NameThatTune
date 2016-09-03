@@ -5,7 +5,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Paint;
-import javafx.scene.text.Font;
 
 /**
  * Created by Dmitriy on 17.02.2016.
@@ -38,25 +37,21 @@ public class GamePane {
         getBackLabel().setCursor(Cursor.HAND);
         getTour1Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
         getTour1Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.2);
-        getTour1Label().setTextFill(Paint.valueOf("DARKBLUE"));
-        getTour1Label().setFont(Main.font);
+        getTour1Label().getStyleClass().add("gamePaneLabel");
         getTour2Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
         getTour2Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
-        getTour2Label().setTextFill(Paint.valueOf("DARKBLUE"));
-        getTour2Label().setFont(Main.font);
+        getTour2Label().getStyleClass().add("gamePaneLabel");
         getTour3Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
         getTour3Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
-        getTour3Label().setTextFill(Paint.valueOf("DARKBLUE"));
-        getTour3Label().setFont(Main.font);
+        getTour3Label().getStyleClass().add("gamePaneLabel");
         getSuperGameLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
         getSuperGameLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
-        getSuperGameLabel().setTextFill(Paint.valueOf("DARKBLUE"));
-        getSuperGameLabel().setFont(Main.font);
+        getSuperGameLabel().getStyleClass().add("gamePaneLabel");
         getBackLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
         getBackLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.6);
-        getBackLabel().setTextFill(Paint.valueOf("DARKBLUE"));
-        getBackLabel().setFont(Main.font);
+        getBackLabel().getStyleClass().add("gamePaneLabel");
         gameScene = new Scene(gamePane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
+        gameScene.getStylesheets().add(Main.getResource("css/style.css"));
         gamePane.getChildren().addAll(gameBackground, getTour1Label(), getTour2Label(), getTour3Label(), getSuperGameLabel(), getBackLabel());
     }
 

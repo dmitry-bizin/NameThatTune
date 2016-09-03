@@ -30,33 +30,29 @@ public class SettingsPane {
         getSettingsTour1Label().setCursor(Cursor.HAND);
         getSettingsTour1Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
         getSettingsTour1Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
-        getSettingsTour1Label().setTextFill(Paint.valueOf("WHITE"));
-        getSettingsTour1Label().setFont(Main.font);
+        getSettingsTour1Label().getStyleClass().add("settingsPaneLabel");
         settingsTour2Label = new Label("Настройки 2го тура");
         getSettingsTour2Label().setCursor(Cursor.HAND);
         getSettingsTour2Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
         getSettingsTour2Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.2);
-        getSettingsTour2Label().setTextFill(Paint.valueOf("WHITE"));
-        getSettingsTour2Label().setFont(Main.font);
+        getSettingsTour2Label().getStyleClass().add("settingsPaneLabel");
         settingsTour3Label = new Label("Настройки 3го тура");
         getSettingsTour3Label().setCursor(Cursor.HAND);
         getSettingsTour3Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
         getSettingsTour3Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
-        getSettingsTour3Label().setTextFill(Paint.valueOf("WHITE"));
-        getSettingsTour3Label().setFont(Main.font);
+        getSettingsTour3Label().getStyleClass().add("settingsPaneLabel");
         settingsSuperGameLabel = new Label("Настройки супер-игры");
         getSettingsSuperGameLabel().setCursor(Cursor.HAND);
         getSettingsSuperGameLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
         getSettingsSuperGameLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
-        getSettingsSuperGameLabel().setTextFill(Paint.valueOf("WHITE"));
-        getSettingsSuperGameLabel().setFont(Main.font);
+        getSettingsSuperGameLabel().getStyleClass().add("settingsPaneLabel");
         backLabel = new Label("Назад");
         getBackLabel().setCursor(Cursor.HAND);
         getBackLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
         getBackLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
-        getBackLabel().setTextFill(Paint.valueOf("WHITE"));
-        getBackLabel().setFont(Main.font);
+        getBackLabel().getStyleClass().add("settingsPaneLabel");
         settingsScene = new Scene(settingsPane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
+        settingsScene.getStylesheets().add(Main.getResource("css/style.css"));
         settingsPane.getChildren().addAll(settingsBackground, getSettingsTour1Label(), getSettingsTour2Label(), getSettingsTour3Label(), getSettingsSuperGameLabel(), getBackLabel());
     }
 

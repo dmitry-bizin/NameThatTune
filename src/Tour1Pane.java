@@ -19,14 +19,14 @@ public class Tour1Pane {
         tour1Pane = new Pane();
         //tour1Background = new ImageView(new Image("file:res\\images\\1366x768_Music-note-wallpaper-free-desktop-background-image.jpg"));
         tour1Scene = new Scene(tour1Pane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
+        tour1Scene.getStylesheets().add(Main.getResource("css/style.css"));
         tour1Category1 = new Label("Категория 1");
         tour1Category2 = new Label("Категория 2");
         tour1Category3 = new Label("Категория 3");
         tour1Category4 = new Label("Категория 4");
         getTour1Category1().setLayoutX(50);
         getTour1Category1().setLayoutY(70);
-        getTour1Category1().setTextFill(Paint.valueOf("DARKBLUE"));
-        getTour1Category1().setFont(Main.font);
+        getTour1Category1().getStyleClass().add("mainPaneLabel");
         tour1Pane.getChildren().addAll(/*tour1Background,*/getTour1Category1());
     }
 

@@ -3,10 +3,13 @@ import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import xml.Categories;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import java.awt.*;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 
 /**
@@ -16,12 +19,11 @@ public class Main extends Application {
     //TODO не забывать делать update лэйблов при смене сцены!!!
     public static final Dimension SCREEN_SIZE = Toolkit.getDefaultToolkit().getScreenSize();
     public static ClassLoader classLoader = Main.class.getClassLoader();
-    public static Font font = new Font("segoe print", 30.0);
 
     static {
         try {
             createDirectories();
-        } catch (IOException e) {
+        } catch (IOException | JAXBException e) {
             e.printStackTrace();
         }
     }
@@ -31,7 +33,7 @@ public class Main extends Application {
         return classLoader.getResource(fileName).toString();
     }
 
-    public static void createDirectories() throws IOException {
+    public static void createDirectories() throws IOException, JAXBException {
         File musics = new File("musics");
         if (!musics.exists()) {
             musics.mkdir();
@@ -296,23 +298,20 @@ public class Main extends Application {
         if (!settings.exists()) {
             settings.mkdir();
         }
-        File categories1 = new File("settings/categories1.txt");
+        JAXBContext jaxbContext = JAXBContext.newInstance(Categories.class);
+        Marshaller marshaller = jaxbContext.createMarshaller();
+        marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);//отступы
+        File categories1 = new File("settings/categories1.xml");
         if (!categories1.exists()) {
-            FileWriter fileWriter = new FileWriter(categories1);
-            fileWriter.write("Категория1\nКатегория2\nКатегория3\nКатегория4\n");
-            fileWriter.close();
+            marshaller.marshal(new Categories("Категория 1", "Категория 2", "Категория 3", "Категория 4"), categories1);
         }
-        File categories2 = new File("settings/categories2.txt");
+        File categories2 = new File("settings/categories2.xml");
         if (!categories2.exists()) {
-            FileWriter fileWriter = new FileWriter(categories2);
-            fileWriter.write("Категория1\nКатегория2\nКатегория3\nКатегория4\n");
-            fileWriter.close();
+            marshaller.marshal(new Categories("Категория 1", "Категория 2", "Категория 3", "Категория 4"), categories2);
         }
-        File categories3 = new File("settings/categories3.txt");
+        File categories3 = new File("settings/categories3.xml");
         if (!categories3.exists()) {
-            FileWriter fileWriter = new FileWriter(categories3);
-            fileWriter.write("Категория1\nКатегория2\nКатегория3\nКатегория4\n");
-            fileWriter.close();
+            marshaller.marshal(new Categories("Категория 1", "Категория 2", "Категория 3", "Категория 4"), categories3);
         }
     }
 
@@ -363,9 +362,7 @@ public class Main extends Application {
             primaryStage.setScene(tour1Pane.getTour1Scene());
             primaryStage.setTitle("1 тур");
         });
-        mainPane.getExitLabel().setOnMouseClicked(event -> {
-            primaryStage.close();
-        });
+        mainPane.getExitLabel().setOnMouseClicked(event -> primaryStage.close());
         mainPane.getMainScene().setOnKeyPressed(event -> {
             if (event.getCode().getName().equals("Esc")) {
                 primaryStage.close();
@@ -453,6 +450,7 @@ public class Main extends Application {
         });*/
         settingsTour1Pane.getCategory1Label().setOnMouseClicked(event -> {
             primaryStage.setScene(settingsTour1Category1Pane.getSettingsTour1Category1Scene());
+            settingsTour1Category1Pane.update();
         });
         settingsTour1Pane.getCategory2Label().setOnMouseClicked(event -> {
             primaryStage.setScene(settingsTour1Category2Pane.getSettingsTour1Category2Scene());

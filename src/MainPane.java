@@ -32,17 +32,15 @@ public class MainPane {
         getExitLabel().setCursor(Cursor.HAND);
         getGameLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);//в процентах от размеров экрана,резиновая вёрстка
         getGameLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
-        getGameLabel().setTextFill(Paint.valueOf("DARKBLUE"));
-        getGameLabel().setFont(Main.font);
+        getGameLabel().getStyleClass().add("mainPaneLabel");
         getSettingsLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
         getSettingsLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
-        getSettingsLabel().setTextFill(Paint.valueOf("DARKBLUE"));
-        getSettingsLabel().setFont(Main.font);
+        getSettingsLabel().getStyleClass().add("mainPaneLabel");
         getExitLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
         getExitLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
-        getExitLabel().setTextFill(Paint.valueOf("DARKBLUE"));
-        getExitLabel().setFont(Main.font);
+        getExitLabel().getStyleClass().add("mainPaneLabel");
         mainScene = new Scene(mainPane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
+        mainScene.getStylesheets().add(Main.getResource("css/style.css"));
         mainPane.getChildren().addAll(mainBackground, getGameLabel(), getSettingsLabel(), getExitLabel());
     }
 

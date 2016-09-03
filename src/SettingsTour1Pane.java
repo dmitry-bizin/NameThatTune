@@ -5,8 +5,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Paint;
+import xml.Categories;
 
-import java.io.BufferedReader;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -22,6 +25,7 @@ public class SettingsTour1Pane {
     private Label category4Label;
     private Label backLabel;
     private ImageView settingsToursBackground;
+    private Categories categories;
 
     public SettingsTour1Pane() {
         settingsToursBackground = new ImageView(new Image(Main.getResource("images/settings_tours.jpg")));
@@ -29,59 +33,53 @@ public class SettingsTour1Pane {
         settingsToursBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         settingsToursBackground.setSmooth(true);//сглаживание
         settingsTour1Pane = new Pane();
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("settings/categories1.txt"))) {
-            String nameCategory = bufferedReader.readLine();
-            category1Label = new Label(nameCategory == null ? "Категория1" : nameCategory);
+        try (FileReader fileReader = new FileReader("settings/categories1.xml")) {
+            JAXBContext jaxbContext = JAXBContext.newInstance(Categories.class);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            categories = (Categories) unmarshaller.unmarshal(fileReader);
+            category1Label = new Label(categories.getCategory1());
             getCategory1Label().setCursor(Cursor.HAND);
             getCategory1Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
             getCategory1Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
-            getCategory1Label().setTextFill(Paint.valueOf("YELLOW"));
-            getCategory1Label().setFont(Main.font);
-            nameCategory = bufferedReader.readLine();
-            category2Label = new Label(nameCategory == null ? "Категория2" : nameCategory);
+            getCategory1Label().getStyleClass().add("settingsToursPaneLabel");
+            category2Label = new Label(categories.getCategory2());
             getCategory2Label().setCursor(Cursor.HAND);
             getCategory2Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
             getCategory2Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.2);
-            getCategory2Label().setTextFill(Paint.valueOf("YELLOW"));
-            getCategory2Label().setFont(Main.font);
-            nameCategory = bufferedReader.readLine();
-            category3Label = new Label(nameCategory == null ? "Категория3" : nameCategory);
+            getCategory2Label().getStyleClass().add("settingsToursPaneLabel");
+            category3Label = new Label(categories.getCategory3());
             getCategory3Label().setCursor(Cursor.HAND);
             getCategory3Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
             getCategory3Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
-            getCategory3Label().setTextFill(Paint.valueOf("YELLOW"));
-            getCategory3Label().setFont(Main.font);
-            nameCategory = bufferedReader.readLine();
-            category4Label = new Label(nameCategory == null ? "Категория4" : nameCategory);
+            getCategory3Label().getStyleClass().add("settingsToursPaneLabel");
+            category4Label = new Label(categories.getCategory4());
             getCategory4Label().setCursor(Cursor.HAND);
             getCategory4Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
             getCategory4Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
-            getCategory4Label().setTextFill(Paint.valueOf("YELLOW"));
-            getCategory4Label().setFont(Main.font);
-        } catch (IOException e) {
+            getCategory4Label().getStyleClass().add("settingsToursPaneLabel");
+        } catch (IOException | JAXBException e) {
             e.printStackTrace();
         }
         backLabel = new Label("Назад");
         getBackLabel().setCursor(Cursor.HAND);
         getBackLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
         getBackLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
-        getBackLabel().setTextFill(Paint.valueOf("YELLOW"));
-        getBackLabel().setFont(Main.font);
+        getBackLabel().getStyleClass().add("settingsToursPaneLabel");
         settingsTour1Scene = new Scene(settingsTour1Pane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
+        settingsTour1Scene.getStylesheets().add(Main.getResource("css/style.css"));
         settingsTour1Pane.getChildren().addAll(settingsToursBackground, category1Label, category2Label, category3Label, category4Label, backLabel);
     }
 
     public void update() {//обновляет название лэйблов
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("settings/categories1.txt"))) {
-            String nameCategory = bufferedReader.readLine();
-            category1Label.setText(nameCategory == null ? "Категория1" : nameCategory);
-            nameCategory = bufferedReader.readLine();
-            category2Label.setText(nameCategory == null ? "Категория2" : nameCategory);
-            nameCategory = bufferedReader.readLine();
-            category3Label.setText(nameCategory == null ? "Категория3" : nameCategory);
-            nameCategory = bufferedReader.readLine();
-            category4Label.setText(nameCategory == null ? "Категория4" : nameCategory);
-        } catch (IOException e) {
+        try (FileReader fileReader = new FileReader("settings/categories1.xml")) {
+            JAXBContext jaxbContext = JAXBContext.newInstance(Categories.class);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            categories = (Categories) unmarshaller.unmarshal(fileReader);
+            category1Label.setText(categories.getCategory1());
+            category2Label.setText(categories.getCategory2());
+            category3Label.setText(categories.getCategory3());
+            category4Label.setText(categories.getCategory4());
+        } catch (IOException | JAXBException e) {
             e.printStackTrace();
         }
     }
