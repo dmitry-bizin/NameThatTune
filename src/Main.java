@@ -645,7 +645,7 @@ public class Main extends Application {
         });*/
         settingsTour1Pane.getCategory1Label().setOnMouseClicked(event -> {
             primaryStage.setScene(settingsTour1Category1Pane.getSettingsTour1Category1Scene());
-            settingsTour1Category1Pane.update();
+            settingsTour1Category1Pane.start();
         });
         settingsTour1Pane.getCategory2Label().setOnMouseClicked(event -> {
             primaryStage.setScene(settingsTour1Category2Pane.getSettingsTour1Category2Scene());
@@ -789,6 +789,7 @@ public class Main extends Application {
             }
         });
         settingsTour1Category1Pane.getBackLabel().setOnMouseClicked(event -> {
+            settingsTour1Category1Pane.back();
             settingsTour1Pane.update();
             primaryStage.setScene(settingsTour1Pane.getSettingsTour1Scene());
             primaryStage.setTitle("Настройки 1го тура");
