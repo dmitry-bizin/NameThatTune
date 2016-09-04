@@ -16,7 +16,6 @@ import java.io.IOException;
  * Created by Dmitriy on 26.12.2015.
  */
 public class Main extends Application {
-    //TODO кодировка в jar-файле(например,когда jar на Рабочем столе)
     public static final Dimension SCREEN_SIZE = Toolkit.getDefaultToolkit().getScreenSize();
     public static ClassLoader classLoader = Main.class.getClassLoader();
 
