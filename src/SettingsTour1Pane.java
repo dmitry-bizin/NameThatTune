@@ -4,14 +4,14 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Paint;
 import xml.Categories;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * Created by Dmitriy on 20.08.2016.
@@ -33,10 +33,10 @@ public class SettingsTour1Pane {
         settingsToursBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         settingsToursBackground.setSmooth(true);//сглаживание
         settingsTour1Pane = new Pane();
-        try (FileReader fileReader = new FileReader("settings/categories1.xml")) {
+        try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("settings/categories1.xml"), "UTF-8")) {
             JAXBContext jaxbContext = JAXBContext.newInstance(Categories.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            categories = (Categories) unmarshaller.unmarshal(fileReader);
+            categories = (Categories) unmarshaller.unmarshal(inputStreamReader);
             category1Label = new Label(categories.getCategory1());
             getCategory1Label().setCursor(Cursor.HAND);
             getCategory1Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
@@ -71,10 +71,10 @@ public class SettingsTour1Pane {
     }
 
     public void update() {//обновляет название лэйблов
-        try (FileReader fileReader = new FileReader("settings/categories1.xml")) {
+        try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("settings/categories1.xml"), "UTF-8")) {
             JAXBContext jaxbContext = JAXBContext.newInstance(Categories.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            categories = (Categories) unmarshaller.unmarshal(fileReader);
+            categories = (Categories) unmarshaller.unmarshal(inputStreamReader);
             category1Label.setText(categories.getCategory1());
             category2Label.setText(categories.getCategory2());
             category3Label.setText(categories.getCategory3());

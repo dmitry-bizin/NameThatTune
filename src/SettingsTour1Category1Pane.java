@@ -131,42 +131,42 @@ public class SettingsTour1Category1Pane {
         pauseImageView40.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         pauseImageView40.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        try (FileReader fileReader = new FileReader("settings/categories1.xml")) {
+        try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("settings/categories1.xml"), "UTF-8")) {
             JAXBContext jaxbContext = JAXBContext.newInstance(Categories.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            categories = (Categories) unmarshaller.unmarshal(fileReader);
+            categories = (Categories) unmarshaller.unmarshal(inputStreamReader);
         } catch (IOException | JAXBException e) {
             e.printStackTrace();
         }
 
-        try (FileReader fileReader = new FileReader("musics/tour1/category1/points10/10.xml")) {
+        try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("musics/tour1/category1/points10/10.xml"), "UTF-8")) {
             JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            melody1 = (Melody) unmarshaller.unmarshal(fileReader);
+            melody1 = (Melody) unmarshaller.unmarshal(inputStreamReader);
         } catch (IOException | JAXBException e) {
             e.printStackTrace();
         }
 
-        try (FileReader fileReader = new FileReader("musics/tour1/category1/points20/20.xml")) {
+        try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("musics/tour1/category1/points20/20.xml"), "UTF-8")) {
             JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            melody2 = (Melody) unmarshaller.unmarshal(fileReader);
+            melody2 = (Melody) unmarshaller.unmarshal(inputStreamReader);
         } catch (IOException | JAXBException e) {
             e.printStackTrace();
         }
 
-        try (FileReader fileReader = new FileReader("musics/tour1/category1/points30/30.xml")) {
+        try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("musics/tour1/category1/points30/30.xml"), "UTF-8")) {
             JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            melody3 = (Melody) unmarshaller.unmarshal(fileReader);
+            melody3 = (Melody) unmarshaller.unmarshal(inputStreamReader);
         } catch (IOException | JAXBException e) {
             e.printStackTrace();
         }
 
-        try (FileReader fileReader = new FileReader("musics/tour1/category1/points40/40.xml")) {
+        try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("musics/tour1/category1/points40/40.xml"), "UTF-8")) {
             JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            melody4 = (Melody) unmarshaller.unmarshal(fileReader);
+            melody4 = (Melody) unmarshaller.unmarshal(inputStreamReader);
         } catch (IOException | JAXBException e) {
             e.printStackTrace();
         }
@@ -186,11 +186,11 @@ public class SettingsTour1Category1Pane {
         saveCategoryButton.setOnMouseClicked(event -> {
             categories.setCategory1(categoryTextField.getText().equals("") ? "Категория 1" : categoryTextField.getText());
             categoryTextField.setText(categories.getCategory1());
-            try (FileWriter fileWriter = new FileWriter("settings/categories1.xml")) {
+            try (OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream("settings/categories1.xml"), "UTF-8")) {
                 JAXBContext jaxbContext = JAXBContext.newInstance(Categories.class);
                 Marshaller marshaller = jaxbContext.createMarshaller();
                 marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);//отступы
-                marshaller.marshal(categories, fileWriter);
+                marshaller.marshal(categories, outputStreamWriter);
             } catch (IOException | JAXBException e) {
                 e.printStackTrace();
             }
@@ -372,11 +372,11 @@ public class SettingsTour1Category1Pane {
             }
             melody1.setTitle(title10TextField.getText());
             melody1.setAuthor(author10TextField.getText());
-            try (FileWriter fileWriter = new FileWriter("musics/tour1/category1/points10/10.xml")) {
+            try (OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream("musics/tour1/category1/points10/10.xml"), "UTF-8")) {
                 JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
                 Marshaller marshaller = jaxbContext.createMarshaller();
                 marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);//отступы
-                marshaller.marshal(melody1, fileWriter);
+                marshaller.marshal(melody1, outputStreamWriter);
             } catch (IOException | JAXBException e) {
                 e.printStackTrace();
             }
@@ -409,11 +409,11 @@ public class SettingsTour1Category1Pane {
             }
             melody2.setTitle(title20TextField.getText());
             melody2.setAuthor(author20TextField.getText());
-            try (FileWriter fileWriter = new FileWriter("musics/tour1/category1/points20/20.xml")) {
+            try (OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream("musics/tour1/category1/points20/20.xml"), "UTF-8")) {
                 JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
                 Marshaller marshaller = jaxbContext.createMarshaller();
                 marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);//отступы
-                marshaller.marshal(melody2, fileWriter);
+                marshaller.marshal(melody2, outputStreamWriter);
             } catch (IOException | JAXBException e) {
                 e.printStackTrace();
             }
@@ -446,11 +446,11 @@ public class SettingsTour1Category1Pane {
             }
             melody3.setTitle(title30TextField.getText());
             melody3.setAuthor(author30TextField.getText());
-            try (FileWriter fileWriter = new FileWriter("musics/tour1/category1/points30/30.xml")) {
+            try (OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream("musics/tour1/category1/points30/30.xml"), "UTF-8")) {
                 JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
                 Marshaller marshaller = jaxbContext.createMarshaller();
                 marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);//отступы
-                marshaller.marshal(melody3, fileWriter);
+                marshaller.marshal(melody3, outputStreamWriter);
             } catch (IOException | JAXBException e) {
                 e.printStackTrace();
             }
@@ -483,11 +483,11 @@ public class SettingsTour1Category1Pane {
             }
             melody4.setTitle(title40TextField.getText());
             melody4.setAuthor(author40TextField.getText());
-            try (FileWriter fileWriter = new FileWriter("musics/tour1/category1/points40/40.xml")) {
+            try (OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream("musics/tour1/category1/points40/40.xml"), "UTF-8")) {
                 JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
                 Marshaller marshaller = jaxbContext.createMarshaller();
                 marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);//отступы
-                marshaller.marshal(melody4, fileWriter);
+                marshaller.marshal(melody4, outputStreamWriter);
             } catch (IOException | JAXBException e) {
                 e.printStackTrace();
             }
@@ -676,20 +676,20 @@ public class SettingsTour1Category1Pane {
     }
 
     public void start() {//при заходе на сцену
-        try (FileReader fileReader = new FileReader("settings/categories1.xml");
-             FileReader fileReader10 = new FileReader("musics/tour1/category1/points10/10.xml");
-             FileReader fileReader20 = new FileReader("musics/tour1/category1/points20/20.xml");
-             FileReader fileReader30 = new FileReader("musics/tour1/category1/points30/30.xml");
-             FileReader fileReader40 = new FileReader("musics/tour1/category1/points40/40.xml")) {
+        try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("settings/categories1.xml"), "UTF-8");
+             InputStreamReader inputStreamReader10 = new InputStreamReader(new FileInputStream("musics/tour1/category1/points10/10.xml"), "UTF-8");
+             InputStreamReader inputStreamReader20 = new InputStreamReader(new FileInputStream("musics/tour1/category1/points20/20.xml"), "UTF-8");
+             InputStreamReader inputStreamReader30 = new InputStreamReader(new FileInputStream("musics/tour1/category1/points30/30.xml"), "UTF-8");
+             InputStreamReader inputStreamReader40 = new InputStreamReader(new FileInputStream("musics/tour1/category1/points40/40.xml"), "UTF-8")) {
             JAXBContext jaxbContext1 = JAXBContext.newInstance(Categories.class);
             JAXBContext jaxbContext2 = JAXBContext.newInstance(Melody.class);
             Unmarshaller unmarshaller1 = jaxbContext1.createUnmarshaller();
             Unmarshaller unmarshaller2 = jaxbContext2.createUnmarshaller();
-            categories = (Categories) unmarshaller1.unmarshal(fileReader);
-            Melody melody1 = (Melody) unmarshaller2.unmarshal(fileReader10);
-            Melody melody2 = (Melody) unmarshaller2.unmarshal(fileReader20);
-            Melody melody3 = (Melody) unmarshaller2.unmarshal(fileReader30);
-            Melody melody4 = (Melody) unmarshaller2.unmarshal(fileReader40);
+            categories = (Categories) unmarshaller1.unmarshal(inputStreamReader);
+            Melody melody1 = (Melody) unmarshaller2.unmarshal(inputStreamReader10);
+            Melody melody2 = (Melody) unmarshaller2.unmarshal(inputStreamReader20);
+            Melody melody3 = (Melody) unmarshaller2.unmarshal(inputStreamReader30);
+            Melody melody4 = (Melody) unmarshaller2.unmarshal(inputStreamReader40);
             categoryTextField.setText(categories.getCategory1());
             title10TextField.setText(melody1.getTitle());
             author10TextField.setText(melody1.getAuthor());

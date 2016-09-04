@@ -600,10 +600,12 @@ public class Main extends Application {
             primaryStage.setTitle("Настройки 1го тура");
         });
         settingsPane.getSettingsTour2Label().setOnMouseClicked(event -> {
+            settingsTour2Pane.update();
             primaryStage.setScene(settingsTour2Pane.getSettingsTour2Scene());
             primaryStage.setTitle("Настройки 2го тура");
         });
         settingsPane.getSettingsTour3Label().setOnMouseClicked(event -> {
+            settingsTour3Pane.update();
             primaryStage.setScene(settingsTour3Pane.getSettingsTour3Scene());
             primaryStage.setTitle("Настройки 3го тура");
         });
