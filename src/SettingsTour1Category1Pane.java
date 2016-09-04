@@ -90,6 +90,8 @@ public class SettingsTour1Category1Pane {
     private ImageView pauseImageView40;
 
     public SettingsTour1Category1Pane() {
+        //TODO вынести из конструктора загрузку мелодий,фона,текста и всего-всего(иначе при старте программы сразу всё в оп)
+        //перенести это в метод старт!!!
         settingsTour1Category1Pane = new Pane();
 
         settingsCategoriesBackground = new ImageView(new Image(Main.getResource("images/settings_categories.jpg")));
