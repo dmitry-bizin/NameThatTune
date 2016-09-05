@@ -4,7 +4,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Paint;
 
 /**
  * Created by Dmitriy on 17.02.2016.
@@ -20,7 +19,7 @@ public class GamePane {
     private ImageView gameBackground;
 
     public GamePane() {
-        gameBackground = new ImageView(new Image(Main.getResource("images/main.jpg")));
+        gameBackground = new ImageView(new Image(Main.getResource("images/play.jpg")));
         gameBackground.setFitHeight(Main.SCREEN_SIZE.getHeight());//подгон под высоту
         gameBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         gameBackground.setSmooth(true);//сглаживание
@@ -35,20 +34,20 @@ public class GamePane {
         getSuperGameLabel().setCursor(Cursor.HAND);
         backLabel = new Label("Назад");
         getBackLabel().setCursor(Cursor.HAND);
-        getTour1Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
-        getTour1Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.2);
+        getTour1Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
+        getTour1Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
         getTour1Label().getStyleClass().add("gamePaneLabel");
-        getTour2Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
-        getTour2Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
+        getTour2Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
+        getTour2Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.2);
         getTour2Label().getStyleClass().add("gamePaneLabel");
-        getTour3Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
-        getTour3Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
+        getTour3Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
+        getTour3Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
         getTour3Label().getStyleClass().add("gamePaneLabel");
-        getSuperGameLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
-        getSuperGameLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
+        getSuperGameLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
+        getSuperGameLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
         getSuperGameLabel().getStyleClass().add("gamePaneLabel");
-        getBackLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
-        getBackLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.6);
+        getBackLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
+        getBackLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
         getBackLabel().getStyleClass().add("gamePaneLabel");
         gameScene = new Scene(gamePane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
         gameScene.getStylesheets().add(Main.getResource("css/style.css"));

@@ -35,11 +35,11 @@
 .gamePaneLabel {
     -fx-font-size: 23pt;
     -fx-font-family: "Segoe Print";
-    -fx-text-fill: blue;
+    -fx-text-fill: #E52B50;
 }
 
 .gamePaneLabel:hover, .gamePaneLabel:pressed {
-    -fx-text-fill: red;
+    -fx-text-fill: blue;
 }
 
 .settingsToursPaneLabel {

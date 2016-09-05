@@ -536,7 +536,7 @@ public class Main extends Application {
         SettingsTour3Category4Pane settingsTour3Category4Pane = new SettingsTour3Category4Pane();
         //SettingsSuperGamePane settingsSuperGamePane = new SettingsSuperGamePane();
         primaryStage.setTitle("Угадай мелодию!");
-        primaryStage.getIcons().add(new Image(getResource("images/16.png")));
+        primaryStage.getIcons().add(new Image(getResource("images/icon.png")));
         primaryStage.setScene(mainPane.getMainScene());
         primaryStage.setWidth(SCREEN_SIZE.getWidth());
         primaryStage.setHeight(SCREEN_SIZE.getHeight());
