@@ -653,12 +653,15 @@ public class Main extends Application {
         });
         settingsTour1Pane.getCategory2Label().setOnMouseClicked(event -> {
             primaryStage.setScene(settingsTour1Category2Pane.getSettingsTour1Category2Scene());
+            settingsTour1Category2Pane.start();
         });
         settingsTour1Pane.getCategory3Label().setOnMouseClicked(event -> {
             primaryStage.setScene(settingsTour1Category3Pane.getSettingsTour1Category3Scene());
+            settingsTour1Category3Pane.start();
         });
         settingsTour1Pane.getCategory4Label().setOnMouseClicked(event -> {
             primaryStage.setScene(settingsTour1Category4Pane.getSettingsTour1Category4Scene());
+            settingsTour1Category4Pane.start();
         });
         settingsTour1Pane.getBackLabel().setOnMouseClicked(event -> {
             primaryStage.setScene(settingsPane.getSettingsScene());
@@ -796,6 +799,24 @@ public class Main extends Application {
             settingsTour1Category1Pane.back();
             //TODO возможно,поставить System.gc() при сменах сцен!!!
             //System.gc();
+            settingsTour1Pane.update();
+            primaryStage.setScene(settingsTour1Pane.getSettingsTour1Scene());
+            primaryStage.setTitle("Настройки 1го тура");
+        });
+        settingsTour1Category2Pane.getBackLabel().setOnMouseClicked(event -> {
+            settingsTour1Category2Pane.back();
+            settingsTour1Pane.update();
+            primaryStage.setScene(settingsTour1Pane.getSettingsTour1Scene());
+            primaryStage.setTitle("Настройки 1го тура");
+        });
+        settingsTour1Category3Pane.getBackLabel().setOnMouseClicked(event -> {
+            settingsTour1Category3Pane.back();
+            settingsTour1Pane.update();
+            primaryStage.setScene(settingsTour1Pane.getSettingsTour1Scene());
+            primaryStage.setTitle("Настройки 1го тура");
+        });
+        settingsTour1Category4Pane.getBackLabel().setOnMouseClicked(event -> {
+            settingsTour1Category4Pane.back();
             settingsTour1Pane.update();
             primaryStage.setScene(settingsTour1Pane.getSettingsTour1Scene());
             primaryStage.setTitle("Настройки 1го тура");
