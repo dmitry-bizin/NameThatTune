@@ -90,8 +90,6 @@ public class SettingsTour1Category1Pane {
     private ImageView pauseImageView40;
 
     public SettingsTour1Category1Pane() {
-        //TODO вынести из конструктора загрузку мелодий,фона,текста и всего-всего(иначе при старте программы сразу всё в оп, а ведь не факт,что зайдут в настройки и это,может,и не понадобится)
-        //перенести это в метод start()!!!
         settingsTour1Category1Pane = new Pane();
 
         settingsCategoriesBackground = new ImageView(new Image(Main.getResource("images/settings_categories.jpg")));
@@ -131,49 +129,8 @@ public class SettingsTour1Category1Pane {
         pauseImageView40.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         pauseImageView40.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("settings/categories1.xml"), "UTF-8")) {
-            JAXBContext jaxbContext = JAXBContext.newInstance(Categories.class);
-            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            categories = (Categories) unmarshaller.unmarshal(inputStreamReader);
-        } catch (IOException | JAXBException e) {
-            e.printStackTrace();
-        }
-
-        try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("musics/tour1/category1/points10/10.xml"), "UTF-8")) {
-            JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
-            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            melody1 = (Melody) unmarshaller.unmarshal(inputStreamReader);
-        } catch (IOException | JAXBException e) {
-            e.printStackTrace();
-        }
-
-        try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("musics/tour1/category1/points20/20.xml"), "UTF-8")) {
-            JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
-            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            melody2 = (Melody) unmarshaller.unmarshal(inputStreamReader);
-        } catch (IOException | JAXBException e) {
-            e.printStackTrace();
-        }
-
-        try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("musics/tour1/category1/points30/30.xml"), "UTF-8")) {
-            JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
-            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            melody3 = (Melody) unmarshaller.unmarshal(inputStreamReader);
-        } catch (IOException | JAXBException e) {
-            e.printStackTrace();
-        }
-
-        try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("musics/tour1/category1/points40/40.xml"), "UTF-8")) {
-            JAXBContext jaxbContext = JAXBContext.newInstance(Melody.class);
-            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            melody4 = (Melody) unmarshaller.unmarshal(inputStreamReader);
-        } catch (IOException | JAXBException e) {
-            e.printStackTrace();
-        }
-
         categoryTextField = new TextField();
         categoryTextField.setPromptText("Название категории");
-        categoryTextField.setText(categories.getCategory1());
         categoryTextField.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.1);
         categoryTextField.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
         categoryTextField.setPrefWidth(Main.SCREEN_SIZE.getWidth() * 0.2);
@@ -296,51 +253,44 @@ public class SettingsTour1Category1Pane {
 
         title10TextField = new TextField();
         title10TextField.setPromptText("Название песни");
-        title10TextField.setText(melody1.getTitle());
         title10TextField.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
         title10TextField.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.6);
         title10TextField.setPrefWidth(Main.SCREEN_SIZE.getWidth() * 0.2);
         author10TextField = new TextField();
         author10TextField.setPromptText("Автор песни");
-        author10TextField.setText(melody1.getAuthor());
         author10TextField.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
         author10TextField.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.7);
         author10TextField.setPrefWidth(Main.SCREEN_SIZE.getWidth() * 0.2);
 
         title20TextField = new TextField();
         title20TextField.setPromptText("Название песни");
-        title20TextField.setText(melody2.getTitle());
         title20TextField.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.26);
         title20TextField.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.6);
         title20TextField.setPrefWidth(Main.SCREEN_SIZE.getWidth() * 0.2);
         author20TextField = new TextField();
         author20TextField.setPromptText("Автор песни");
-        author20TextField.setText(melody2.getAuthor());
         author20TextField.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.26);
         author20TextField.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.7);
         author20TextField.setPrefWidth(Main.SCREEN_SIZE.getWidth() * 0.2);
 
         title30TextField = new TextField();
         title30TextField.setPromptText("Название песни");
-        title30TextField.setText(melody3.getTitle());
         title30TextField.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.51);
         title30TextField.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.6);
         title30TextField.setPrefWidth(Main.SCREEN_SIZE.getWidth() * 0.2);
         author30TextField = new TextField();
         author30TextField.setPromptText("Автор песни");
-        author30TextField.setText(melody3.getAuthor());
         author30TextField.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.51);
         author30TextField.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.7);
         author30TextField.setPrefWidth(Main.SCREEN_SIZE.getWidth() * 0.2);
+
         title40TextField = new TextField();
         title40TextField.setPromptText("Название песни");
-        title40TextField.setText(melody4.getTitle());
         title40TextField.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.76);
         title40TextField.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.6);
         title40TextField.setPrefWidth(Main.SCREEN_SIZE.getWidth() * 0.2);
         author40TextField = new TextField();
         author40TextField.setPromptText("Автор песни");
-        author40TextField.setText(melody4.getAuthor());
         author40TextField.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.76);
         author40TextField.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.7);
         author40TextField.setPrefWidth(Main.SCREEN_SIZE.getWidth() * 0.2);
@@ -352,6 +302,9 @@ public class SettingsTour1Category1Pane {
         save10Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.8);
         save10Button.setOnMouseClicked(event -> {
             if (melody10 != null) {
+                if (mediaPlayer10 != null) {//останавливает текущее воспроизведение
+                    mediaPlayer10.dispose();
+                }
                 try (FileInputStream fileInputStream = new FileInputStream(melody10);
                      FileOutputStream fileOutputStream = new FileOutputStream("musics/tour1/category1/points10/10.mp3")) {
                     byte[] bytes = new byte[1024];
@@ -363,8 +316,7 @@ public class SettingsTour1Category1Pane {
                     e.printStackTrace();
                 }
                 melody10 = null;
-                File melody10 = new File("musics/tour1/category1/points10/10.mp3");
-                media10 = new Media(melody10.toURI().toString());
+                media10 = new Media(new File("musics/tour1/category1/points10/10.mp3").toURI().toString());
                 mediaPlayer10 = new MediaPlayer(media10);
                 openMelody10Button.getStyleClass().remove("selectedButton");
                 play10Button.setDisable(false);
@@ -389,6 +341,9 @@ public class SettingsTour1Category1Pane {
         save20Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.8);
         save20Button.setOnMouseClicked(event -> {
             if (melody20 != null) {
+                if (mediaPlayer20 != null) {//останавливает текущее воспроизведение
+                    mediaPlayer20.dispose();
+                }
                 try (FileInputStream fileInputStream = new FileInputStream(melody20);
                      FileOutputStream fileOutputStream = new FileOutputStream("musics/tour1/category1/points20/20.mp3")) {
                     byte[] bytes = new byte[1024];
@@ -400,8 +355,7 @@ public class SettingsTour1Category1Pane {
                     e.printStackTrace();
                 }
                 melody20 = null;
-                File melody20 = new File("musics/tour1/category1/points20/20.mp3");
-                media20 = new Media(melody20.toURI().toString());
+                media20 = new Media(new File("musics/tour1/category1/points20/20.mp3").toURI().toString());
                 mediaPlayer20 = new MediaPlayer(media20);
                 openMelody20Button.getStyleClass().remove("selectedButton");
                 play20Button.setDisable(false);
@@ -426,6 +380,9 @@ public class SettingsTour1Category1Pane {
         save30Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.8);
         save30Button.setOnMouseClicked(event -> {
             if (melody30 != null) {
+                if (mediaPlayer30 != null) {//останавливает текущее воспроизведение
+                    mediaPlayer30.dispose();
+                }
                 try (FileInputStream fileInputStream = new FileInputStream(melody30);
                      FileOutputStream fileOutputStream = new FileOutputStream("musics/tour1/category1/points30/30.mp3")) {
                     byte[] bytes = new byte[1024];
@@ -437,8 +394,7 @@ public class SettingsTour1Category1Pane {
                     e.printStackTrace();
                 }
                 melody30 = null;
-                File melody30 = new File("musics/tour1/category1/points30/30.mp3");
-                media30 = new Media(melody30.toURI().toString());
+                media30 = new Media(new File("musics/tour1/category1/points30/30.mp3").toURI().toString());
                 mediaPlayer30 = new MediaPlayer(media30);
                 openMelody30Button.getStyleClass().remove("selectedButton");
                 play30Button.setDisable(false);
@@ -463,6 +419,9 @@ public class SettingsTour1Category1Pane {
         save40Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.8);
         save40Button.setOnMouseClicked(event -> {
             if (melody40 != null) {
+                if (mediaPlayer40 != null) {//останавливает текущее воспроизведение
+                    mediaPlayer40.dispose();
+                }
                 try (FileInputStream fileInputStream = new FileInputStream(melody40);
                      FileOutputStream fileOutputStream = new FileOutputStream("musics/tour1/category1/points40/40.mp3")) {
                     byte[] bytes = new byte[1024];
@@ -474,8 +433,7 @@ public class SettingsTour1Category1Pane {
                     e.printStackTrace();
                 }
                 melody40 = null;
-                File melody40 = new File("musics/tour1/category1/points40/40.mp3");
-                media40 = new Media(melody40.toURI().toString());
+                media40 = new Media(new File("musics/tour1/category1/points40/40.mp3").toURI().toString());
                 mediaPlayer40 = new MediaPlayer(media40);
                 openMelody40Button.getStyleClass().remove("selectedButton");
                 play40Button.setDisable(false);
@@ -505,18 +463,7 @@ public class SettingsTour1Category1Pane {
         pause10Button.setCursor(Cursor.HAND);
         pause10Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.04 + playImageView10.getFitWidth());
         pause10Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.43);
-        File melody10 = new File("musics/tour1/category1/points10/10.mp3");
-        if (melody10.exists()) {
-            media10 = new Media(melody10.toURI().toString());
-            mediaPlayer10 = new MediaPlayer(media10);
-            play10Button.setDisable(false);
-            pause10Button.setDisable(false);
-        } else {
-            media10 = null;
-            mediaPlayer10 = null;
-            play10Button.setDisable(true);
-            pause10Button.setDisable(true);
-        }
+
         play10Button.setOnMouseClicked(event -> {
             mediaPlayer10.setVolume(1);
             mediaPlayer10.setCycleCount(Integer.MAX_VALUE);
@@ -540,18 +487,7 @@ public class SettingsTour1Category1Pane {
         pause20Button.setCursor(Cursor.HAND);
         pause20Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.29 + playImageView10.getFitWidth());
         pause20Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.43);
-        File melody20 = new File("musics/tour1/category1/points20/20.mp3");
-        if (melody20.exists()) {
-            media20 = new Media(melody20.toURI().toString());
-            mediaPlayer20 = new MediaPlayer(media20);
-            play20Button.setDisable(false);
-            pause20Button.setDisable(false);
-        } else {
-            media20 = null;
-            mediaPlayer20 = null;
-            play20Button.setDisable(true);
-            pause20Button.setDisable(true);
-        }
+
         play20Button.setOnMouseClicked(event -> {
             mediaPlayer20.setVolume(1);
             mediaPlayer20.setCycleCount(Integer.MAX_VALUE);
@@ -575,18 +511,7 @@ public class SettingsTour1Category1Pane {
         pause30Button.setCursor(Cursor.HAND);
         pause30Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.54 + playImageView10.getFitWidth());
         pause30Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.43);
-        File melody30 = new File("musics/tour1/category1/points30/30.mp3");
-        if (melody30.exists()) {
-            media30 = new Media(melody30.toURI().toString());
-            mediaPlayer30 = new MediaPlayer(media30);
-            play30Button.setDisable(false);
-            pause30Button.setDisable(false);
-        } else {
-            media30 = null;
-            mediaPlayer30 = null;
-            play30Button.setDisable(true);
-            pause30Button.setDisable(true);
-        }
+
         play30Button.setOnMouseClicked(event -> {
             mediaPlayer30.setVolume(1);
             mediaPlayer30.setCycleCount(Integer.MAX_VALUE);
@@ -610,18 +535,7 @@ public class SettingsTour1Category1Pane {
         pause40Button.setCursor(Cursor.HAND);
         pause40Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.79 + playImageView10.getFitWidth());
         pause40Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.43);
-        File melody40 = new File("musics/tour1/category1/points40/40.mp3");
-        if (melody40.exists()) {
-            media40 = new Media(melody40.toURI().toString());
-            mediaPlayer40 = new MediaPlayer(media40);
-            play40Button.setDisable(false);
-            pause40Button.setDisable(false);
-        } else {
-            media40 = null;
-            mediaPlayer40 = null;
-            play40Button.setDisable(true);
-            pause40Button.setDisable(true);
-        }
+
         play40Button.setOnMouseClicked(event -> {
             mediaPlayer40.setVolume(1);
             mediaPlayer40.setCycleCount(Integer.MAX_VALUE);
@@ -686,10 +600,10 @@ public class SettingsTour1Category1Pane {
             Unmarshaller unmarshaller1 = jaxbContext1.createUnmarshaller();
             Unmarshaller unmarshaller2 = jaxbContext2.createUnmarshaller();
             categories = (Categories) unmarshaller1.unmarshal(inputStreamReader);
-            Melody melody1 = (Melody) unmarshaller2.unmarshal(inputStreamReader10);
-            Melody melody2 = (Melody) unmarshaller2.unmarshal(inputStreamReader20);
-            Melody melody3 = (Melody) unmarshaller2.unmarshal(inputStreamReader30);
-            Melody melody4 = (Melody) unmarshaller2.unmarshal(inputStreamReader40);
+            melody1 = (Melody) unmarshaller2.unmarshal(inputStreamReader10);
+            melody2 = (Melody) unmarshaller2.unmarshal(inputStreamReader20);
+            melody3 = (Melody) unmarshaller2.unmarshal(inputStreamReader30);
+            melody4 = (Melody) unmarshaller2.unmarshal(inputStreamReader40);
             categoryTextField.setText(categories.getCategory1());
             title10TextField.setText(melody1.getTitle());
             author10TextField.setText(melody1.getAuthor());

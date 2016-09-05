@@ -27,6 +27,9 @@ public class Main extends Application {
         }
     }
 
+    //TODO System.gc() поставить и протестировать!!!System.gc() - не всегда хорошо
+
+
     //возвращает абсолютный путь ресурса
     public static String getResource(String fileName) {
         return classLoader.getResource(fileName).toString();
@@ -791,6 +794,8 @@ public class Main extends Application {
         });
         settingsTour1Category1Pane.getBackLabel().setOnMouseClicked(event -> {
             settingsTour1Category1Pane.back();
+            //TODO возможно,поставить System.gc() при сменах сцен!!!
+            //System.gc();
             settingsTour1Pane.update();
             primaryStage.setScene(settingsTour1Pane.getSettingsTour1Scene());
             primaryStage.setTitle("Настройки 1го тура");
