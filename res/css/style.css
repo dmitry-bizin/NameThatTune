@@ -118,3 +118,9 @@
 .playButton:pressed, .pauseButton:pressed {
     -fx-border-color: blue;
 }
+
+.toursLabel {
+    -fx-font-size: 23pt;
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: blue;
+}

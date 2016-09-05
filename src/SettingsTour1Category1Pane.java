@@ -88,6 +88,7 @@ public class SettingsTour1Category1Pane {
     private ImageView pauseImageView30;
     private ImageView playImageView40;
     private ImageView pauseImageView40;
+    private Label tour1Label;
 
     public SettingsTour1Category1Pane() {
         settingsTour1Category1Pane = new Pane();
@@ -155,9 +156,14 @@ public class SettingsTour1Category1Pane {
 
         backLabel = new Label("Назад");
         backLabel.setCursor(Cursor.HAND);
-        backLabel.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.8);
+        backLabel.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.85);
         backLabel.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
         backLabel.getStyleClass().add("settingsToursCategoriesPaneLabel");
+
+        tour1Label = new Label("1 тур");
+        tour1Label.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
+        tour1Label.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
+        tour1Label.getStyleClass().add("toursLabel");
 
         category10 = new Label("10");
         category10.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.25 / 2);
@@ -550,7 +556,7 @@ public class SettingsTour1Category1Pane {
         settingsTour1Category1Scene = new Scene(settingsTour1Category1Pane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
         settingsTour1Category1Scene.getStylesheets().addAll(Main.getResource("css/style.css"));
         settingsTour1Category1Pane.getChildren().addAll(settingsCategoriesBackground, categoryTextField, saveCategoryButton,
-                backLabel, openMelody10Button, openMelody20Button, openMelody30Button, openMelody40Button, save10Button,
+                backLabel, tour1Label, openMelody10Button, openMelody20Button, openMelody30Button, openMelody40Button, save10Button,
                 save20Button, save30Button, save40Button, separatorV1, separatorV2, separatorV3, category10, category20,
                 category30, category40, separatorH, title10TextField, author10TextField, title20TextField, author20TextField,
                 title30TextField, author30TextField, title40TextField, author40TextField, play10Button, pause10Button,
