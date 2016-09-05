@@ -138,7 +138,7 @@ public class SettingsTour1Category1Pane {
 
         saveCategoryButton = new Button("Сохранить");
         saveCategoryButton.setCursor(Cursor.HAND);
-        saveCategoryButton.getStyleClass().add("saveButton");
+        saveCategoryButton.setId("saveButton");
         saveCategoryButton.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.31);
         saveCategoryButton.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
         saveCategoryButton.setOnMouseClicked(event -> {
@@ -158,17 +158,17 @@ public class SettingsTour1Category1Pane {
         backLabel.setCursor(Cursor.HAND);
         backLabel.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.85);
         backLabel.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
-        backLabel.getStyleClass().add("settingsToursCategoriesPaneLabel");
+        backLabel.setId("settingsToursCategoriesPaneLabel");
 
         tour1Label = new Label("1 тур");
         tour1Label.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
         tour1Label.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
-        tour1Label.getStyleClass().add("toursLabel");
+        tour1Label.setId("toursLabel");
 
         category10 = new Label("10");
         category10.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.25 / 2);
         category10.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
-        category10.getStyleClass().add("scoresLabel");
+        category10.setId("scoresLabel");
 
         separatorV1 = new Separator(Orientation.VERTICAL);
         separatorV1.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.25);
@@ -178,7 +178,7 @@ public class SettingsTour1Category1Pane {
         category20 = new Label("20");
         category20.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.25 + Main.SCREEN_SIZE.getWidth() * 0.25 / 2);
         category20.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
-        category20.getStyleClass().add("scoresLabel");
+        category20.setId("scoresLabel");
 
         separatorV2 = new Separator(Orientation.VERTICAL);
         separatorV2.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.5);
@@ -188,7 +188,7 @@ public class SettingsTour1Category1Pane {
         category30 = new Label("30");
         category30.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.50 + Main.SCREEN_SIZE.getWidth() * 0.25 / 2);
         category30.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
-        category30.getStyleClass().add("scoresLabel");
+        category30.setId("scoresLabel");
 
         separatorV3 = new Separator(Orientation.VERTICAL);
         separatorV3.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.75);
@@ -198,7 +198,7 @@ public class SettingsTour1Category1Pane {
         category40 = new Label("40");
         category40.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.75 + Main.SCREEN_SIZE.getWidth() * 0.25 / 2);
         category40.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
-        category40.getStyleClass().add("scoresLabel");
+        category40.setId("scoresLabel");
 
         separatorH = new Separator(Orientation.HORIZONTAL);
         separatorH.setLayoutX(0);
@@ -211,49 +211,52 @@ public class SettingsTour1Category1Pane {
 
         openMelody10Button = new Button("Выбрать");
         openMelody10Button.setCursor(Cursor.HAND);
-        openMelody10Button.getStyleClass().add("unselectedButton");
+        openMelody10Button.setId("unselectedButton");
+        ;
         openMelody10Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
         openMelody10Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
         openMelody10Button.setOnMouseClicked(event -> {
             melody10 = fileChooser.showOpenDialog(getSettingsTour1Category1Scene().getWindow());
             if (melody10 != null) {
-                openMelody10Button.getStyleClass().add("selectedButton");
+                openMelody10Button.setId("selectedButton");
             }
         });
 
         openMelody20Button = new Button("Выбрать");
         openMelody20Button.setCursor(Cursor.HAND);
-        openMelody20Button.getStyleClass().add("unselectedButton");
+        openMelody20Button.setId("unselectedButton");
+        ;
         openMelody20Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.26);
         openMelody20Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
         openMelody20Button.setOnMouseClicked(event -> {
             melody20 = fileChooser.showOpenDialog(getSettingsTour1Category1Scene().getWindow());
             if (melody20 != null) {
-                openMelody20Button.getStyleClass().add("selectedButton");
+                openMelody20Button.setId("selectedButton");
             }
         });
 
         openMelody30Button = new Button("Выбрать");
         openMelody30Button.setCursor(Cursor.HAND);
-        openMelody30Button.getStyleClass().add("unselectedButton");
+        openMelody30Button.setId("unselectedButton");
+        ;
         openMelody30Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.51);
         openMelody30Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
         openMelody30Button.setOnMouseClicked(event -> {
             melody30 = fileChooser.showOpenDialog(getSettingsTour1Category1Scene().getWindow());
             if (melody30 != null) {
-                openMelody30Button.getStyleClass().add("selectedButton");
+                openMelody30Button.setId("selectedButton");
             }
         });
 
         openMelody40Button = new Button("Выбрать");
         openMelody40Button.setCursor(Cursor.HAND);
-        openMelody40Button.getStyleClass().add("unselectedButton");
+        openMelody40Button.setId("unselectedButton");
         openMelody40Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.76);
         openMelody40Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
         openMelody40Button.setOnMouseClicked(event -> {
             melody40 = fileChooser.showOpenDialog(getSettingsTour1Category1Scene().getWindow());
             if (melody40 != null) {
-                openMelody40Button.getStyleClass().add("selectedButton");
+                openMelody40Button.setId("selectedButton");
             }
         });
 
@@ -303,7 +306,7 @@ public class SettingsTour1Category1Pane {
 
         save10Button = new Button("Сохранить");
         save10Button.setCursor(Cursor.HAND);
-        save10Button.getStyleClass().add("saveButton");
+        save10Button.setId("saveButton");
         save10Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
         save10Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.8);
         save10Button.setOnMouseClicked(event -> {
@@ -324,7 +327,8 @@ public class SettingsTour1Category1Pane {
                 melody10 = null;
                 media10 = new Media(new File("musics/tour1/category1/points10/10.mp3").toURI().toString());
                 mediaPlayer10 = new MediaPlayer(media10);
-                openMelody10Button.getStyleClass().remove("selectedButton");
+                openMelody10Button.setId("unselectedButton");
+                ;
                 play10Button.setDisable(false);
                 pause10Button.setDisable(false);
             }
@@ -342,7 +346,7 @@ public class SettingsTour1Category1Pane {
 
         save20Button = new Button("Сохранить");
         save20Button.setCursor(Cursor.HAND);
-        save20Button.getStyleClass().add("saveButton");
+        save20Button.setId("saveButton");
         save20Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.26);
         save20Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.8);
         save20Button.setOnMouseClicked(event -> {
@@ -363,7 +367,7 @@ public class SettingsTour1Category1Pane {
                 melody20 = null;
                 media20 = new Media(new File("musics/tour1/category1/points20/20.mp3").toURI().toString());
                 mediaPlayer20 = new MediaPlayer(media20);
-                openMelody20Button.getStyleClass().remove("selectedButton");
+                openMelody20Button.setId("unselectedButton");
                 play20Button.setDisable(false);
                 pause20Button.setDisable(false);
             }
@@ -381,7 +385,7 @@ public class SettingsTour1Category1Pane {
 
         save30Button = new Button("Сохранить");
         save30Button.setCursor(Cursor.HAND);
-        save30Button.getStyleClass().add("saveButton");
+        save30Button.setId("saveButton");
         save30Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.51);
         save30Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.8);
         save30Button.setOnMouseClicked(event -> {
@@ -402,7 +406,8 @@ public class SettingsTour1Category1Pane {
                 melody30 = null;
                 media30 = new Media(new File("musics/tour1/category1/points30/30.mp3").toURI().toString());
                 mediaPlayer30 = new MediaPlayer(media30);
-                openMelody30Button.getStyleClass().remove("selectedButton");
+                openMelody30Button.setId("unselectedButton");
+                ;
                 play30Button.setDisable(false);
                 pause30Button.setDisable(false);
             }
@@ -420,7 +425,7 @@ public class SettingsTour1Category1Pane {
 
         save40Button = new Button("Сохранить");
         save40Button.setCursor(Cursor.HAND);
-        save40Button.getStyleClass().add("saveButton");
+        save40Button.setId("saveButton");
         save40Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.76);
         save40Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.8);
         save40Button.setOnMouseClicked(event -> {
@@ -441,7 +446,7 @@ public class SettingsTour1Category1Pane {
                 melody40 = null;
                 media40 = new Media(new File("musics/tour1/category1/points40/40.mp3").toURI().toString());
                 mediaPlayer40 = new MediaPlayer(media40);
-                openMelody40Button.getStyleClass().remove("selectedButton");
+                openMelody40Button.setId("unselectedButton");
                 play40Button.setDisable(false);
                 pause40Button.setDisable(false);
             }
@@ -458,13 +463,13 @@ public class SettingsTour1Category1Pane {
         });
 
         play10Button = new Button();
-        play10Button.getStyleClass().add("playButton");
+        play10Button.setId("playButton");
         play10Button.setGraphic(playImageView10);
         play10Button.setCursor(Cursor.HAND);
         play10Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
         play10Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.43);
         pause10Button = new Button();
-        pause10Button.getStyleClass().add("pauseButton");
+        pause10Button.setId("pauseButton");
         pause10Button.setGraphic(pauseImageView10);
         pause10Button.setCursor(Cursor.HAND);
         pause10Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.04 + playImageView10.getFitWidth());
@@ -482,13 +487,13 @@ public class SettingsTour1Category1Pane {
         });
 
         play20Button = new Button();
-        play20Button.getStyleClass().add("playButton");
+        play20Button.setId("playButton");
         play20Button.setGraphic(playImageView20);
         play20Button.setCursor(Cursor.HAND);
         play20Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.26);
         play20Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.43);
         pause20Button = new Button();
-        pause20Button.getStyleClass().add("pauseButton");
+        pause20Button.setId("pauseButton");
         pause20Button.setGraphic(pauseImageView20);
         pause20Button.setCursor(Cursor.HAND);
         pause20Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.29 + playImageView10.getFitWidth());
@@ -506,13 +511,13 @@ public class SettingsTour1Category1Pane {
         });
 
         play30Button = new Button();
-        play30Button.getStyleClass().add("playButton");
+        play30Button.setId("playButton");
         play30Button.setGraphic(playImageView30);
         play30Button.setCursor(Cursor.HAND);
         play30Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.51);
         play30Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.43);
         pause30Button = new Button();
-        pause30Button.getStyleClass().add("pauseButton");
+        pause30Button.setId("pauseButton");
         pause30Button.setGraphic(pauseImageView30);
         pause30Button.setCursor(Cursor.HAND);
         pause30Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.54 + playImageView10.getFitWidth());
@@ -530,13 +535,13 @@ public class SettingsTour1Category1Pane {
         });
 
         play40Button = new Button();
-        play40Button.getStyleClass().add("playButton");
+        play40Button.setId("playButton");
         play40Button.setGraphic(playImageView40);
         play40Button.setCursor(Cursor.HAND);
         play40Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.76);
         play40Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.43);
         pause40Button = new Button();
-        pause40Button.getStyleClass().add("pauseButton");
+        pause40Button.setId("pauseButton");
         pause40Button.setGraphic(pauseImageView40);
         pause40Button.setCursor(Cursor.HAND);
         pause40Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.79 + playImageView10.getFitWidth());
@@ -577,10 +582,10 @@ public class SettingsTour1Category1Pane {
         melody20 = null;
         melody30 = null;
         melody40 = null;
-        openMelody10Button.getStyleClass().remove("selectedButton");
-        openMelody20Button.getStyleClass().remove("selectedButton");
-        openMelody30Button.getStyleClass().remove("selectedButton");
-        openMelody40Button.getStyleClass().remove("selectedButton");
+        openMelody10Button.setId("unselectedButton");
+        openMelody20Button.setId("unselectedButton");
+        openMelody30Button.setId("unselectedButton");
+        openMelody40Button.setId("unselectedButton");
         if (mediaPlayer10 != null) {
             mediaPlayer10.dispose();
         }

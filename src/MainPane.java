@@ -32,13 +32,13 @@ public class MainPane {
         getExitLabel().setCursor(Cursor.HAND);
         getGameLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);//в процентах от размеров экрана,резиновая вёрстка
         getGameLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
-        getGameLabel().getStyleClass().add("mainPaneLabel");
+        getGameLabel().setId("mainPaneLabel");
         getSettingsLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
         getSettingsLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
-        getSettingsLabel().getStyleClass().add("mainPaneLabel");
+        getSettingsLabel().setId("mainPaneLabel");
         getExitLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
         getExitLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
-        getExitLabel().getStyleClass().add("mainPaneLabel");
+        getExitLabel().setId("mainPaneLabel");
         mainScene = new Scene(mainPane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
         mainScene.getStylesheets().add(Main.getResource("css/style.css"));
         mainPane.getChildren().addAll(mainBackground, getGameLabel(), getSettingsLabel(), getExitLabel());
