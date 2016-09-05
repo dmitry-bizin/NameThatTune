@@ -1,11 +1,6 @@
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
-import javafx.scene.text.Font;
-import javafx.util.Duration;
 
 /**
  * Created by Dmitriy on 17.02.2016.
@@ -30,7 +25,6 @@ public class Tour1Pane {
         tour1Category4 = new Label("Категория 4");
         getTour1Category1().setLayoutX(0);
         getTour1Category1().setLayoutY(70);
-        getTour1Category1().setId("animLabel");
         tour1Pane.getChildren().addAll(/*tour1Background,*/getTour1Category1());
     }
 
