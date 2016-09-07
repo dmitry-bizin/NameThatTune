@@ -5,6 +5,7 @@
     -fx-text-fill: white;
     -fx-font-size: 14pt;
     -fx-font-family: "Segoe Print";
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #saveButton:pressed {
@@ -12,64 +13,75 @@
     -fx-border-color: blue;
     -fx-scale-x: 0.9;
     -fx-scale-y: 0.9;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #mainPaneLabel {
     -fx-font-size: 23pt;
     -fx-font-family: "Segoe Print";
     -fx-text-fill: blue;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #mainPaneLabel:hover, #mainPaneLabel:pressed {
     -fx-text-fill: red;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #settingsPaneLabel {
     -fx-font-size: 23pt;
     -fx-font-family: "Segoe Print";
     -fx-text-fill: white;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #settingsPaneLabel:hover, #settingsPaneLabel:pressed {
     -fx-text-fill: yellow;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #gamePaneLabel {
     -fx-font-size: 23pt;
     -fx-font-family: "Segoe Print";
     -fx-text-fill: #E52B50;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #gamePaneLabel:hover, #gamePaneLabel:pressed {
     -fx-text-fill: blue;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #settingsToursPaneLabel {
     -fx-text-fill: linear-gradient(to right, green, yellow, red, mediumvioletred);
     -fx-font-size: 23pt;
     -fx-font-family: "Segoe Print";
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #settingsToursPaneLabel:hover, #settingsToursPaneLabel:pressed {
     -fx-text-fill: white;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #settingsToursCategoriesPaneLabel {
     -fx-font-size: 23pt;
     -fx-font-family: "Segoe Print";
     -fx-text-fill: blue;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #settingsToursCategoriesPaneLabel:hover, #settingsToursCategoriesPaneLabel:pressed {
     -fx-text-fill: red;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 .text-field {
@@ -80,17 +92,20 @@
     -fx-font-size: 14pt;
     -fx-font-family: "Segoe Print";
     -fx-text-fill: deepskyblue;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 .text-field:focused {
     -fx-border-color: blue;
     -fx-text-fill: blue;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #scoresLabel {
     -fx-font-size: 23pt;
     -fx-font-family: "Segoe Print";
     -fx-text-fill: blue;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #unselectedButton {
@@ -100,6 +115,7 @@
     -fx-text-fill: white;
     -fx-font-size: 14pt;
     -fx-font-family: "Segoe Print";
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #unselectedButton:pressed {
@@ -107,6 +123,7 @@
     -fx-border-color: red;
     -fx-scale-x: 0.9;
     -fx-scale-y: 0.9;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #selectedButton {
@@ -116,6 +133,7 @@
     -fx-text-fill: white;
     -fx-font-size: 14pt;
     -fx-font-family: "Segoe Print";
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #selectedButton:pressed {
@@ -123,20 +141,31 @@
     -fx-border-color: green;
     -fx-scale-x: 0.9;
     -fx-scale-y: 0.9;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #playButton, #pauseButton {
     -fx-background-color: white;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #playButton:pressed, #pauseButton:pressed {
     -fx-border-color: blue;
     -fx-scale-x: 0.9;
     -fx-scale-y: 0.9;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 #toursLabel {
     -fx-font-size: 23pt;
     -fx-font-family: "Segoe Print";
     -fx-text-fill: blue;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+#gameLabel {
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: blue;
+    -fx-font-size: 35pt;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }

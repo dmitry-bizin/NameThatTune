@@ -1,4 +1,5 @@
 import javafx.application.Application;
+import javafx.application.Preloader;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -27,7 +28,6 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
-
     //TODO System.gc() поставить и протестировать!!!System.gc() - не всегда хорошо
 
 
