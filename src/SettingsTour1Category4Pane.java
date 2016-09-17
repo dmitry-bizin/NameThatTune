@@ -93,40 +93,40 @@ public class SettingsTour1Category4Pane {
     public SettingsTour1Category4Pane() {
         settingsTour1Category4Pane = new Pane();
 
-        settingsCategoriesBackground = new ImageView(new Image(Main.getResource("images/settings_categories.jpg")));
+        settingsCategoriesBackground = new ImageView(new Image(Main.getPathToResource("images/settings_categories.jpg")));
         settingsCategoriesBackground.setFitHeight(Main.SCREEN_SIZE.getHeight());//подгон под высоту
         settingsCategoriesBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         settingsCategoriesBackground.setSmooth(true);//сглаживание
 
-        playImageView10 = new ImageView(new Image(Main.getResource("images/play.png")));
+        playImageView10 = new ImageView(new Image(Main.getPathToResource("images/play.png")));
         playImageView10.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         playImageView10.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        pauseImageView10 = new ImageView(new Image(Main.getResource("images/pause.png")));
+        pauseImageView10 = new ImageView(new Image(Main.getPathToResource("images/pause.png")));
         pauseImageView10.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         pauseImageView10.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        playImageView20 = new ImageView(new Image(Main.getResource("images/play.png")));
+        playImageView20 = new ImageView(new Image(Main.getPathToResource("images/play.png")));
         playImageView20.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         playImageView20.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        pauseImageView20 = new ImageView(new Image(Main.getResource("images/pause.png")));
+        pauseImageView20 = new ImageView(new Image(Main.getPathToResource("images/pause.png")));
         pauseImageView20.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         pauseImageView20.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        playImageView30 = new ImageView(new Image(Main.getResource("images/play.png")));
+        playImageView30 = new ImageView(new Image(Main.getPathToResource("images/play.png")));
         playImageView30.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         playImageView30.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        pauseImageView30 = new ImageView(new Image(Main.getResource("images/pause.png")));
+        pauseImageView30 = new ImageView(new Image(Main.getPathToResource("images/pause.png")));
         pauseImageView30.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         pauseImageView30.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        playImageView40 = new ImageView(new Image(Main.getResource("images/play.png")));
+        playImageView40 = new ImageView(new Image(Main.getPathToResource("images/play.png")));
         playImageView40.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         playImageView40.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        pauseImageView40 = new ImageView(new Image(Main.getResource("images/pause.png")));
+        pauseImageView40 = new ImageView(new Image(Main.getPathToResource("images/pause.png")));
         pauseImageView40.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         pauseImageView40.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
@@ -554,7 +554,7 @@ public class SettingsTour1Category4Pane {
         });
 
         settingsTour1Category4Scene = new Scene(settingsTour1Category4Pane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
-        settingsTour1Category4Scene.getStylesheets().addAll(Main.getResource("css/style.css"));
+        settingsTour1Category4Scene.getStylesheets().addAll(Main.getPathToResource("css/style.css"));
         settingsTour1Category4Pane.getChildren().addAll(settingsCategoriesBackground, categoryTextField, saveCategoryButton,
                 backLabel, tour1Label, openMelody10Button, openMelody20Button, openMelody30Button, openMelody40Button, save10Button,
                 save20Button, save30Button, save40Button, separatorV1, separatorV2, separatorV3, category10, category20,

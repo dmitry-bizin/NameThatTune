@@ -4,7 +4,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Paint;
 
 
 /**
@@ -19,7 +18,7 @@ public class MainPane {
     private ImageView mainBackground;
 
     public MainPane() {
-        mainBackground = new ImageView(new Image(Main.getResource("images/main.jpg")));
+        mainBackground = new ImageView(new Image(Main.getPathToResource("images/main.jpg")));
         mainBackground.setFitHeight(Main.SCREEN_SIZE.getHeight());//подгон под высоту
         mainBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         mainBackground.setSmooth(true);//сглаживание
@@ -40,7 +39,7 @@ public class MainPane {
         getExitLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
         getExitLabel().setId("mainPaneLabel");
         mainScene = new Scene(mainPane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
-        mainScene.getStylesheets().add(Main.getResource("css/style.css"));
+        mainScene.getStylesheets().add(Main.getPathToResource("css/style.css"));
         mainPane.getChildren().addAll(mainBackground, getGameLabel(), getSettingsLabel(), getExitLabel());
     }
 

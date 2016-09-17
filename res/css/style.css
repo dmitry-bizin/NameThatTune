@@ -165,7 +165,7 @@
 
 #gameLabel {
     -fx-font-family: "Segoe Print";
-    -fx-text-fill: blue;
-    -fx-font-size: 35pt;
     -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-weight: bold;
+    -fx-text-fill: blue;
 }

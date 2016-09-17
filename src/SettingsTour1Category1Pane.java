@@ -93,40 +93,40 @@ public class SettingsTour1Category1Pane {
     public SettingsTour1Category1Pane() {
         settingsTour1Category1Pane = new Pane();
 
-        settingsCategoriesBackground = new ImageView(new Image(Main.getResource("images/settings_categories.jpg")));
+        settingsCategoriesBackground = new ImageView(new Image(Main.getPathToResource("images/settings_categories.jpg")));
         settingsCategoriesBackground.setFitHeight(Main.SCREEN_SIZE.getHeight());//подгон под высоту
         settingsCategoriesBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         settingsCategoriesBackground.setSmooth(true);//сглаживание
 
-        playImageView10 = new ImageView(new Image(Main.getResource("images/play.png")));
+        playImageView10 = new ImageView(new Image(Main.getPathToResource("images/play.png")));
         playImageView10.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         playImageView10.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        pauseImageView10 = new ImageView(new Image(Main.getResource("images/pause.png")));
+        pauseImageView10 = new ImageView(new Image(Main.getPathToResource("images/pause.png")));
         pauseImageView10.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         pauseImageView10.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        playImageView20 = new ImageView(new Image(Main.getResource("images/play.png")));
+        playImageView20 = new ImageView(new Image(Main.getPathToResource("images/play.png")));
         playImageView20.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         playImageView20.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        pauseImageView20 = new ImageView(new Image(Main.getResource("images/pause.png")));
+        pauseImageView20 = new ImageView(new Image(Main.getPathToResource("images/pause.png")));
         pauseImageView20.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         pauseImageView20.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        playImageView30 = new ImageView(new Image(Main.getResource("images/play.png")));
+        playImageView30 = new ImageView(new Image(Main.getPathToResource("images/play.png")));
         playImageView30.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         playImageView30.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        pauseImageView30 = new ImageView(new Image(Main.getResource("images/pause.png")));
+        pauseImageView30 = new ImageView(new Image(Main.getPathToResource("images/pause.png")));
         pauseImageView30.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         pauseImageView30.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        playImageView40 = new ImageView(new Image(Main.getResource("images/play.png")));
+        playImageView40 = new ImageView(new Image(Main.getPathToResource("images/play.png")));
         playImageView40.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         playImageView40.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
-        pauseImageView40 = new ImageView(new Image(Main.getResource("images/pause.png")));
+        pauseImageView40 = new ImageView(new Image(Main.getPathToResource("images/pause.png")));
         pauseImageView40.setFitHeight(0.04 * Main.SCREEN_SIZE.getHeight());
         pauseImageView40.setFitWidth(0.04 * Main.SCREEN_SIZE.getHeight());
 
@@ -212,7 +212,6 @@ public class SettingsTour1Category1Pane {
         openMelody10Button = new Button("Выбрать");
         openMelody10Button.setCursor(Cursor.HAND);
         openMelody10Button.setId("unselectedButton");
-        ;
         openMelody10Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);
         openMelody10Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
         openMelody10Button.setOnMouseClicked(event -> {
@@ -225,7 +224,6 @@ public class SettingsTour1Category1Pane {
         openMelody20Button = new Button("Выбрать");
         openMelody20Button.setCursor(Cursor.HAND);
         openMelody20Button.setId("unselectedButton");
-        ;
         openMelody20Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.26);
         openMelody20Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
         openMelody20Button.setOnMouseClicked(event -> {
@@ -238,7 +236,6 @@ public class SettingsTour1Category1Pane {
         openMelody30Button = new Button("Выбрать");
         openMelody30Button.setCursor(Cursor.HAND);
         openMelody30Button.setId("unselectedButton");
-        ;
         openMelody30Button.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.51);
         openMelody30Button.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
         openMelody30Button.setOnMouseClicked(event -> {
@@ -328,7 +325,6 @@ public class SettingsTour1Category1Pane {
                 media10 = new Media(new File("musics/tour1/category1/points10/10.mp3").toURI().toString());
                 mediaPlayer10 = new MediaPlayer(media10);
                 openMelody10Button.setId("unselectedButton");
-                ;
                 play10Button.setDisable(false);
                 pause10Button.setDisable(false);
             }
@@ -407,7 +403,6 @@ public class SettingsTour1Category1Pane {
                 media30 = new Media(new File("musics/tour1/category1/points30/30.mp3").toURI().toString());
                 mediaPlayer30 = new MediaPlayer(media30);
                 openMelody30Button.setId("unselectedButton");
-                ;
                 play30Button.setDisable(false);
                 pause30Button.setDisable(false);
             }
@@ -559,7 +554,7 @@ public class SettingsTour1Category1Pane {
         });
 
         settingsTour1Category1Scene = new Scene(settingsTour1Category1Pane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
-        settingsTour1Category1Scene.getStylesheets().addAll(Main.getResource("css/style.css"));
+        settingsTour1Category1Scene.getStylesheets().addAll(Main.getPathToResource("css/style.css"));
         settingsTour1Category1Pane.getChildren().addAll(settingsCategoriesBackground, categoryTextField, saveCategoryButton,
                 backLabel, tour1Label, openMelody10Button, openMelody20Button, openMelody30Button, openMelody40Button, save10Button,
                 save20Button, save30Button, save40Button, separatorV1, separatorV2, separatorV3, category10, category20,

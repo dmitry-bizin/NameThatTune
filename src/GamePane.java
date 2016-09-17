@@ -19,7 +19,7 @@ public class GamePane {
     private ImageView gameBackground;
 
     public GamePane() {
-        gameBackground = new ImageView(new Image(Main.getResource("images/play.jpg")));
+        gameBackground = new ImageView(new Image(Main.getPathToResource("images/play.jpg")));
         gameBackground.setFitHeight(Main.SCREEN_SIZE.getHeight());//подгон под высоту
         gameBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         gameBackground.setSmooth(true);//сглаживание
@@ -50,7 +50,7 @@ public class GamePane {
         getBackLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
         getBackLabel().setId("gamePaneLabel");
         gameScene = new Scene(gamePane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
-        gameScene.getStylesheets().add(Main.getResource("css/style.css"));
+        gameScene.getStylesheets().add(Main.getPathToResource("css/style.css"));
         gamePane.getChildren().addAll(gameBackground, getTour1Label(), getTour2Label(), getTour3Label(), getSuperGameLabel(), getBackLabel());
     }
 

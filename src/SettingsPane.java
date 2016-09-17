@@ -20,7 +20,7 @@ public class SettingsPane {
 
 
     public SettingsPane() {
-        settingsBackground = new ImageView(new Image(Main.getResource("images/settings.jpg")));
+        settingsBackground = new ImageView(new Image(Main.getPathToResource("images/settings.jpg")));
         settingsBackground.setFitHeight(Main.SCREEN_SIZE.getHeight());//подгон под высоту
         settingsBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         settingsBackground.setSmooth(true);//сглаживание
@@ -51,7 +51,7 @@ public class SettingsPane {
         getBackLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
         getBackLabel().setId("settingsPaneLabel");
         settingsScene = new Scene(settingsPane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
-        settingsScene.getStylesheets().add(Main.getResource("css/style.css"));
+        settingsScene.getStylesheets().add(Main.getPathToResource("css/style.css"));
         settingsPane.getChildren().addAll(settingsBackground, getSettingsTour1Label(), getSettingsTour2Label(), getSettingsTour3Label(), getSettingsSuperGameLabel(), getBackLabel());
     }
 

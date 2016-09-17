@@ -28,7 +28,7 @@ public class SettingsTour1Pane {
     private Categories categories;
 
     public SettingsTour1Pane() {
-        settingsToursBackground = new ImageView(new Image(Main.getResource("images/settings_tours.jpg")));
+        settingsToursBackground = new ImageView(new Image(Main.getPathToResource("images/settings_tours.jpg")));
         settingsToursBackground.setFitHeight(Main.SCREEN_SIZE.getHeight());//подгон под высоту
         settingsToursBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         settingsToursBackground.setSmooth(true);//сглаживание
@@ -66,7 +66,7 @@ public class SettingsTour1Pane {
         getBackLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
         getBackLabel().setId("settingsToursPaneLabel");
         settingsTour1Scene = new Scene(settingsTour1Pane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
-        settingsTour1Scene.getStylesheets().add(Main.getResource("css/style.css"));
+        settingsTour1Scene.getStylesheets().add(Main.getPathToResource("css/style.css"));
         settingsTour1Pane.getChildren().addAll(settingsToursBackground, category1Label, category2Label, category3Label, category4Label, backLabel);
     }
 

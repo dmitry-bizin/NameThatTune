@@ -4,7 +4,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Paint;
 import xml.Categories;
 
 import javax.xml.bind.JAXBContext;
@@ -27,7 +26,7 @@ public class SettingsTour3Pane {
     private Categories categories;
 
     public SettingsTour3Pane() {
-        settingsToursBackground = new ImageView(new Image(Main.getResource("images/settings_tours.jpg")));
+        settingsToursBackground = new ImageView(new Image(Main.getPathToResource("images/settings_tours.jpg")));
         settingsToursBackground.setFitHeight(Main.SCREEN_SIZE.getHeight());//подгон под высоту
         settingsToursBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         settingsToursBackground.setSmooth(true);//сглаживание
@@ -65,7 +64,7 @@ public class SettingsTour3Pane {
         getBackLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
         getBackLabel().setId("settingsToursPaneLabel");
         settingsTour3Scene = new Scene(settingsTour3Pane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
-        settingsTour3Scene.getStylesheets().add(Main.getResource("css/style.css"));
+        settingsTour3Scene.getStylesheets().add(Main.getPathToResource("css/style.css"));
         settingsTour3Pane.getChildren().addAll(settingsToursBackground, category1Label, category2Label, category3Label, category4Label, backLabel);
     }
 

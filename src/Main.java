@@ -1,6 +1,4 @@
 import javafx.application.Application;
-import javafx.application.Preloader;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -32,7 +30,7 @@ public class Main extends Application {
 
 
     //возвращает абсолютный путь ресурса
-    public static String getResource(String fileName) {
+    public static String getPathToResource(String fileName) {
         return classLoader.getResource(fileName).toString();
     }
 
@@ -537,7 +535,7 @@ public class Main extends Application {
         SettingsTour3Category4Pane settingsTour3Category4Pane = new SettingsTour3Category4Pane();
         //SettingsSuperGamePane settingsSuperGamePane = new SettingsSuperGamePane();
         primaryStage.setTitle("Угадай мелодию!");
-        primaryStage.getIcons().add(new Image(getResource("images/icon.png")));
+        primaryStage.getIcons().add(new Image(getPathToResource("images/icon.png")));
         primaryStage.setScene(mainPane.getMainScene());
         primaryStage.setWidth(SCREEN_SIZE.getWidth());
         primaryStage.setHeight(SCREEN_SIZE.getHeight());
@@ -557,6 +555,7 @@ public class Main extends Application {
             primaryStage.setTitle("Угадай мелодию!");
         });
         gamePane.getTour1Label().setOnMouseClicked(event -> {
+            tour1Pane.start();
             primaryStage.setScene(tour1Pane.getTour1Scene());
             primaryStage.setTitle("1 тур");
         });
@@ -821,6 +820,11 @@ public class Main extends Application {
             settingsTour1Pane.update();
             primaryStage.setScene(settingsTour1Pane.getSettingsTour1Scene());
             primaryStage.setTitle("Настройки 1го тура");
+        });
+        tour1Pane.getBackLabel().setOnMouseClicked(event -> {
+            tour1Pane.back();
+            primaryStage.setScene(gamePane.getGameScene());
+            primaryStage.setTitle("Угадай мелодию!");
         });
     }
 }

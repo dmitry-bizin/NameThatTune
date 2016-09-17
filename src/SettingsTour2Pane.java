@@ -9,7 +9,6 @@ import xml.Categories;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
-import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -29,7 +28,7 @@ public class SettingsTour2Pane {
     private Categories categories;
 
     public SettingsTour2Pane() {
-        settingsToursBackground = new ImageView(new Image(Main.getResource("images/settings_tours.jpg")));
+        settingsToursBackground = new ImageView(new Image(Main.getPathToResource("images/settings_tours.jpg")));
         settingsToursBackground.setFitHeight(Main.SCREEN_SIZE.getHeight());//подгон под высоту
         settingsToursBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         settingsToursBackground.setSmooth(true);//сглаживание
@@ -67,7 +66,7 @@ public class SettingsTour2Pane {
         getBackLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
         getBackLabel().setId("settingsToursPaneLabel");
         settingsTour2Scene = new Scene(settingsTour2Pane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
-        settingsTour2Scene.getStylesheets().add(Main.getResource("css/style.css"));
+        settingsTour2Scene.getStylesheets().add(Main.getPathToResource("css/style.css"));
         settingsTour2Pane.getChildren().addAll(settingsToursBackground, category1Label, category2Label, category3Label, category4Label, backLabel);
     }
 
