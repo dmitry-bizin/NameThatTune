@@ -593,6 +593,7 @@ public class SettingsTour1Category2Pane {
         if (mediaPlayer40 != null) {
             mediaPlayer40.dispose();
         }
+        System.gc();
     }
 
     public void start() {//при заходе на сцену
