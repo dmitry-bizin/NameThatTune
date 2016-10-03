@@ -23,35 +23,42 @@ public class GamePane {
         gameBackground.setFitHeight(Main.SCREEN_SIZE.getHeight());//подгон под высоту
         gameBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         gameBackground.setSmooth(true);//сглаживание
+
         gamePane = new Pane();
+
         tour1Label = new Label("1 тур");
-        getTour1Label().setCursor(Cursor.HAND);
+        tour1Label.setCursor(Cursor.HAND);
+        tour1Label.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);
+        tour1Label.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
+        tour1Label.setId("gamePaneLabel");
+
         tour2Label = new Label("2 тур");
-        getTour2Label().setCursor(Cursor.HAND);
+        tour2Label.setCursor(Cursor.HAND);
+        tour2Label.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);
+        tour2Label.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.2);
+        tour2Label.setId("gamePaneLabel");
+
         tour3Label = new Label("3 тур");
-        getTour3Label().setCursor(Cursor.HAND);
+        tour3Label.setCursor(Cursor.HAND);
+        tour3Label.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);
+        tour3Label.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
+        tour3Label.setId("gamePaneLabel");
+
         superGameLabel = new Label("Супер-игра");
-        getSuperGameLabel().setCursor(Cursor.HAND);
+        superGameLabel.setCursor(Cursor.HAND);
+        superGameLabel.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);
+        superGameLabel.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
+        superGameLabel.setId("gamePaneLabel");
+
         backLabel = new Label("Назад");
-        getBackLabel().setCursor(Cursor.HAND);
-        getTour1Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);
-        getTour1Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
-        getTour1Label().setId("gamePaneLabel");
-        getTour2Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);
-        getTour2Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.2);
-        getTour2Label().setId("gamePaneLabel");
-        getTour3Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);
-        getTour3Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
-        getTour3Label().setId("gamePaneLabel");
-        getSuperGameLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);
-        getSuperGameLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
-        getSuperGameLabel().setId("gamePaneLabel");
-        getBackLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);
-        getBackLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
-        getBackLabel().setId("gamePaneLabel");
+        backLabel.setCursor(Cursor.HAND);
+        backLabel.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);
+        backLabel.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
+        backLabel.setId("gamePaneLabel");
+
         gameScene = new Scene(gamePane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
         gameScene.getStylesheets().add(Main.getPathToResource("css/style.css"));
-        gamePane.getChildren().addAll(gameBackground, getTour1Label(), getTour2Label(), getTour3Label(), getSuperGameLabel(), getBackLabel());
+        gamePane.getChildren().addAll(gameBackground, tour1Label, tour2Label, tour3Label, superGameLabel, backLabel);
     }
 
     public Label getTour1Label() {

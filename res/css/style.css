@@ -169,3 +169,11 @@
     -fx-font-weight: bold;
     -fx-text-fill: blue;
 }
+
+#copyrightLabel {
+    -fx-font-family: Times New Roman, Georgia, serif;
+    -fx-opacity: 0.3;
+    -fx-text-fill: blue;
+    -fx-font-smoothing-type: lcd;
+    -fx-font-size: 9pt;
+}

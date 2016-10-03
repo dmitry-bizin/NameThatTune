@@ -32,39 +32,47 @@ public class SettingsTour1Pane {
         settingsToursBackground.setFitHeight(Main.SCREEN_SIZE.getHeight());//подгон под высоту
         settingsToursBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         settingsToursBackground.setSmooth(true);//сглаживание
+
         settingsTour1Pane = new Pane();
+
         try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("settings/categories1.xml"), "UTF-8")) {
             JAXBContext jaxbContext = JAXBContext.newInstance(Categories.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             categories = (Categories) unmarshaller.unmarshal(inputStreamReader);
+
             category1Label = new Label(categories.getCategory1());
-            getCategory1Label().setCursor(Cursor.HAND);
-            getCategory1Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
-            getCategory1Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
-            getCategory1Label().setId("settingsToursPaneLabel");
+            category1Label.setCursor(Cursor.HAND);
+            category1Label.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
+            category1Label.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
+            category1Label.setId("settingsToursPaneLabel");
+
             category2Label = new Label(categories.getCategory2());
-            getCategory2Label().setCursor(Cursor.HAND);
-            getCategory2Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
-            getCategory2Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.2);
-            getCategory2Label().setId("settingsToursPaneLabel");
+            category2Label.setCursor(Cursor.HAND);
+            category2Label.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
+            category2Label.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.2);
+            category2Label.setId("settingsToursPaneLabel");
+
             category3Label = new Label(categories.getCategory3());
-            getCategory3Label().setCursor(Cursor.HAND);
-            getCategory3Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
-            getCategory3Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
-            getCategory3Label().setId("settingsToursPaneLabel");
+            category3Label.setCursor(Cursor.HAND);
+            category3Label.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
+            category3Label.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
+            category3Label.setId("settingsToursPaneLabel");
+
             category4Label = new Label(categories.getCategory4());
-            getCategory4Label().setCursor(Cursor.HAND);
-            getCategory4Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
-            getCategory4Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
-            getCategory4Label().setId("settingsToursPaneLabel");
+            category4Label.setCursor(Cursor.HAND);
+            category4Label.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
+            category4Label.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
+            category4Label.setId("settingsToursPaneLabel");
         } catch (IOException | JAXBException e) {
             e.printStackTrace();
         }
+
         backLabel = new Label("Назад");
-        getBackLabel().setCursor(Cursor.HAND);
-        getBackLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
-        getBackLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
-        getBackLabel().setId("settingsToursPaneLabel");
+        backLabel.setCursor(Cursor.HAND);
+        backLabel.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.01);//в процентах от размеров экрана,резиновая вёрстка
+        backLabel.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
+        backLabel.setId("settingsToursPaneLabel");
+
         settingsTour1Scene = new Scene(settingsTour1Pane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
         settingsTour1Scene.getStylesheets().add(Main.getPathToResource("css/style.css"));
         settingsTour1Pane.getChildren().addAll(settingsToursBackground, category1Label, category2Label, category3Label, category4Label, backLabel);

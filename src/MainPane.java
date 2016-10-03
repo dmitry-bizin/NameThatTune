@@ -16,31 +16,42 @@ public class MainPane {
     private Label exitLabel;
     private Scene mainScene;
     private ImageView mainBackground;
+    private Label copyright;
 
     public MainPane() {
         mainBackground = new ImageView(new Image(Main.getPathToResource("images/main.jpg")));
         mainBackground.setFitHeight(Main.SCREEN_SIZE.getHeight());//подгон под высоту
         mainBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         mainBackground.setSmooth(true);//сглаживание
+
         mainPane = new Pane();
+
         gameLabel = new Label("Игра");
-        getGameLabel().setCursor(Cursor.HAND);
+        gameLabel.setCursor(Cursor.HAND);
+        gameLabel.setId("mainPaneLabel");
+        gameLabel.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);//в процентах от размеров экрана,резиновая вёрстка
+        gameLabel.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
+
         settingsLabel = new Label("Настройки");
-        getSettingsLabel().setCursor(Cursor.HAND);
+        settingsLabel.setCursor(Cursor.HAND);
+        settingsLabel.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
+        settingsLabel.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
+        settingsLabel.setId("mainPaneLabel");
+
+        copyright = new Label("© Bizin Dmitriy, 2016");
+        copyright.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.46);
+        copyright.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.96);
+        copyright.setId("copyrightLabel");
+
         exitLabel = new Label("Выход");
-        getExitLabel().setCursor(Cursor.HAND);
-        getGameLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);//в процентах от размеров экрана,резиновая вёрстка
-        getGameLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
-        getGameLabel().setId("mainPaneLabel");
-        getSettingsLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
-        getSettingsLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
-        getSettingsLabel().setId("mainPaneLabel");
-        getExitLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
-        getExitLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
-        getExitLabel().setId("mainPaneLabel");
+        exitLabel.setCursor(Cursor.HAND);
+        exitLabel.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.6);
+        exitLabel.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
+        exitLabel.setId("mainPaneLabel");
+
         mainScene = new Scene(mainPane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
         mainScene.getStylesheets().add(Main.getPathToResource("css/style.css"));
-        mainPane.getChildren().addAll(mainBackground, getGameLabel(), getSettingsLabel(), getExitLabel());
+        mainPane.getChildren().addAll(mainBackground, gameLabel, settingsLabel, exitLabel, copyright);
     }
 
     public Label getGameLabel() {

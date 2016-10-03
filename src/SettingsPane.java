@@ -24,35 +24,43 @@ public class SettingsPane {
         settingsBackground.setFitHeight(Main.SCREEN_SIZE.getHeight());//подгон под высоту
         settingsBackground.setFitWidth(Main.SCREEN_SIZE.getWidth());//подгон под ширину
         settingsBackground.setSmooth(true);//сглаживание
+
         settingsPane = new Pane();
+
         settingsTour1Label = new Label("Настройки 1го тура");
-        getSettingsTour1Label().setCursor(Cursor.HAND);
-        getSettingsTour1Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);//в процентах от размеров экрана,резиновая вёрстка
-        getSettingsTour1Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
-        getSettingsTour1Label().setId("settingsPaneLabel");
+        settingsTour1Label.setCursor(Cursor.HAND);
+        settingsTour1Label.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);//в процентах от размеров экрана,резиновая вёрстка
+        settingsTour1Label.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
+        settingsTour1Label.setId("settingsPaneLabel");
+
         settingsTour2Label = new Label("Настройки 2го тура");
-        getSettingsTour2Label().setCursor(Cursor.HAND);
-        getSettingsTour2Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);//в процентах от размеров экрана,резиновая вёрстка
-        getSettingsTour2Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.2);
-        getSettingsTour2Label().setId("settingsPaneLabel");
+        settingsTour2Label.setCursor(Cursor.HAND);
+        settingsTour2Label.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);//в процентах от размеров экрана,резиновая вёрстка
+        settingsTour2Label.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.2);
+        settingsTour2Label.setId("settingsPaneLabel");
+
         settingsTour3Label = new Label("Настройки 3го тура");
-        getSettingsTour3Label().setCursor(Cursor.HAND);
-        getSettingsTour3Label().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);//в процентах от размеров экрана,резиновая вёрстка
-        getSettingsTour3Label().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
-        getSettingsTour3Label().setId("settingsPaneLabel");
+        settingsTour3Label.setCursor(Cursor.HAND);
+        settingsTour3Label.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);//в процентах от размеров экрана,резиновая вёрстка
+        settingsTour3Label.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.3);
+        settingsTour3Label.setId("settingsPaneLabel");
+
         settingsSuperGameLabel = new Label("Настройки супер-игры");
-        getSettingsSuperGameLabel().setCursor(Cursor.HAND);
-        getSettingsSuperGameLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);//в процентах от размеров экрана,резиновая вёрстка
-        getSettingsSuperGameLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
-        getSettingsSuperGameLabel().setId("settingsPaneLabel");
+        settingsSuperGameLabel.setCursor(Cursor.HAND);
+        settingsSuperGameLabel.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);//в процентах от размеров экрана,резиновая вёрстка
+        settingsSuperGameLabel.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
+        settingsSuperGameLabel.setId("settingsPaneLabel");
+
         backLabel = new Label("Назад");
-        getBackLabel().setCursor(Cursor.HAND);
-        getBackLabel().setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);//в процентах от размеров экрана,резиновая вёрстка
-        getBackLabel().setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
-        getBackLabel().setId("settingsPaneLabel");
+        backLabel.setCursor(Cursor.HAND);
+        backLabel.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);//в процентах от размеров экрана,резиновая вёрстка
+        backLabel.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
+        backLabel.setId("settingsPaneLabel");
+
         settingsScene = new Scene(settingsPane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
         settingsScene.getStylesheets().add(Main.getPathToResource("css/style.css"));
-        settingsPane.getChildren().addAll(settingsBackground, getSettingsTour1Label(), getSettingsTour2Label(), getSettingsTour3Label(), getSettingsSuperGameLabel(), getBackLabel());
+        settingsPane.getChildren().addAll(settingsBackground, settingsTour1Label, settingsTour2Label, settingsTour3Label,
+                settingsSuperGameLabel, backLabel);
     }
 
     public Scene getSettingsScene() {
