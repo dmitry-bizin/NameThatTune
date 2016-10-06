@@ -1,0 +1,9 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+.gitignore
+musics
+settings/categories1.xml
+settings/categories2.xml
+settings/categories3.xml
