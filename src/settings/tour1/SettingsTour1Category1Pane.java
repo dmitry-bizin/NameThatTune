@@ -1,5 +1,8 @@
 package settings.tour1;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.geometry.Orientation;
 import javafx.scene.Cursor;
 import javafx.scene.Scene;
@@ -7,12 +10,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Separator;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.Glow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.FileChooser;
+import javafx.util.Duration;
 import main.Main;
 import xml.Categories;
 import xml.Melody;
@@ -92,6 +97,14 @@ public class SettingsTour1Category1Pane {
     private ImageView play40ImageView;
     private ImageView pause40ImageView;
     private Label tour1Label;
+    private Glow melody10Glow;
+    private Timeline melody10Timeline;
+    private Glow melody20Glow;
+    private Timeline melody20Timeline;
+    private Glow melody30Glow;
+    private Timeline melody30Timeline;
+    private Glow melody40Glow;
+    private Timeline melody40Timeline;
 
     public SettingsTour1Category1Pane() {
         pane = new Pane();
@@ -138,6 +151,30 @@ public class SettingsTour1Category1Pane {
         categoryTextField.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.1);
         categoryTextField.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.1);
         categoryTextField.setPrefWidth(Main.SCREEN_SIZE.getWidth() * 0.2);
+
+        melody10Glow = new Glow();
+        melody10Timeline = new Timeline();
+        melody10Timeline.setCycleCount(Timeline.INDEFINITE);
+        melody10Timeline.setAutoReverse(true);
+        melody10Timeline.getKeyFrames().add(new KeyFrame(Duration.millis(500), new KeyValue(melody10Glow.levelProperty(), 1.0)));
+
+        melody20Glow = new Glow();
+        melody20Timeline = new Timeline();
+        melody20Timeline.setCycleCount(Timeline.INDEFINITE);
+        melody20Timeline.setAutoReverse(true);
+        melody20Timeline.getKeyFrames().add(new KeyFrame(Duration.millis(500), new KeyValue(melody20Glow.levelProperty(), 1.0)));
+
+        melody30Glow = new Glow();
+        melody30Timeline = new Timeline();
+        melody30Timeline.setCycleCount(Timeline.INDEFINITE);
+        melody30Timeline.setAutoReverse(true);
+        melody30Timeline.getKeyFrames().add(new KeyFrame(Duration.millis(500), new KeyValue(melody30Glow.levelProperty(), 1.0)));
+
+        melody40Glow = new Glow();
+        melody40Timeline = new Timeline();
+        melody40Timeline.setCycleCount(Timeline.INDEFINITE);
+        melody40Timeline.setAutoReverse(true);
+        melody40Timeline.getKeyFrames().add(new KeyFrame(Duration.millis(500), new KeyValue(melody40Glow.levelProperty(), 1.0)));
 
         saveCategoryButton = new Button("Сохранить");
         saveCategoryButton.setCursor(Cursor.HAND);
@@ -312,6 +349,10 @@ public class SettingsTour1Category1Pane {
         save10Button.setOnMouseClicked(event -> {
             if (melody10File != null) {
                 if (mediaPlayer10 != null) {//останавливает текущее воспроизведение
+                    if (melody10Timeline.getStatus().toString().equals("RUNNING")) {
+                        melody10Timeline.pause();
+                        melody10Glow.setLevel(0.0);
+                    }
                     mediaPlayer10.dispose();
                 }
                 try (FileInputStream fileInputStream = new FileInputStream(melody10File);
@@ -351,6 +392,10 @@ public class SettingsTour1Category1Pane {
         save20Button.setOnMouseClicked(event -> {
             if (melody20File != null) {
                 if (mediaPlayer20 != null) {//останавливает текущее воспроизведение
+                    if (melody20Timeline.getStatus().toString().equals("RUNNING")) {
+                        melody20Timeline.pause();
+                        melody20Glow.setLevel(0.0);
+                    }
                     mediaPlayer20.dispose();
                 }
                 try (FileInputStream fileInputStream = new FileInputStream(melody20File);
@@ -390,6 +435,10 @@ public class SettingsTour1Category1Pane {
         save30Button.setOnMouseClicked(event -> {
             if (melody30File != null) {
                 if (mediaPlayer30 != null) {//останавливает текущее воспроизведение
+                    if (melody30Timeline.getStatus().toString().equals("RUNNING")) {
+                        melody30Timeline.pause();
+                        melody30Glow.setLevel(0.0);
+                    }
                     mediaPlayer30.dispose();
                 }
                 try (FileInputStream fileInputStream = new FileInputStream(melody30File);
@@ -429,6 +478,10 @@ public class SettingsTour1Category1Pane {
         save40Button.setOnMouseClicked(event -> {
             if (melody40File != null) {
                 if (mediaPlayer40 != null) {//останавливает текущее воспроизведение
+                    if (melody40Timeline.getStatus().toString().equals("RUNNING")) {
+                        melody40Timeline.pause();
+                        melody40Glow.setLevel(0.0);
+                    }
                     mediaPlayer40.dispose();
                 }
                 try (FileInputStream fileInputStream = new FileInputStream(melody40File);
@@ -476,11 +529,35 @@ public class SettingsTour1Category1Pane {
         play10Button.setOnMouseClicked(event -> {
             mediaPlayer10.setVolume(1);
             mediaPlayer10.setCycleCount(Integer.MAX_VALUE);
+            if (mediaPlayer20 != null && mediaPlayer20.getStatus().toString().equals("PLAYING")) {
+                if (melody20Timeline.getStatus().toString().equals("RUNNING")) {
+                    melody20Timeline.pause();
+                    melody20Glow.setLevel(0.0);
+                }
+                mediaPlayer20.pause();
+            }
+            if (mediaPlayer30 != null && mediaPlayer30.getStatus().toString().equals("PLAYING")) {
+                if (melody30Timeline.getStatus().toString().equals("RUNNING")) {
+                    melody30Timeline.pause();
+                    melody30Glow.setLevel(0.0);
+                }
+                mediaPlayer30.pause();
+            }
+            if (mediaPlayer40 != null && mediaPlayer40.getStatus().toString().equals("PLAYING")) {
+                if (melody40Timeline.getStatus().toString().equals("RUNNING")) {
+                    melody40Timeline.pause();
+                    melody40Glow.setLevel(0.0);
+                }
+                mediaPlayer40.pause();
+            }
+            category10Label.setEffect(melody10Glow);
+            melody10Glow.setLevel(0.0);
+            melody10Timeline.play();
             mediaPlayer10.play();
         });
         pause10Button.setOnMouseClicked(event -> {
-            mediaPlayer10.setVolume(1);
-            mediaPlayer10.setCycleCount(Integer.MAX_VALUE);
+            melody10Timeline.pause();
+            melody10Glow.setLevel(0.0);
             mediaPlayer10.pause();
         });
 
@@ -500,11 +577,35 @@ public class SettingsTour1Category1Pane {
         play20Button.setOnMouseClicked(event -> {
             mediaPlayer20.setVolume(1);
             mediaPlayer20.setCycleCount(Integer.MAX_VALUE);
+            if (mediaPlayer10 != null && mediaPlayer10.getStatus().toString().equals("PLAYING")) {
+                if (melody10Timeline.getStatus().toString().equals("RUNNING")) {
+                    melody10Timeline.pause();
+                    melody10Glow.setLevel(0.0);
+                }
+                mediaPlayer10.pause();
+            }
+            if (mediaPlayer30 != null && mediaPlayer30.getStatus().toString().equals("PLAYING")) {
+                if (melody30Timeline.getStatus().toString().equals("RUNNING")) {
+                    melody30Timeline.pause();
+                    melody30Glow.setLevel(0.0);
+                }
+                mediaPlayer30.pause();
+            }
+            if (mediaPlayer40 != null && mediaPlayer40.getStatus().toString().equals("PLAYING")) {
+                if (melody40Timeline.getStatus().toString().equals("RUNNING")) {
+                    melody40Timeline.pause();
+                    melody40Glow.setLevel(0.0);
+                }
+                mediaPlayer40.pause();
+            }
+            category20Label.setEffect(melody20Glow);
+            melody20Glow.setLevel(0.0);
+            melody20Timeline.play();
             mediaPlayer20.play();
         });
         pause20Button.setOnMouseClicked(event -> {
-            mediaPlayer20.setVolume(1);
-            mediaPlayer20.setCycleCount(Integer.MAX_VALUE);
+            melody20Timeline.pause();
+            melody20Glow.setLevel(0.0);
             mediaPlayer20.pause();
         });
 
@@ -524,11 +625,35 @@ public class SettingsTour1Category1Pane {
         play30Button.setOnMouseClicked(event -> {
             mediaPlayer30.setVolume(1);
             mediaPlayer30.setCycleCount(Integer.MAX_VALUE);
+            if (mediaPlayer10 != null && mediaPlayer10.getStatus().toString().equals("PLAYING")) {
+                if (melody10Timeline.getStatus().toString().equals("RUNNING")) {
+                    melody10Timeline.pause();
+                    melody10Glow.setLevel(0.0);
+                }
+                mediaPlayer10.pause();
+            }
+            if (mediaPlayer20 != null && mediaPlayer20.getStatus().toString().equals("PLAYING")) {
+                if (melody20Timeline.getStatus().toString().equals("RUNNING")) {
+                    melody20Timeline.pause();
+                    melody20Glow.setLevel(0.0);
+                }
+                mediaPlayer20.pause();
+            }
+            if (mediaPlayer40 != null && mediaPlayer40.getStatus().toString().equals("PLAYING")) {
+                if (melody40Timeline.getStatus().toString().equals("RUNNING")) {
+                    melody40Timeline.pause();
+                    melody40Glow.setLevel(0.0);
+                }
+                mediaPlayer40.pause();
+            }
+            category30Label.setEffect(melody30Glow);
+            melody30Glow.setLevel(0.0);
+            melody30Timeline.play();
             mediaPlayer30.play();
         });
         pause30Button.setOnMouseClicked(event -> {
-            mediaPlayer30.setVolume(1);
-            mediaPlayer30.setCycleCount(Integer.MAX_VALUE);
+            melody30Timeline.pause();
+            melody30Glow.setLevel(0.0);
             mediaPlayer30.pause();
         });
 
@@ -548,11 +673,35 @@ public class SettingsTour1Category1Pane {
         play40Button.setOnMouseClicked(event -> {
             mediaPlayer40.setVolume(1);
             mediaPlayer40.setCycleCount(Integer.MAX_VALUE);
+            if (mediaPlayer10 != null && mediaPlayer10.getStatus().toString().equals("PLAYING")) {
+                if (melody10Timeline.getStatus().toString().equals("RUNNING")) {
+                    melody10Timeline.pause();
+                    melody10Glow.setLevel(0.0);
+                }
+                mediaPlayer10.pause();
+            }
+            if (mediaPlayer20 != null && mediaPlayer20.getStatus().toString().equals("PLAYING")) {
+                if (melody20Timeline.getStatus().toString().equals("RUNNING")) {
+                    melody20Timeline.pause();
+                    melody20Glow.setLevel(0.0);
+                }
+                mediaPlayer20.pause();
+            }
+            if (mediaPlayer30 != null && mediaPlayer30.getStatus().toString().equals("PLAYING")) {
+                if (melody30Timeline.getStatus().toString().equals("RUNNING")) {
+                    melody30Timeline.pause();
+                    melody30Glow.setLevel(0.0);
+                }
+                mediaPlayer30.pause();
+            }
+            category40Label.setEffect(melody40Glow);
+            melody40Glow.setLevel(0.0);
+            melody40Timeline.play();
             mediaPlayer40.play();
         });
         pause40Button.setOnMouseClicked(event -> {
-            mediaPlayer40.setVolume(1);
-            mediaPlayer40.setCycleCount(Integer.MAX_VALUE);
+            melody40Timeline.pause();
+            melody40Glow.setLevel(0.0);
             mediaPlayer40.pause();
         });
 
@@ -586,15 +735,39 @@ public class SettingsTour1Category1Pane {
         openMelody40Button.setId("unselectedButton");
         if (mediaPlayer10 != null) {
             mediaPlayer10.dispose();
+            media10 = null;
+            mediaPlayer10 = null;
         }
         if (mediaPlayer20 != null) {
             mediaPlayer20.dispose();
+            media20 = null;
+            mediaPlayer20 = null;
         }
         if (mediaPlayer30 != null) {
             mediaPlayer30.dispose();
+            media30 = null;
+            mediaPlayer30 = null;
         }
         if (mediaPlayer40 != null) {
             mediaPlayer40.dispose();
+            media40 = null;
+            mediaPlayer40 = null;
+        }
+        melody10Glow.setLevel(0.0);
+        if (melody10Timeline.getStatus().toString().equals("RUNNING")) {
+            melody10Timeline.stop();
+        }
+        melody20Glow.setLevel(0.0);
+        if (melody20Timeline.getStatus().toString().equals("RUNNING")) {
+            melody20Timeline.stop();
+        }
+        melody30Glow.setLevel(0.0);
+        if (melody30Timeline.getStatus().toString().equals("RUNNING")) {
+            melody30Timeline.stop();
+        }
+        melody40Glow.setLevel(0.0);
+        if (melody40Timeline.getStatus().toString().equals("RUNNING")) {
+            melody40Timeline.stop();
         }
         System.gc();
     }
