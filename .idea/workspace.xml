@@ -7,27 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7fe07d1-29b5-46c0-8421-097006a5a176" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/xml/MelodiesFolder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GuessMelody/GuessMelody.jar" afterPath="$PROJECT_DIR$/out/artifacts/GuessMelody/GuessMelody.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/main/Main.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/main/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/settings/SettingsPane.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/SettingsPane.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour1/SettingsTour1Category2Pane.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour1/SettingsTour1Category2Pane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour1/SettingsTour1Category1Pane.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour1/SettingsTour1Category1Pane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour1/SettingsTour1Category3Pane.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour1/SettingsTour1Category3Pane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour1/SettingsTour1Category4Pane.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour1/SettingsTour1Category4Pane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour2/SettingsTour2Category1Pane.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour2/SettingsTour2Category1Pane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour2/SettingsTour2Category2Pane.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour2/SettingsTour2Category2Pane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour2/SettingsTour2Category3Pane.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour2/SettingsTour2Category3Pane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour2/SettingsTour2Category4Pane.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour2/SettingsTour2Category4Pane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour3/SettingsTour3Category1Pane.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour3/SettingsTour3Category1Pane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour3/SettingsTour3Category2Pane.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour3/SettingsTour3Category2Pane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour3/SettingsTour3Category3Pane.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour3/SettingsTour3Category3Pane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour3/SettingsTour3Category4Pane.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour3/SettingsTour3Category4Pane.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GuessMelody/GuessMelody.jnlp" afterPath="$PROJECT_DIR$/out/artifacts/GuessMelody/GuessMelody.jnlp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Main.java" afterPath="$PROJECT_DIR$/src/main/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/SettingsPane.java" afterPath="$PROJECT_DIR$/src/settings/SettingsPane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category1Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category1Pane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category2Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category2Pane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category3Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category3Pane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category4Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category4Pane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category1Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category1Pane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category2Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category2Pane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category3Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category3Pane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category4Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category4Pane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category1Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category1Pane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category2Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category2Pane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category3Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category3Pane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category4Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category4Pane.java" />
     </list>
     <ignored path="GuessMelody.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1015,7 +1006,7 @@
       <workItem from="1478547116006" duration="56000" />
       <workItem from="1482388799858" duration="23000" />
       <workItem from="1484394022576" duration="3000" />
-      <workItem from="1485029541214" duration="3575000" />
+      <workItem from="1485029541214" duration="3731000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <created>1472532843603</created>
@@ -1185,11 +1176,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475737661144</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="v1.1">
+      <created>1485033848259</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1485033848259</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164057000" />
+    <option name="totallyTimeSpent" value="164213000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1264,7 +1262,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1" />
+    <MESSAGE value="v1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
