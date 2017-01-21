@@ -20,6 +20,7 @@ import javafx.stage.FileChooser;
 import javafx.util.Duration;
 import main.Main;
 import xml.Categories;
+import xml.MelodiesFolder;
 import xml.Melody;
 
 import javax.xml.bind.JAXBContext;
@@ -245,8 +246,19 @@ public class SettingsTour3Category3Pane {
         hSeparator.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
         hSeparator.setPrefWidth(Main.SCREEN_SIZE.getWidth());
 
+        MelodiesFolder melodiesFolder = null;
+        try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("settings/melodiesFolders.xml"), "UTF-8")) {
+            JAXBContext jaxbContext = JAXBContext.newInstance(MelodiesFolder.class);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            melodiesFolder = (MelodiesFolder) unmarshaller.unmarshal(inputStreamReader);
+        } catch (JAXBException | IOException e) {
+            e.printStackTrace();
+        }
         fileChooser = new FileChooser();
         fileChooser.setTitle("Выбрать мелодию для загрузки");
+        if (melodiesFolder != null && !melodiesFolder.getFolder().equals("")) {
+            fileChooser.setInitialDirectory(new File(melodiesFolder.getFolder()));
+        }
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Audio Files", "*.mp3"));
 
         openMelody10Button = new Button("Выбрать");

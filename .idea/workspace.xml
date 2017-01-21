@@ -7,116 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7fe07d1-29b5-46c0-8421-097006a5a176" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/GuessMelody/GuessMelody.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/game/GamePane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/game/tour1/Tour1Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/game/tour2/Tour2Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/game/tour3/Tour3Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/main.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/notes/blue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/notes/darkBlue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/notes/darkGreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/notes/green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/notes/orange.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/notes/original.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/notes/pink.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/notes/red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/notes/violet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/notes/yellow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/pause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/play.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/play.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/settings.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/settings_categories.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/settings_tours.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/images/tour.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/main/Main.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/main/MainPane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/SettingsPane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/supergame/SettingsSuperGamePane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour1/SettingsTour1Category1Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour1/SettingsTour1Category2Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour1/SettingsTour1Category3Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour1/SettingsTour1Category4Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour1/SettingsTour1Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour2/SettingsTour2Category1Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour2/SettingsTour2Category2Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour2/SettingsTour2Category3Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour2/SettingsTour2Category4Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour2/SettingsTour2Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour3/SettingsTour3Category1Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour3/SettingsTour3Category2Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour3/SettingsTour3Category3Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour3/SettingsTour3Category4Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour3/SettingsTour3Pane.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/xml/Categories.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/xml/Melody.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/GuessMelody/GuessMelody.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/GuessMelody/GuessMelody.jnlp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/GuessMelody/css/style.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category1/points10/10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category1/points20/20.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category1/points20/20.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category1/points30/30.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category1/points30/30.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category1/points40/40.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category1/points40/40.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category2/points10/10.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category2/points10/10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category2/points20/20.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category2/points30/30.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category2/points30/30.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category2/points40/40.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category3/points10/10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category3/points20/20.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category3/points30/30.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category3/points40/40.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category4/points10/10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category4/points20/20.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category4/points20/20.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category4/points30/30.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category4/points30/30.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour1/category4/points40/40.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category1/points10/10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category1/points20/20.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category1/points30/30.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category1/points40/40.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category2/points10/10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category2/points20/20.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category2/points30/30.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category2/points40/40.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category3/points10/10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category3/points20/20.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category3/points30/30.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category3/points40/40.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category4/points10/10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category4/points20/20.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category4/points30/30.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour2/category4/points40/40.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category1/points10/10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category1/points20/20.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category1/points30/30.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category1/points40/40.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category2/points10/10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category2/points20/20.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category2/points30/30.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category2/points40/40.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category3/points10/10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category3/points20/20.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category3/points30/30.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category3/points40/40.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category4/points10/10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category4/points20/20.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category4/points30/30.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musics/tour3/category4/points40/40.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/settings/categories1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/settings/categories2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/settings/categories3.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/xml/MelodiesFolder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GuessMelody/GuessMelody.jar" afterPath="$PROJECT_DIR$/out/artifacts/GuessMelody/GuessMelody.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/main/Main.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/main/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/settings/SettingsPane.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/SettingsPane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour1/SettingsTour1Category2Pane.class" afterPath="$PROJECT_DIR$/out/production/GuessMelody/settings/tour1/SettingsTour1Category2Pane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/GuessMelody/GuessMelody.jnlp" afterPath="$PROJECT_DIR$/out/artifacts/GuessMelody/GuessMelody.jnlp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Main.java" afterPath="$PROJECT_DIR$/src/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/SettingsPane.java" afterPath="$PROJECT_DIR$/src/settings/SettingsPane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category1Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category1Pane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category2Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category2Pane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category3Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category3Pane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category4Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category4Pane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category1Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category1Pane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category2Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category2Pane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category3Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category3Pane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category4Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category4Pane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category1Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category1Pane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category2Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category2Pane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category3Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category3Pane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category4Pane.java" afterPath="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category4Pane.java" />
     </list>
     <ignored path="GuessMelody.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -133,7 +44,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="C:\Users\Dmitriy\IdeaProjects\GuessMelody" />
   </component>
@@ -143,23 +53,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Tour1Pane.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/tour1/Tour1Pane.java">
+      <file leaf-file-name="SettingsTour2Category3Pane.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category3Pane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10931">
-              <caret line="670" column="7" selection-start-line="670" selection-start-column="7" selection-end-line="670" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="316">
+              <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tour2Pane.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/tour2/Tour2Pane.java">
+      <file leaf-file-name="SettingsTour2Category4Pane.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category4Pane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="720" column="20" selection-start-line="720" selection-start-column="20" selection-end-line="720" selection-end-column="20" />
+            <state relative-caret-position="394">
+              <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsTour3Category1Pane.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category1Pane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsTour3Category2Pane.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category2Pane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsTour3Category3Pane.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category3Pane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsTour3Category4Pane.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category4Pane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="melodiesFolders.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings/melodiesFolders.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -168,18 +126,28 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tour3Pane.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/tour3/Tour3Pane.java">
+      <file leaf-file-name="SettingsTour2Category2Pane.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category2Pane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13736">
-              <caret line="835" column="63" selection-start-line="835" selection-start-column="63" selection-end-line="835" selection-end-column="63" />
+            <state relative-caret-position="265">
+              <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsTour2Category1Pane.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category1Pane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
               <folding />
             </state>
           </provider>
@@ -208,9 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/xml/Melody.java" />
-        <option value="$PROJECT_DIR$/src/JavaFXPreloader.java" />
-        <option value="$USER_HOME$/Downloads/OfficeBuilding.java" />
         <option value="$PROJECT_DIR$/res/css/style.css" />
         <option value="$PROJECT_DIR$/src/GamePane.java" />
         <option value="$PROJECT_DIR$/src/MainPane.java" />
@@ -233,7 +198,6 @@
         <option value="$PROJECT_DIR$/src/Tour1Pane.java" />
         <option value="$PROJECT_DIR$/src/SettingsTour2Category1Pane.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/settings/SettingsPane.java" />
         <option value="$PROJECT_DIR$/src/main/MainPane.java" />
         <option value="$PROJECT_DIR$/src/game/GamePane.java" />
         <option value="$PROJECT_DIR$/src/settings/supergame/SettingsSuperGamePane.java" />
@@ -242,7 +206,15 @@
         <option value="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Pane.java" />
         <option value="$PROJECT_DIR$/src/game/tour2/Tour1Pane.java" />
         <option value="$PROJECT_DIR$/src/game/tour3/Tour1Pane.java" />
+        <option value="$PROJECT_DIR$/src/game/tour1/Tour1Pane.java" />
+        <option value="$PROJECT_DIR$/src/game/tour2/Tour2Pane.java" />
+        <option value="$PROJECT_DIR$/src/game/tour3/Tour3Pane.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/settings/SettingsFolderPane.java" />
+        <option value="$PROJECT_DIR$/src/settings/SettingsPane.java" />
+        <option value="$PROJECT_DIR$/src/xml/MelodiesFolder.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
+        <option value="$PROJECT_DIR$/settings/melodiesFolders.xml" />
         <option value="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category1Pane.java" />
         <option value="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category2Pane.java" />
         <option value="$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category3Pane.java" />
@@ -255,10 +227,6 @@
         <option value="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category2Pane.java" />
         <option value="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category3Pane.java" />
         <option value="$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category4Pane.java" />
-        <option value="$PROJECT_DIR$/src/game/tour1/Tour1Pane.java" />
-        <option value="$PROJECT_DIR$/src/game/tour2/Tour2Pane.java" />
-        <option value="$PROJECT_DIR$/src/game/tour3/Tour3Pane.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -306,9 +274,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -340,6 +305,10 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -356,6 +325,112 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GuessMelody" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GuessMelody" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tour3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GuessMelody" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GuessMelody" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tour2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GuessMelody" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GuessMelody" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tour1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GuessMelody" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GuessMelody" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="supergame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GuessMelody" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GuessMelody" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -445,17 +520,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -476,23 +555,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8 (1)" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="GuessMelody" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="GuessMelody.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/GuessMelody/GuessMelody.jar" />
@@ -515,8 +577,13 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method />
@@ -535,8 +602,13 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -611,6 +683,9 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -702,7 +777,6 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
-      <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
@@ -860,12 +934,6 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -881,16 +949,25 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
+    <configuration default="false" name="Main" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="GuessMelody" />
+      <envs />
+      <method />
+    </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="JAR Application.GuessMelody.jar" />
     </list>
-    <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JAR Application.GuessMelody.jar" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -926,7 +1003,19 @@
       <workItem from="1474630725738" duration="1591000" />
       <workItem from="1475399535325" duration="27699000" />
       <workItem from="1475557842084" duration="31125000" />
-      <workItem from="1475737371365" duration="262000" />
+      <workItem from="1475737371365" duration="575000" />
+      <workItem from="1475925210848" duration="480000" />
+      <workItem from="1475926459257" duration="606000" />
+      <workItem from="1477078734521" duration="422000" />
+      <workItem from="1477945988679" duration="66000" />
+      <workItem from="1477946187125" duration="132000" />
+      <workItem from="1477947450244" duration="37000" />
+      <workItem from="1477978054037" duration="45000" />
+      <workItem from="1478150644559" duration="33000" />
+      <workItem from="1478547116006" duration="56000" />
+      <workItem from="1482388799858" duration="23000" />
+      <workItem from="1484394022576" duration="3000" />
+      <workItem from="1485029541214" duration="3575000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <created>1472532843603</created>
@@ -1089,11 +1178,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475736424754</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="v1">
+      <created>1475737661144</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1475737661144</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158266000" />
+    <option name="totallyTimeSpent" value="164057000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1115,26 +1211,26 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3207856" sideWeight="0.5060362" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34042552" sideWeight="0.49597585" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33224222" sideWeight="0.49396378" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31535947" sideWeight="0.49396378" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3398693" sideWeight="0.49597585" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24810892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25416037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1181,96 +1277,19 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/net/InetAddress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="306" column="4" selection-start-line="306" selection-start-column="4" selection-end-line="306" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/images/back.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/images/notes/blue.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/images/notes/darkBlue.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/images/notes/original.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/images/notes/pink.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/images/notes/red.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/images/notes/yellow.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/images/icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/media/MediaPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21981">
-          <caret line="1449" column="24" selection-start-line="1449" selection-start-column="24" selection-end-line="1449" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28934">
-          <caret line="1785" column="0" selection-start-line="1785" selection-start-column="0" selection-end-line="1785" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/images/notes/violet.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/images/notes/green.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/images/notes/darkGreen.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/images/notes/orange.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/res/images/notes/pink.png" />
+    <entry file="file://$PROJECT_DIR$/res/images/notes/red.png" />
+    <entry file="file://$PROJECT_DIR$/res/images/notes/yellow.png" />
+    <entry file="file://$PROJECT_DIR$/res/images/icon.png" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/media/MediaPlayer.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/lang/Class.java" />
+    <entry file="file://$PROJECT_DIR$/res/images/notes/violet.png" />
+    <entry file="file://$PROJECT_DIR$/res/images/notes/green.png" />
+    <entry file="file://$PROJECT_DIR$/res/images/notes/darkGreen.png" />
+    <entry file="file://$PROJECT_DIR$/res/images/notes/orange.png" />
     <entry file="file://$USER_HOME$/Downloads/OfficeBuilding.java" />
     <entry file="file://$USER_HOME$/Downloads/List.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/shape/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="117" column="22" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/scene/shape/Shape.java" />
     <entry file="file://$PROJECT_DIR$/res/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1279,184 +1298,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SettingsPane.java" />
-    <entry file="file://$PROJECT_DIR$/settings/categories1.xml" />
     <entry file="file://$PROJECT_DIR$/settings/categories2.xml" />
-    <entry file="file://$PROJECT_DIR$/settings/categories3.xml" />
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/settings/tour2/SettingsTour2Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/tour3/SettingsTour3Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/images/tour.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/GamePane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/MainPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/supergame/SettingsSuperGamePane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/xml/Categories.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/xml/Melody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="935" column="11" selection-start-line="935" selection-start-column="11" selection-end-line="935" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/tour1/SettingsTour1Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category1Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12019">
-          <caret line="737" column="27" selection-start-line="737" selection-start-column="27" selection-end-line="737" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category4Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1960">
-          <caret line="845" column="13" selection-start-line="845" selection-start-column="13" selection-end-line="845" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category3Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1943">
-          <caret line="847" column="32" selection-start-line="847" selection-start-column="32" selection-end-line="847" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category2Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1895">
-          <caret line="845" column="13" selection-start-line="845" selection-start-column="13" selection-end-line="845" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category1Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1875">
-          <caret line="846" column="44" selection-start-line="846" selection-start-column="44" selection-end-line="846" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category4Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1841">
-          <caret line="844" column="32" selection-start-line="844" selection-start-column="32" selection-end-line="844" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category3Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-233">
-          <caret line="748" column="33" selection-start-line="748" selection-start-column="33" selection-end-line="748" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category2Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="763" column="24" selection-start-line="763" selection-start-column="24" selection-end-line="763" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category2Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="763" column="34" selection-start-line="763" selection-start-column="34" selection-end-line="763" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category3Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="839" column="48" selection-start-line="839" selection-start-column="48" selection-end-line="839" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/SettingsPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="85" column="29" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
-          <folding>
-            <element signature="e#3491#3492#0" expanded="false" />
-            <element signature="e#3536#3537#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category4Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="770" column="9" selection-start-line="770" selection-start-column="9" selection-end-line="770" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category1Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="537" column="13" selection-start-line="531" selection-start-column="11" selection-end-line="537" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/tour1/Tour1Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10931">
-          <caret line="670" column="7" selection-start-line="670" selection-start-column="7" selection-end-line="670" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/tour2/SettingsTour2Pane.java" />
+    <entry file="file://$PROJECT_DIR$/res/images/tour.jpg" />
+    <entry file="file://$PROJECT_DIR$/src/settings/supergame/SettingsSuperGamePane.java" />
+    <entry file="file://$PROJECT_DIR$/src/xml/Melody.java" />
     <entry file="file://$PROJECT_DIR$/src/game/tour3/Tour3Pane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13736">
@@ -1467,16 +1314,258 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/tour2/Tour2Pane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="11781">
           <caret line="720" column="20" selection-start-line="720" selection-start-column="20" selection-end-line="720" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/GamePane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2589#2590#0" expanded="false" />
+            <element signature="e#2622#2623#0" expanded="false" />
+            <element signature="e#2658#2659#0" expanded="false" />
+            <element signature="e#2691#2692#0" expanded="false" />
+            <element signature="e#2727#2728#0" expanded="false" />
+            <element signature="e#2760#2761#0" expanded="false" />
+            <element signature="e#2800#2801#0" expanded="false" />
+            <element signature="e#2837#2838#0" expanded="false" />
+            <element signature="e#2872#2873#0" expanded="false" />
+            <element signature="e#2904#2905#0" expanded="false" />
+            <element signature="e#2935#2936#0" expanded="false" />
+            <element signature="e#2963#2964#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/GuessMelody/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/tour3/SettingsTour3Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="119" column="5" selection-start-line="22" selection-start-column="3" selection-end-line="119" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/SettingsFolderPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/SettingsPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+          <folding>
+            <element signature="e#663#664#0" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/categories1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xml/Categories.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xml/MelodiesFolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#494#495#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/MainPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/categories3.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/tour1/Tour1Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1059">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="677" column="12" selection-start-line="677" selection-start-column="12" selection-end-line="679" selection-end-column="13" />
+          <folding>
+            <element signature="e#1161#1162#0" expanded="true" />
+            <element signature="e#1228#1229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category1Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="249" column="8" selection-start-line="249" selection-start-column="8" selection-end-line="262" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category2Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="262" column="103" selection-start-line="262" selection-start-column="103" selection-end-line="262" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category3Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/tour1/SettingsTour1Category4Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/tour1/SettingsTour1Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category1Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category2Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category3Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/tour2/SettingsTour2Category4Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category1Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category2Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category3Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings/tour3/SettingsTour3Category4Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="261" column="103" selection-start-line="261" selection-start-column="103" selection-end-line="261" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/melodiesFolders.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

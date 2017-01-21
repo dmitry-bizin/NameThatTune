@@ -6,6 +6,7 @@ import game.tour2.Tour2Pane;
 import game.tour3.Tour3Pane;
 import javafx.application.Application;
 import javafx.scene.image.Image;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import settings.SettingsPane;
@@ -13,14 +14,15 @@ import settings.tour1.*;
 import settings.tour2.*;
 import settings.tour3.*;
 import xml.Categories;
+import xml.MelodiesFolder;
 import xml.Melody;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import java.awt.*;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * Created by Dmitriy on 26.12.2015.
@@ -517,6 +519,13 @@ public class Main extends Application {
         if (!categories3.exists()) {
             marshaller.marshal(new Categories("Категория 1", "Категория 2", "Категория 3", "Категория 4"), categories3);
         }
+        jaxbContext = JAXBContext.newInstance(MelodiesFolder.class);
+        marshaller = jaxbContext.createMarshaller();
+        marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);//отступы
+        File melodiesFolders = new File("settings/melodiesFolders.xml");
+        if (!melodiesFolders.exists()) {
+            marshaller.marshal(new MelodiesFolder(""), melodiesFolders);
+        }
     }
 
     @Override
@@ -654,6 +663,32 @@ public class Main extends Application {
             settingsTour3Pane.update();
             primaryStage.setScene(settingsTour3Pane.getScene());
             primaryStage.setTitle("Настройки 3го тура");
+        });
+        settingsPane.getSettingsFolderLabel().setOnMouseClicked(event -> {
+            MelodiesFolder melodiesFolder = null;
+            try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream("settings/melodiesFolders.xml"), "UTF-8")) {
+                JAXBContext jaxbContext = JAXBContext.newInstance(MelodiesFolder.class);
+                Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+                melodiesFolder = (MelodiesFolder) unmarshaller.unmarshal(inputStreamReader);
+            } catch (JAXBException | IOException e) {
+                e.printStackTrace();
+            }
+            DirectoryChooser directoryChooser = new DirectoryChooser();
+            directoryChooser.setTitle("Папка с мелодиями");
+            if (melodiesFolder != null && !melodiesFolder.getFolder().equals("")) {
+                directoryChooser.setInitialDirectory(new File(melodiesFolder.getFolder()));
+            }
+            File selectedDirectory = directoryChooser.showDialog(primaryStage);
+            if (selectedDirectory != null) {
+                try (OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream("settings/melodiesFolders.xml"), "UTF-8")) {
+                    JAXBContext jaxbContext = JAXBContext.newInstance(MelodiesFolder.class);
+                    Marshaller marshaller = jaxbContext.createMarshaller();
+                    marshaller.setProperty("jaxb.formatted.output", Boolean.TRUE);//отступы
+                    marshaller.marshal(new MelodiesFolder(selectedDirectory.toString()), outputStreamWriter);
+                } catch (JAXBException | IOException e) {
+                    e.printStackTrace();
+                }
+            }
         });
         /*settingsPane.getSettingsSuperGameLabel().setOnMouseClicked(event -> {
             primaryStage.setScene(settingsSuperGamePane.getScene());

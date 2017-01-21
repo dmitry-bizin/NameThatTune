@@ -18,9 +18,14 @@ public class SettingsPane {
     private Label settingsTour2Label;
     private Label settingsTour3Label;
     private Label settingsSuperGameLabel;
+    private Label settingsFolderLabel;
     private Label backLabel;
     private ImageView backgroundImageView;
 
+
+    public Label getSettingsFolderLabel() {
+        return settingsFolderLabel;
+    }
 
     public SettingsPane() {
         backgroundImageView = new ImageView(new Image(Main.getPathToResource("images/settings.jpg")));
@@ -54,16 +59,22 @@ public class SettingsPane {
         settingsSuperGameLabel.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.4);
         settingsSuperGameLabel.setId("settingsPaneLabel");
 
+        settingsFolderLabel = new Label("Папка с мелодиями");
+        settingsFolderLabel.setCursor(Cursor.HAND);
+        settingsFolderLabel.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);//в процентах от размеров экрана,резиновая вёрстка
+        settingsFolderLabel.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
+        settingsFolderLabel.setId("settingsPaneLabel");
+
         backLabel = new Label("Назад");
         backLabel.setCursor(Cursor.HAND);
         backLabel.setLayoutX(Main.SCREEN_SIZE.getWidth() * 0.03);//в процентах от размеров экрана,резиновая вёрстка
-        backLabel.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.5);
+        backLabel.setLayoutY(Main.SCREEN_SIZE.getHeight() * 0.6);
         backLabel.setId("settingsPaneLabel");
 
         scene = new Scene(pane, Main.SCREEN_SIZE.getWidth(), Main.SCREEN_SIZE.getHeight());
         scene.getStylesheets().add(Main.getPathToResource("css/style.css"));
         pane.getChildren().addAll(backgroundImageView, settingsTour1Label, settingsTour2Label, settingsTour3Label,
-                settingsSuperGameLabel, backLabel);
+                settingsSuperGameLabel, settingsFolderLabel, backLabel);
     }
 
     public Scene getScene() {
