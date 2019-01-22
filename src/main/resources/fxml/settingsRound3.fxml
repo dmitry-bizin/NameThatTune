@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.Pane?>
+<Pane xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx"
+      fx:controller="controller.SettingsRound3Controller"
+      stylesheets="@../css/style.css" styleClass="settingsRoundBackground"
+      fx:id="pane">
+
+    <Label fx:id="category1Label" styleClass="settingsRoundLabel" onMouseClicked="#category1LabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+    <Label fx:id="category2Label" styleClass="settingsRoundLabel" onMouseClicked="#category2LabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+    <Label fx:id="category3Label" styleClass="settingsRoundLabel" onMouseClicked="#category3LabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+    <Label fx:id="category4Label" styleClass="settingsRoundLabel"
+           onMouseClicked="#category4LabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+    <Label fx:id="backLabel" text="Назад" styleClass="settingsRoundLabel" onMouseClicked="#backLabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+</Pane>

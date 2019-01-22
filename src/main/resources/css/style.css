@@ -1,0 +1,244 @@
+/* --main-- */
+
+.mainBackground {
+    -fx-background-image: url("../images/main.jpg");
+    -fx-background-size: cover;
+    -fx-smooth: true;
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+}
+
+.mainLabel {
+    -fx-font-size: 23pt;
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: blue;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.mainLabel:hover, .mainLabel:pressed {
+    -fx-text-fill: red;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+/* ---- */
+
+/* --game-- */
+
+.gameBackground {
+    -fx-background-image: url("../images/game.jpg");
+    -fx-background-size: cover;
+    -fx-smooth: true;
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+}
+
+.gameLabel {
+    -fx-font-size: 23pt;
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: #E52B50;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.gameLabel:hover, .gameLabel:pressed {
+    -fx-text-fill: blue;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+/* ---- */
+
+/* --settings-- */
+
+.settingsBackground {
+    -fx-background-image: url("../images/settings.jpg");
+    -fx-background-size: cover;
+    -fx-smooth: true;
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+}
+
+.settingsLabel {
+    -fx-font-size: 23pt;
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: white;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.settingsLabel:hover, .settingsLabel:pressed {
+    -fx-text-fill: yellow;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+/* ---- */
+
+/* --round-- */
+
+.roundBackground {
+    -fx-background-image: url("../images/round.jpg");
+    -fx-background-size: cover;
+    -fx-smooth: true;
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+}
+
+.roundLabel {
+    -fx-font-family: "Segoe Print";
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-weight: bold;
+    -fx-text-fill: blue;
+}
+
+.roundBackLabel {
+    -fx-font-size: 23pt;
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: blue;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.roundBackLabel:hover, .roundBackLabel:pressed {
+    -fx-text-fill: red;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+/* ---- */
+
+/* --preloader-- */
+
+.preloaderLabel {
+    -fx-font-family: "Segoe Print";
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-text-fill: white;
+    -fx-font-size: 23pt;
+    -fx-padding: 23pt;
+    -fx-background-color: radial-gradient(focus-distance 0%, center 50% 50%, radius 50%, #5e96ff, #6e96ff, #7e96ff, #8e96ff, #9e96ff, #Ae96ff, #Be96ff);
+}
+
+/* ---- */
+
+/* --settingsRound-- */
+
+.settingsRoundBackground {
+    -fx-background-image: url("../images/settingsRound.jpg");
+    -fx-background-size: cover;
+    -fx-smooth: true;
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+}
+
+.settingsRoundLabel {
+    -fx-text-fill: linear-gradient(to right, green, yellow, red, mediumvioletred);
+    -fx-font-size: 23pt;
+    -fx-font-family: "Segoe Print";
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.settingsRoundLabel:hover, .settingsRoundLabel:pressed {
+    -fx-text-fill: white;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+/* ---- */
+
+.saveButton {
+    -fx-background-radius: 10;
+    -fx-border-radius: 8;
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe Print";
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.saveButton:pressed {
+    -fx-background-color: deepskyblue;
+    -fx-border-color: blue;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.text-field {
+    -fx-background-radius: 10;
+    -fx-border-radius: 8;
+    -fx-border-width: 1pt;
+    -fx-border-color: deepskyblue;
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: deepskyblue;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.text-field:focused {
+    -fx-border-color: blue;
+    -fx-text-fill: blue;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.scoresLabel {
+    -fx-font-size: 23pt;
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: blue;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.unselectedButton {
+    -fx-background-radius: 10;
+    -fx-border-radius: 8;
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe Print";
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.unselectedButton:pressed {
+    -fx-background-color: orangered;
+    -fx-border-color: red;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.selectedButton {
+    -fx-background-radius: 10;
+    -fx-border-radius: 8;
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe Print";
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.selectedButton:pressed {
+    -fx-background-color: limegreen;
+    -fx-border-color: green;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.playButton, .pauseButton {
+    -fx-background-color: white;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.playButton:pressed, .pauseButton:pressed {
+    -fx-border-color: blue;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.toursLabel {
+    -fx-font-size: 23pt;
+    -fx-font-family: "Segoe Print";
+    -fx-text-fill: blue;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}

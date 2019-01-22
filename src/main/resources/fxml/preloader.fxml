@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<Pane xmlns="http://javafx.com/javafx"
+      stylesheets="@../css/style.css">
+
+    <Label text="Пожалуйста, подождите..." styleClass="preloaderLabel" textAlignment="CENTER"
+           alignment="CENTER"/>
+
+</Pane>

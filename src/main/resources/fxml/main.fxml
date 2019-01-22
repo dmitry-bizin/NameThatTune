@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.Pane?>
+<Pane xmlns:fx="http://javafx.com/fxml/1"
+      stylesheets="@../css/style.css" styleClass="mainBackground"
+      xmlns="http://javafx.com/javafx/8.0.172-ea"
+      fx:controller="controller.MainController" fx:id="pane">
+
+    <Label fx:id="gameLabel" text="Игра" styleClass="mainLabel" onMouseClicked="#gameLabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+    <Label fx:id="settingsLabel" text="Настройки" styleClass="mainLabel" onMouseClicked="#settingsLabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+    <Label fx:id="exitLabel" text="Выход" styleClass="mainLabel" onMouseClicked="#exitLabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+</Pane>

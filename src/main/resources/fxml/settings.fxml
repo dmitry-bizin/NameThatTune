@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.Pane?>
+<Pane xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx"
+      fx:controller="controller.SettingsController"
+      stylesheets="@../css/style.css"
+      styleClass="settingsBackground"
+      fx:id="pane">
+
+    <Label fx:id="round1SettingsLabel" text="Настройки 1го тура" styleClass="settingsLabel"
+           onMouseClicked="#round1SettingsLabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+    <Label fx:id="round2SettingsLabel" text="Настройки 2го тура" styleClass="settingsLabel"
+           onMouseClicked="#round2SettingsLabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+    <Label fx:id="round3SettingsLabel" text="Настройки 3го тура" styleClass="settingsLabel"
+           onMouseClicked="#round3SettingsLabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+    <Label fx:id="supergameSettingsLabel" text="Настройки супер-игры" styleClass="settingsLabel"
+           onMouseClicked="#supergameSettingsLabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+    <Label fx:id="currentDirectorySettings" text="Выбрать директорию с мелодиями" styleClass="settingsLabel"
+           onMouseClicked="#currentDirectorySettingsClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+    <Label fx:id="backLabel" text="Назад" styleClass="settingsLabel" onMouseClicked="#backLabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+</Pane>

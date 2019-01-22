@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.Pane?>
+<Pane xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx"
+      fx:controller="controller.GameController"
+      stylesheets="@../css/style.css"
+      styleClass="gameBackground"
+      fx:id="pane">
+
+    <Label fx:id="round1Label" text="1 тур" styleClass="gameLabel" onMouseClicked="#round1LabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+    <Label fx:id="round2Label" text="2 тур" styleClass="gameLabel" onMouseClicked="#round2LabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+    <Label fx:id="round3Label" text="3 тур" styleClass="gameLabel" onMouseClicked="#round3LabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+    <Label fx:id="supergameLabel" text="Супер-игра" styleClass="gameLabel" onMouseClicked="#supergameLabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+    <Label fx:id="backLabel" text="Назад" styleClass="gameLabel" onMouseClicked="#backLabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
+
+</Pane>
