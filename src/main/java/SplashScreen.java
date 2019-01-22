@@ -7,7 +7,7 @@ import util.UIUtil;
 
 import java.io.IOException;
 
-public class MainPreloader extends Preloader {
+public class SplashScreen extends Preloader {
 
     private Stage stage;
 
@@ -35,7 +35,7 @@ public class MainPreloader extends Preloader {
 
     @Override
     public void handleStateChangeNotification(StateChangeNotification stateChangeNotification) {
-        if (stateChangeNotification.getType().equals(StateChangeNotification.Type.BEFORE_START)) {
+        if (StateChangeNotification.Type.BEFORE_START.equals(stateChangeNotification.getType())) {
             stage.hide();
         }
     }

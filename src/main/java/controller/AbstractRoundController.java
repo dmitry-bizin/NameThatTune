@@ -158,7 +158,7 @@ abstract class AbstractRoundController {
         label.setFont(new Font(UIUtil.getHeight() * 0.045));
     }
 
-    void disposeResources() {
+    private void disposeResources() {
         for (int i = 0; i < CATEGORIES_IN_ROUND_COUNT * MUSICS_IN_CATEGORY_COUNT; i++) {
             if (mediaPlayers[i] != null) {
                 mediaPlayers[i].dispose();
