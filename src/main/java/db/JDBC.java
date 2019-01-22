@@ -33,7 +33,7 @@ public class JDBC {
 
     public static void init() {
         jdbcDataSource = new JdbcDataSource();
-        jdbcDataSource.setURL("jdbc:h2:./db/guessmelody");
+        jdbcDataSource.setURL("jdbc:h2:./db/nameThatTune");
         initializeTables();
         initializeDataIfNeeded();
     }

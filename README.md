@@ -4,4 +4,4 @@
 
 Для сборки проекта из исходников выполнить maven goal: mvn clean install
 
-Запуск jar производить с параметрами: java -jar -Dfile.encoding=UTF-8 GuessMelody.jar
+Запуск jar производить с параметрами: java -jar -Dfile.encoding=UTF-8 NameThatTune.jar
