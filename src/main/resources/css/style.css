@@ -1,7 +1,15 @@
+/* --font-- */
+
+@font-face {
+    src: url('../font/Segoe-Print.ttf');
+}
+
+/* ---- */
+
 /* --main-- */
 
 .mainBackground {
-    -fx-background-image: url("../images/main.jpg");
+    -fx-background-image: url('../images/main.jpg');
     -fx-background-size: cover;
     -fx-smooth: true;
     -fx-fit-to-height: true;
@@ -10,7 +18,7 @@
 
 .mainLabel {
     -fx-font-size: 23pt;
-    -fx-font-family: "Segoe Print";
+    -fx-font-family: 'Segoe Print';
     -fx-text-fill: blue;
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
@@ -27,7 +35,7 @@
 /* --game-- */
 
 .gameBackground {
-    -fx-background-image: url("../images/game.jpg");
+    -fx-background-image: url('../images/game.jpg');
     -fx-background-size: cover;
     -fx-smooth: true;
     -fx-fit-to-height: true;
@@ -36,7 +44,7 @@
 
 .gameLabel {
     -fx-font-size: 23pt;
-    -fx-font-family: "Segoe Print";
+    -fx-font-family: 'Segoe Print';
     -fx-text-fill: #E52B50;
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
@@ -53,7 +61,7 @@
 /* --settings-- */
 
 .settingsBackground {
-    -fx-background-image: url("../images/settings.jpg");
+    -fx-background-image: url('../images/settings.jpg');
     -fx-background-size: cover;
     -fx-smooth: true;
     -fx-fit-to-height: true;
@@ -62,7 +70,7 @@
 
 .settingsLabel {
     -fx-font-size: 23pt;
-    -fx-font-family: "Segoe Print";
+    -fx-font-family: 'Segoe Print';
     -fx-text-fill: white;
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
@@ -79,7 +87,7 @@
 /* --round-- */
 
 .roundBackground {
-    -fx-background-image: url("../images/round.jpg");
+    -fx-background-image: url('../images/round.jpg');
     -fx-background-size: cover;
     -fx-smooth: true;
     -fx-fit-to-height: true;
@@ -87,7 +95,7 @@
 }
 
 .roundLabel {
-    -fx-font-family: "Segoe Print";
+    -fx-font-family: 'Segoe Print';
     -fx-font-smoothing-type: lcd; /*сглаживание*/
     -fx-font-weight: bold;
     -fx-text-fill: blue;
@@ -95,7 +103,7 @@
 
 .roundBackLabel {
     -fx-font-size: 23pt;
-    -fx-font-family: "Segoe Print";
+    -fx-font-family: 'Segoe Print';
     -fx-text-fill: blue;
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
@@ -112,7 +120,7 @@
 /* --preloader-- */
 
 .preloaderLabel {
-    -fx-font-family: "Segoe Print";
+    -fx-font-family: 'Segoe Print';
     -fx-font-smoothing-type: lcd; /*сглаживание*/
     -fx-text-fill: white;
     -fx-font-size: 23pt;
@@ -125,7 +133,7 @@
 /* --settingsRound-- */
 
 .settingsRoundBackground {
-    -fx-background-image: url("../images/settingsRound.jpg");
+    -fx-background-image: url('../images/settingsRound.jpg');
     -fx-background-size: cover;
     -fx-smooth: true;
     -fx-fit-to-height: true;
@@ -135,7 +143,7 @@
 .settingsRoundLabel {
     -fx-text-fill: linear-gradient(to right, green, yellow, red, mediumvioletred);
     -fx-font-size: 23pt;
-    -fx-font-family: "Segoe Print";
+    -fx-font-family: 'Segoe Print';
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
@@ -152,7 +160,7 @@
     -fx-background-color: blue;
     -fx-text-fill: white;
     -fx-font-size: 14pt;
-    -fx-font-family: "Segoe Print";
+    -fx-font-family: 'Segoe Print';
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
@@ -170,7 +178,7 @@
     -fx-border-width: 1pt;
     -fx-border-color: deepskyblue;
     -fx-font-size: 14pt;
-    -fx-font-family: "Segoe Print";
+    -fx-font-family: 'Segoe Print';
     -fx-text-fill: deepskyblue;
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
@@ -183,7 +191,7 @@
 
 .scoresLabel {
     -fx-font-size: 23pt;
-    -fx-font-family: "Segoe Print";
+    -fx-font-family: 'Segoe Print';
     -fx-text-fill: blue;
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
@@ -194,7 +202,7 @@
     -fx-background-color: red;
     -fx-text-fill: white;
     -fx-font-size: 14pt;
-    -fx-font-family: "Segoe Print";
+    -fx-font-family: 'Segoe Print';
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
@@ -212,7 +220,7 @@
     -fx-background-color: green;
     -fx-text-fill: white;
     -fx-font-size: 14pt;
-    -fx-font-family: "Segoe Print";
+    -fx-font-family: 'Segoe Print';
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
@@ -238,7 +246,7 @@
 
 .toursLabel {
     -fx-font-size: 23pt;
-    -fx-font-family: "Segoe Print";
+    -fx-font-family: 'Segoe Print';
     -fx-text-fill: blue;
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
