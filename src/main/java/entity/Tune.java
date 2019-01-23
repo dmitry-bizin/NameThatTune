@@ -2,7 +2,7 @@ package entity;
 
 import java.util.Objects;
 
-public class Melody implements Identifiable {
+public class Tune implements Identifiable {
 
     private int id;
     private String title;
@@ -10,7 +10,7 @@ public class Melody implements Identifiable {
     private int score;
     private int categoryId;
 
-    public Melody(int id, String title, String author, int score, int categoryId) {
+    public Tune(int id, String title, String author, int score, int categoryId) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -41,7 +41,7 @@ public class Melody implements Identifiable {
 
     @Override
     public String toString() {
-        return "Melody{" +
+        return "Tune{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
@@ -58,12 +58,12 @@ public class Melody implements Identifiable {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Melody melody = (Melody) o;
-        return id == melody.id &&
-                score == melody.score &&
-                categoryId == melody.categoryId &&
-                title.equals(melody.title) &&
-                author.equals(melody.author);
+        Tune tune = (Tune) o;
+        return id == tune.id &&
+                score == tune.score &&
+                categoryId == tune.categoryId &&
+                title.equals(tune.title) &&
+                author.equals(tune.author);
     }
 
     @Override

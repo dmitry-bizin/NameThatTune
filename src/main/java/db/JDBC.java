@@ -16,14 +16,14 @@ public class JDBC {
 
     private static final String CHECK_ROUND_TABLE = "SELECT count(1) FROM round";
     private static final String CHECK_CATEGORY_TABLE = "SELECT count(1) FROM category";
-    private static final String CHECK_MELODY_TABLE = "SELECT count(1) FROM melody";
+    private static final String CHECK_TUNE_TABLE = "SELECT count(1) FROM tune";
     private static final String CHECK_SUPERGAME_TABLE = "SELECT count(1) FROM supergame";
     private static final String CHECK_CURRENT_DIRECTORY_TABLE = "SELECT count(1) FROM currentDirectory";
     private static final String INSERT_INTO_CURRENT_DIRECTORY_TABLE = "INSERT INTO currentDirectory (path) VALUES (?)";
     private static final String[] CHECK_QUERIES = {
             CHECK_ROUND_TABLE,
             CHECK_CATEGORY_TABLE,
-            CHECK_MELODY_TABLE,
+            CHECK_TUNE_TABLE,
             CHECK_SUPERGAME_TABLE
     };
     private static JdbcDataSource jdbcDataSource;

@@ -1,11 +1,11 @@
 import dao.DAO;
-import dao.MelodyDAO;
-import entity.Melody;
+import dao.TuneDAO;
+import entity.Tune;
 import org.junit.jupiter.api.Test;
 
-public class MelodyDAOTest implements DAOTest<Melody> {
+public class TuneDAOTest implements DAOTest<Tune> {
 
-    private static final DAO<Melody> DAO = new MelodyDAO();
+    private static final DAO<Tune> DAO = new TuneDAO();
 
     @Override
     @Test
@@ -26,8 +26,8 @@ public class MelodyDAOTest implements DAOTest<Melody> {
     }
 
     @Override
-    public Melody getNewEntity(Melody melody) {
-        return new Melody(melody.getId(), UPDATE_STRING, UPDATE_STRING, UPDATE_INT, melody.getCategoryId());
+    public Tune getNewEntity(Tune tune) {
+        return new Tune(tune.getId(), UPDATE_STRING, UPDATE_STRING, UPDATE_INT, tune.getCategoryId());
     }
 
 }

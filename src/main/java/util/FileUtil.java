@@ -20,10 +20,10 @@ public class FileUtil {
     private static final String NOTES = IMAGES + "notes/";
     private static final String ICON = IMAGES + "icon.png";
     private static final String FXML = "/fxml/";
-    private static final String MAIN_FXML = "main.fxml";
-    private static final String GAME_FXML = "game.fxml";
-    private static final String SETTINGS_FXML = "settings.fxml";
-    private static final String PRELOADER = "preloader.fxml";
+    private static final String MAIN_FXML = FXML + "main.fxml";
+    private static final String GAME_FXML = FXML + "game.fxml";
+    private static final String SETTINGS_FXML = FXML + "settings.fxml";
+    private static final String PRELOADER = FXML + "preloader.fxml";
     private static final String FXML_EXT = ".fxml";
     private static final String SETTINGS_ROUND = "settingsRound";
     private static final int ROUNDS_COUNT = 3;
@@ -67,15 +67,15 @@ public class FileUtil {
     }
 
     public static Parent loadMainFromFXML() throws IOException {
-        return FXMLLoader.load(FileUtil.class.getResource(FXML + MAIN_FXML));
+        return FXMLLoader.load(FileUtil.class.getResource(MAIN_FXML));
     }
 
     public static Parent loadGameFromFXML() throws IOException {
-        return FXMLLoader.load(FileUtil.class.getResource(FXML + GAME_FXML));
+        return FXMLLoader.load(FileUtil.class.getResource(GAME_FXML));
     }
 
     public static Parent loadSettingsFromFXML() throws IOException {
-        return FXMLLoader.load(FileUtil.class.getResource(FXML + SETTINGS_FXML));
+        return FXMLLoader.load(FileUtil.class.getResource(SETTINGS_FXML));
     }
 
     public static Parent loadRoundFromFXML(int roundNumber) throws IOException {
@@ -83,7 +83,7 @@ public class FileUtil {
     }
 
     public static Parent loadPreloaderFromFXML() throws IOException {
-        return FXMLLoader.load(FileUtil.class.getResource(FXML + PRELOADER));
+        return FXMLLoader.load(FileUtil.class.getResource(PRELOADER));
     }
 
     public static Parent loadSettingsRoundFromFXML(int roundNumber) throws IOException {

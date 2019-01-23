@@ -31,7 +31,7 @@
         </cursor>
     </Label>
 
-    <Label fx:id="supergameSettingsLabel" text="Настройки супер-игры" styleClass="settingsLabel"
+    <Label fx:id="supergameSettingsLabel" text="Настройки суперигры" styleClass="settingsLabel"
            onMouseClicked="#supergameSettingsLabelClick">
         <cursor>
             <Cursor fx:constant="HAND"/>

@@ -23,8 +23,8 @@ VALUES (1, 'Категория 1', 1),
        (12, 'Категория 4', 3);
 
 DELETE
-FROM melody;
-INSERT INTO melody (id, title, author, score, categoryId)
+FROM tune;
+INSERT INTO tune (id, title, author, score, categoryId)
 VALUES (1, 'Название', 'Автор', 10, 1),
        (2, 'Название', 'Автор', 20, 1),
        (3, 'Название', 'Автор', 30, 1),
