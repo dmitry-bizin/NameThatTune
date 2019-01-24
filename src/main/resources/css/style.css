@@ -97,7 +97,6 @@
 .roundLabel {
     -fx-font-family: 'Ribbon Heart';
     -fx-font-smoothing-type: lcd; /*сглаживание*/
-    -fx-font-weight: bold;
     -fx-text-fill: blue;
 }
 
@@ -115,8 +114,8 @@
     -fx-font-family: 'Ribbon Heart';
     -fx-font-smoothing-type: lcd; /*сглаживание*/
     -fx-text-fill: white;
-    -fx-font-size: 35pt;
-    -fx-padding: 35pt;
+    -fx-font-size: 40pt;
+    -fx-padding: 40pt;
     -fx-background-color: radial-gradient(focus-distance 0%, center 50% 50%, radius 50%, #5e96ff, #6e96ff, #7e96ff, #8e96ff, #9e96ff, #Ae96ff, #Be96ff);
 }
 
