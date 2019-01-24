@@ -13,34 +13,30 @@ import java.util.ResourceBundle;
 public class Round2Controller extends AbstractRoundController implements Initializable {
 
     @FXML
-    public Pane pane;
+    private Pane pane;
 
     @FXML
-    public Label backLabel;
+    private ImageView backImageView;
 
     @FXML
-    public ImageView backImageView;
+    private Label category1Label;
 
     @FXML
-    public Label category1Label;
+    private Label category2Label;
 
     @FXML
-    public Label category2Label;
+    private Label category3Label;
 
     @FXML
-    public Label category3Label;
-
-    @FXML
-    public Label category4Label;
+    private Label category4Label;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        super.initialize(backImageView, category1Label, category2Label, category3Label,
-                category4Label, pane, 2);
+        init(backImageView, pane, 2, category1Label, category2Label, category3Label, category4Label);
     }
 
     @FXML
-    public void backLabelClick(MouseEvent mouseEvent) {
+    private void backLabelClick(MouseEvent mouseEvent) {
         handleBackLabelClick(pane);
     }
 

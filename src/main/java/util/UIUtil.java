@@ -79,6 +79,15 @@ public class UIUtil {
         }
     }
 
+    public static void changeSceneToSettingsRoundCategory(Pane pane, int roundNumber, int categoryNumber) {
+        try {
+            Parent root = FileUtil.loadSettingsRoundCategoryFromFXML(roundNumber, categoryNumber);
+            UIUtil.changeScene(root, getStage(pane), "Настройки " + roundNumber + "го тура");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static double getWidth() {
         return SCREEN_SIZE.getWidth();
     }

@@ -10,11 +10,12 @@ import java.io.IOException;
 public class FileUtil {
 
     public static final int CATEGORIES_IN_ROUND_COUNT = 4;
-    public static final int MUSICS_IN_CATEGORY_COUNT = 4;
-    private static final String MUSICS = "musics";
+    public static final int TUNES_IN_CATEGORY_COUNT = 4;
+    private static final String TUNES = "tunes";
     private static final String ROUND = "round";
     private static final String CATEGORY = "category";
-    private static final String MUSIC = "music";
+    private static final String _C_ATEGORY = "Category";
+    private static final String TUNE = "tune";
     private static final String SUPERGAME = "supergame";
     private static final String IMAGES = "/images/";
     private static final String NOTES = IMAGES + "notes/";
@@ -32,19 +33,19 @@ public class FileUtil {
     }
 
     public static void createDirectories() {
-        createDir(MUSICS);
+        createDir(TUNES);
         for (int roundNumber = 1; roundNumber <= ROUNDS_COUNT; roundNumber++) {
-            String roundPath = MUSICS + "/" + ROUND + roundNumber;
+            String roundPath = TUNES + "/" + ROUND + roundNumber;
             createDir(roundPath);
             for (int categoryNumber = 1; categoryNumber <= CATEGORIES_IN_ROUND_COUNT; categoryNumber++) {
                 String categoryPath = roundPath + "/" + CATEGORY + categoryNumber;
                 createDir(categoryPath);
-                for (int musicNumber = 1; musicNumber <= MUSICS_IN_CATEGORY_COUNT; musicNumber++) {
-                    createDir(categoryPath + "/" + MUSIC + musicNumber);
+                for (int tuneNumber = 1; tuneNumber <= TUNES_IN_CATEGORY_COUNT; tuneNumber++) {
+                    createDir(categoryPath + "/" + TUNE + tuneNumber);
                 }
             }
         }
-        createDir(MUSICS + "/" + SUPERGAME);
+        createDir(TUNES + "/" + SUPERGAME);
     }
 
     private static void createDir(String path) {
@@ -54,8 +55,8 @@ public class FileUtil {
         }
     }
 
-    public static File getMP3File(int roundNumber, int categoryNumber, int musicNumber) {
-        return new File(MUSICS + "/" + ROUND + roundNumber + "/" + CATEGORY + categoryNumber + "/" + MUSIC + musicNumber + "/" + musicNumber + ".mp3");
+    public static File getMP3File(int roundNumber, int categoryNumber, int tuneNumber) {
+        return new File(TUNES + "/" + ROUND + roundNumber + "/" + CATEGORY + categoryNumber + "/" + TUNE + tuneNumber + "/" + tuneNumber + ".mp3");
     }
 
     public static Image getNoteImage(String color) {
@@ -88,6 +89,10 @@ public class FileUtil {
 
     public static Parent loadSettingsRoundFromFXML(int roundNumber) throws IOException {
         return FXMLLoader.load(FileUtil.class.getResource(FXML + SETTINGS_ROUND + roundNumber + FXML_EXT));
+    }
+
+    public static Parent loadSettingsRoundCategoryFromFXML(int roundNumber, int categoryNumber) throws IOException {
+        return FXMLLoader.load(FileUtil.class.getResource(FXML + SETTINGS_ROUND + roundNumber + _C_ATEGORY + categoryNumber + FXML_EXT));
     }
 
 }

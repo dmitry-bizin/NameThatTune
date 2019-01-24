@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.Pane?>
+<Pane xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx"
+      fx:controller="controller.SettingsRound1Category1Controller"
+      stylesheets="@../css/style.css" styleClass="settingsCategoryBackground"
+      fx:id="pane">
+
+    <Label onMouseClicked="#play1LabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <graphic>
+            <ImageView fx:id="play1ImageView">
+                <Image url="@../images/play.png"/>
+            </ImageView>
+        </graphic>
+    </Label>
+
+    <Label onMouseClicked="#pause1LabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <graphic>
+            <ImageView fx:id="pause1ImageView">
+                <Image url="@../images/pause.png"/>
+            </ImageView>
+        </graphic>
+    </Label>
+
+    <Label onMouseClicked="#play2LabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <graphic>
+            <ImageView fx:id="play2ImageView">
+                <Image url="@../images/play.png"/>
+            </ImageView>
+        </graphic>
+    </Label>
+
+    <Label onMouseClicked="#pause2LabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <graphic>
+            <ImageView fx:id="pause2ImageView">
+                <Image url="@../images/pause.png"/>
+            </ImageView>
+        </graphic>
+    </Label>
+
+    <Label onMouseClicked="#play3LabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <graphic>
+            <ImageView fx:id="play3ImageView">
+                <Image url="@../images/play.png"/>
+            </ImageView>
+        </graphic>
+    </Label>
+
+    <Label onMouseClicked="#pause3LabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <graphic>
+            <ImageView fx:id="pause3ImageView">
+                <Image url="@../images/pause.png"/>
+            </ImageView>
+        </graphic>
+    </Label>
+
+    <Label onMouseClicked="#play4LabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <graphic>
+            <ImageView fx:id="play4ImageView">
+                <Image url="@../images/play.png"/>
+            </ImageView>
+        </graphic>
+    </Label>
+
+    <Label onMouseClicked="#pause4LabelClick">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+        <graphic>
+            <ImageView fx:id="pause4ImageView">
+                <Image url="@../images/pause.png"/>
+            </ImageView>
+        </graphic>
+    </Label>
+
+    <TextField promptText="Название категории" fx:id="categoryTextField"/>
+
+    <Button text="Сохранить" styleClass="saveCategoryButton">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+
+</Pane>

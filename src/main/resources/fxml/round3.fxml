@@ -19,7 +19,7 @@
 
     <Label fx:id="category4Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER"/>
 
-    <Label fx:id="backLabel" onMouseClicked="#backLabelClick" styleClass="roundBackLabel">
+    <Label onMouseClicked="#backLabelClick" styleClass="roundBackLabel">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>

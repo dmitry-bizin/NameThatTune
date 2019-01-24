@@ -12,50 +12,50 @@ import java.util.ResourceBundle;
 public class SettingsRound2Controller extends AbstractSettingsRoundController implements Initializable {
 
     @FXML
-    public Pane pane;
+    private Pane pane;
 
     @FXML
-    public Label category1Label;
+    private Label category1Label;
 
     @FXML
-    public Label category2Label;
+    private Label category2Label;
 
     @FXML
-    public Label category3Label;
+    private Label category3Label;
 
     @FXML
-    public Label category4Label;
+    private Label category4Label;
 
     @FXML
-    public Label backLabel;
+    private Label backLabel;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        initialize(category1Label, category2Label, category3Label, category4Label, backLabel, 2);
+        init(backLabel, 2, category1Label, category2Label, category3Label, category4Label);
     }
 
     @FXML
-    public void category1LabelClick(MouseEvent mouseEvent) {
-
-    }
-
-    @FXML
-    public void category2LabelClick(MouseEvent mouseEvent) {
+    private void category1LabelClick(MouseEvent mouseEvent) {
 
     }
 
     @FXML
-    public void category3LabelClick(MouseEvent mouseEvent) {
+    private void category2LabelClick(MouseEvent mouseEvent) {
 
     }
 
     @FXML
-    public void category4LabelClick(MouseEvent mouseEvent) {
+    private void category3LabelClick(MouseEvent mouseEvent) {
 
     }
 
     @FXML
-    public void backLabelClick(MouseEvent mouseEvent) {
+    private void category4LabelClick(MouseEvent mouseEvent) {
+
+    }
+
+    @FXML
+    private void backLabelClick(MouseEvent mouseEvent) {
         handleBackLabelClick(pane);
     }
 

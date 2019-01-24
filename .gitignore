@@ -2,6 +2,6 @@
 .gitignore
 *.db
 out
-musics
+tunes
 target
 .idea

@@ -1,12 +1,6 @@
-/* --font-- */
-
 @font-face {
     src: url('../font/RibbonHeart.ttf');
 }
-
-/* ---- */
-
-/* --main-- */
 
 .mainBackground {
     -fx-background-image: url('../images/main.jpg');
@@ -30,10 +24,6 @@
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
-/* ---- */
-
-/* --game-- */
-
 .gameBackground {
     -fx-background-image: url('../images/game.jpg');
     -fx-background-size: cover;
@@ -55,10 +45,6 @@
     -fx-scale-y: 1.1;
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
-
-/* ---- */
-
-/* --settings-- */
 
 .settingsBackground {
     -fx-background-image: url('../images/settings.jpg');
@@ -82,10 +68,6 @@
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
-/* ---- */
-
-/* --round-- */
-
 .roundBackground {
     -fx-background-image: url('../images/round.jpg');
     -fx-background-size: cover;
@@ -106,10 +88,6 @@
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
-/* ---- */
-
-/* --preloader-- */
-
 .preloaderLabel {
     -fx-font-family: 'Ribbon Heart';
     -fx-font-smoothing-type: lcd; /*сглаживание*/
@@ -118,10 +96,6 @@
     -fx-padding: 40pt;
     -fx-background-color: radial-gradient(focus-distance 0%, center 50% 50%, radius 50%, #5e96ff, #6e96ff, #7e96ff, #8e96ff, #9e96ff, #Ae96ff, #Be96ff);
 }
-
-/* ---- */
-
-/* --settingsRound-- */
 
 .settingsRoundBackground {
     -fx-background-image: url('../images/settingsRound.jpg');
@@ -143,9 +117,15 @@
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
-/* ---- */
+.settingsCategoryBackground {
+    -fx-background-image: url('../images/settingsCategory.jpg');
+    -fx-background-size: cover;
+    -fx-smooth: true;
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+}
 
-.saveButton {
+.saveCategoryButton {
     -fx-background-radius: 10;
     -fx-border-radius: 8;
     -fx-background-color: blue;
@@ -155,7 +135,7 @@
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
-.saveButton:pressed {
+.saveCategoryButton:pressed {
     -fx-background-color: deepskyblue;
     -fx-border-color: blue;
     -fx-scale-x: 0.9;

@@ -25,52 +25,71 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static util.FileUtil.CATEGORIES_IN_ROUND_COUNT;
-import static util.FileUtil.MUSICS_IN_CATEGORY_COUNT;
+import static util.FileUtil.TUNES_IN_CATEGORY_COUNT;
 
 abstract class AbstractRoundController {
 
     private static final DAO<Category> CATEGORY_DAO = new CategoryDAO();
 
     private Label[] notesLabels;
-    private Media[] medias;
     private MediaPlayer[] mediaPlayers;
     private Glow[] glows;
     private Timeline[] timelines;
 
-    void initialize(ImageView backImageView, Label category1Label,
-                    Label category2Label, Label category3Label, Label category4Label, Pane pane, int roundNumber) {
-
+    void init(ImageView backImageView, Pane pane, int roundNumber, Label... categoryLabels) {
         initBackImageView(backImageView);
+        initCategoryLabels(categoryLabels);
+        initGlowsAndTimelines();
+        initMedia();
+        Stream.of(notesLabels).forEach(label -> pane.getChildren().add(label));
+        initData(roundNumber, categoryLabels);
+    }
 
-        initCategoryLabels(category1Label, category2Label, category3Label, category4Label);
-
-        medias = new Media[CATEGORIES_IN_ROUND_COUNT * MUSICS_IN_CATEGORY_COUNT];
-        mediaPlayers = new MediaPlayer[CATEGORIES_IN_ROUND_COUNT * MUSICS_IN_CATEGORY_COUNT];
-        notesLabels = new Label[CATEGORIES_IN_ROUND_COUNT * MUSICS_IN_CATEGORY_COUNT];
-        glows = new Glow[CATEGORIES_IN_ROUND_COUNT * MUSICS_IN_CATEGORY_COUNT];
-        timelines = new Timeline[CATEGORIES_IN_ROUND_COUNT * MUSICS_IN_CATEGORY_COUNT];
-        ImageView[] imageViews = new ImageView[CATEGORIES_IN_ROUND_COUNT * MUSICS_IN_CATEGORY_COUNT];
-
+    private ImageView[] createImageViews() {
+        ImageView[] imageViews = new ImageView[CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT];
         for (int i = 0; i < CATEGORIES_IN_ROUND_COUNT; i++) {
-            imageViews[MUSICS_IN_CATEGORY_COUNT * i] = createNoteImageView("blue.png");
-            imageViews[MUSICS_IN_CATEGORY_COUNT * i + 1] = createNoteImageView("darkGreen.png");
-            imageViews[MUSICS_IN_CATEGORY_COUNT * i + 2] = createNoteImageView("orange.png");
-            imageViews[MUSICS_IN_CATEGORY_COUNT * i + 3] = createNoteImageView("violet.png");
+            imageViews[TUNES_IN_CATEGORY_COUNT * i] = createNoteImageView("blue.png");
+            imageViews[TUNES_IN_CATEGORY_COUNT * i + 1] = createNoteImageView("darkGreen.png");
+            imageViews[TUNES_IN_CATEGORY_COUNT * i + 2] = createNoteImageView("orange.png");
+            imageViews[TUNES_IN_CATEGORY_COUNT * i + 3] = createNoteImageView("violet.png");
         }
+        return imageViews;
+    }
 
-        for (int i = 0; i < CATEGORIES_IN_ROUND_COUNT * MUSICS_IN_CATEGORY_COUNT; i++) {
+    @SuppressWarnings("Duplicates")
+    private void initGlowsAndTimelines() {
+        glows = new Glow[CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT];
+        timelines = new Timeline[CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT];
+        for (int i = 0; i < CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT; i++) {
             glows[i] = new Glow();
             timelines[i] = new Timeline();
             timelines[i].setCycleCount(Timeline.INDEFINITE);
             timelines[i].setAutoReverse(true);
             timelines[i].getKeyFrames().add(new KeyFrame(Duration.millis(500), new KeyValue(glows[i].levelProperty(), 1.0)));
+
         }
+    }
 
+    private void initBackImageView(ImageView backImageView) {
+        backImageView.setFitWidth(0.05 * UIUtil.getHeight());
+        backImageView.setFitHeight(0.05 * UIUtil.getHeight());
+    }
+
+    private ImageView createNoteImageView(String color) {
+        ImageView imageView = new ImageView(FileUtil.getNoteImage(color));
+        imageView.setFitWidth(0.2 * UIUtil.getHeight());
+        imageView.setFitHeight(0.2 * UIUtil.getHeight());
+        return imageView;
+    }
+
+    private void initMedia() {
+        mediaPlayers = new MediaPlayer[CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT];
+        notesLabels = new Label[CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT];
+        ImageView[] imageViews = createImageViews();
         // (0.7 * UIUtil.getWidth() - 0.8 * UIUtil.getHeight()) / 5 - промежуток между нотами
-
         for (int i = 0; i < CATEGORIES_IN_ROUND_COUNT; i++) {
-            for (int j = 0; j < MUSICS_IN_CATEGORY_COUNT; j++) {
-                int t = MUSICS_IN_CATEGORY_COUNT * i + j;
+            for (int j = 0; j < TUNES_IN_CATEGORY_COUNT; j++) {
+                int t = TUNES_IN_CATEGORY_COUNT * i + j;
                 double delta = j * imageViews[4 * i].getFitWidth();
                 notesLabels[t] = new Label(null, imageViews[t]);
                 notesLabels[t].setCursor(Cursor.HAND);
@@ -101,42 +120,25 @@ abstract class AbstractRoundController {
                 });
             }
         }
-
-        Stream.of(notesLabels).forEach(label -> pane.getChildren().add(label));
-        initData(category1Label, category2Label, category3Label, category4Label, roundNumber);
     }
 
-    private void initBackImageView(ImageView backImageView) {
-        backImageView.setFitWidth(0.05 * UIUtil.getHeight());
-        backImageView.setFitHeight(0.05 * UIUtil.getHeight());
-    }
-
-    private ImageView createNoteImageView(String color) {
-        ImageView imageView = new ImageView(FileUtil.getNoteImage(color));
-        imageView.setFitWidth(0.2 * UIUtil.getHeight());
-        imageView.setFitHeight(0.2 * UIUtil.getHeight());
-        return imageView;
-    }
-
-    private void initData(Label category1Label, Label category2Label, Label category3Label, Label category4Label, int roundNumber) {
+    private void initData(int roundNumber, Label... categoryLabels) {
         List<Category> categoryList = CATEGORY_DAO.readAll().stream()
                 .filter(category -> category.getRoundId() == roundNumber)
                 .collect(Collectors.toList());
-        category1Label.setText(categoryList.get(0).getTitle());
-        category2Label.setText(categoryList.get(1).getTitle());
-        category3Label.setText(categoryList.get(2).getTitle());
-        category4Label.setText(categoryList.get(3).getTitle());
+        for (int i = 0; i < categoryLabels.length; i++) {
+            categoryLabels[i].setText(categoryList.get(i).getTitle());
+        }
 
         for (int i = 0; i < CATEGORIES_IN_ROUND_COUNT; i++) {
-            for (int j = 0; j < MUSICS_IN_CATEGORY_COUNT; j++) {
+            for (int j = 0; j < TUNES_IN_CATEGORY_COUNT; j++) {
                 File file = FileUtil.getMP3File(roundNumber, i + 1, j + 1);
-                int t = MUSICS_IN_CATEGORY_COUNT * i + j;
+                int t = TUNES_IN_CATEGORY_COUNT * i + j;
                 if (file.exists()) {
-                    medias[t] = new Media(file.toURI().toString());
-                    mediaPlayers[t] = new MediaPlayer(medias[t]);
+                    Media media = new Media(file.toURI().toString());
+                    mediaPlayers[t] = new MediaPlayer(media);
                     notesLabels[t].setDisable(false);
                 } else {
-                    medias[t] = null;
                     mediaPlayers[t] = null;
                     notesLabels[t].setDisable(true);
                 }
@@ -144,11 +146,10 @@ abstract class AbstractRoundController {
         }
     }
 
-    private void initCategoryLabels(Label category1Label, Label category2Label, Label category3Label, Label category4Label) {
-        initCategoryLabel(category1Label, 0);
-        initCategoryLabel(category2Label, 1);
-        initCategoryLabel(category3Label, 2);
-        initCategoryLabel(category4Label, 3);
+    private void initCategoryLabels(Label... categoryLabels) {
+        for (int i = 0; i < categoryLabels.length; i++) {
+            initCategoryLabel(categoryLabels[i], i);
+        }
     }
 
     private void initCategoryLabel(Label label, int labelNumber) {
@@ -159,10 +160,9 @@ abstract class AbstractRoundController {
     }
 
     private void disposeResources() {
-        for (int i = 0; i < CATEGORIES_IN_ROUND_COUNT * MUSICS_IN_CATEGORY_COUNT; i++) {
+        for (int i = 0; i < CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT; i++) {
             if (mediaPlayers[i] != null) {
                 mediaPlayers[i].dispose();
-                medias[i] = null;
                 mediaPlayers[i] = null;
             }
             if (!notesLabels[i].isDisable()) {
@@ -172,7 +172,6 @@ abstract class AbstractRoundController {
                 }
             }
         }
-        //System.gc();
     }
 
     void handleBackLabelClick(Pane pane) {
