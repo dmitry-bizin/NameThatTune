@@ -36,9 +36,7 @@ abstract class AbstractRoundController {
     private Glow[] glows;
     private Timeline[] timelines;
 
-    void init(ImageView backImageView, Pane pane, int roundNumber, Label... categoryLabels) {
-        initBackImageView(backImageView);
-        initCategoryLabels(categoryLabels);
+    void init(Pane pane, int roundNumber, Label... categoryLabels) {
         initGlowsAndTimelines();
         initMedia();
         Stream.of(notesLabels).forEach(label -> pane.getChildren().add(label));
@@ -68,11 +66,6 @@ abstract class AbstractRoundController {
             timelines[i].getKeyFrames().add(new KeyFrame(Duration.millis(500), new KeyValue(glows[i].levelProperty(), 1.0)));
 
         }
-    }
-
-    private void initBackImageView(ImageView backImageView) {
-        backImageView.setFitWidth(0.05 * UIUtil.getHeight());
-        backImageView.setFitHeight(0.05 * UIUtil.getHeight());
     }
 
     private ImageView createNoteImageView(String color) {
@@ -138,25 +131,12 @@ abstract class AbstractRoundController {
                     Media media = new Media(file.toURI().toString());
                     mediaPlayers[t] = new MediaPlayer(media);
                     notesLabels[t].setDisable(false);
-                } else {
+                } else { ;
                     mediaPlayers[t] = null;
                     notesLabels[t].setDisable(true);
                 }
             }
         }
-    }
-
-    private void initCategoryLabels(Label... categoryLabels) {
-        for (int i = 0; i < categoryLabels.length; i++) {
-            initCategoryLabel(categoryLabels[i], i);
-        }
-    }
-
-    private void initCategoryLabel(Label label, int labelNumber) {
-        label.setLayoutY(UIUtil.getHeight() * 0.25 * labelNumber);
-        label.setMaxSize(UIUtil.getWidth() * 0.3, UIUtil.getHeight() * 0.25);
-        label.setMinSize(UIUtil.getWidth() * 0.3, UIUtil.getHeight() * 0.25);
-        label.setFont(new Font(UIUtil.getHeight() * 0.045));
     }
 
     private void disposeResources() {

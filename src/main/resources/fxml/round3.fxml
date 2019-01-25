@@ -1,23 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?language javascript?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.stage.Screen?>
+<?import javafx.scene.text.Font?>
 <Pane xmlns:fx="http://javafx.com/fxml"
       xmlns="http://javafx.com/javafx"
       fx:controller="controller.Round3Controller"
       stylesheets="@../css/style.css" styleClass="roundBackground"
       fx:id="pane">
 
-    <Label fx:id="category1Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER"/>
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen"/>
+    </fx:define>
 
-    <Label fx:id="category2Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER"/>
+    <Label fx:id="category1Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER">
+        <font>
+            <Font fx:id="font1"/>
+        </font>
+        <fx:script>
+            category1Label.maxWidth = 0.3 * screen.visualBounds.width;
+            category1Label.maxHeight = 0.25 * screen.visualBounds.height;
+            category1Label.minWidth = 0.3 * screen.visualBounds.width;
+            category1Label.minHeight = 0.25 * screen.visualBounds.height;
+            font1.size = 0.045 * screen.visualBounds.height;
+             </fx:script>
+    </Label>
 
-    <Label fx:id="category3Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER"/>
+    <Label fx:id="category2Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER">
+        <font>
+            <Font fx:id="font2"/>
+        </font>
+        <fx:script>
+            category2Label.layoutY = 0.25 * screen.visualBounds.height;
+            category2Label.maxWidth = 0.3 * screen.visualBounds.width;
+            category2Label.maxHeight = 0.25 * screen.visualBounds.height;
+            category2Label.minWidth = 0.3 * screen.visualBounds.width;
+            category2Label.minHeight = 0.25 * screen.visualBounds.height;
+            font2.size = 0.045 * screen.visualBounds.height;
+             </fx:script>
+    </Label>
 
-    <Label fx:id="category4Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER"/>
+    <Label fx:id="category3Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER">
+        <font>
+            <Font fx:id="font3"/>
+        </font>
+        <fx:script>
+            category3Label.layoutY = 0.5 * screen.visualBounds.height;
+            category3Label.maxWidth = 0.3 * screen.visualBounds.width;
+            category3Label.maxHeight = 0.25 * screen.visualBounds.height;
+            category3Label.minWidth = 0.3 * screen.visualBounds.width;
+            category3Label.minHeight = 0.25 * screen.visualBounds.height;
+            font3.size = 0.045 * screen.visualBounds.height;
+             </fx:script>
+    </Label>
+
+    <Label fx:id="category4Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER">
+        <font>
+            <Font fx:id="font4"/>
+        </font>
+        <fx:script>
+            category4Label.layoutY = 0.75 * screen.visualBounds.height;
+            category4Label.maxWidth = 0.3 * screen.visualBounds.width;
+            category4Label.maxHeight = 0.25 * screen.visualBounds.height;
+            category4Label.minWidth = 0.3 * screen.visualBounds.width;
+            category4Label.minHeight = 0.25 * screen.visualBounds.height;
+            font4.size = 0.045 * screen.visualBounds.height;
+             </fx:script>
+    </Label>
 
     <Label onMouseClicked="#backLabelClick" styleClass="roundBackLabel">
         <cursor>
@@ -26,6 +81,10 @@
         <graphic>
             <ImageView fx:id="backImageView">
                 <Image url="@../images/back.png"/>
+                <fx:script>
+                    backImageView.fitWidth = 0.05 * screen.visualBounds.height;
+                    backImageView.fitHeight = 0.05 * screen.visualBounds.height;
+                     </fx:script>
             </ImageView>
         </graphic>
     </Label>

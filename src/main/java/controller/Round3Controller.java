@@ -16,9 +16,6 @@ public class Round3Controller extends AbstractRoundController implements Initial
     private Pane pane;
 
     @FXML
-    private ImageView backImageView;
-
-    @FXML
     private Label category1Label;
 
     @FXML
@@ -32,7 +29,7 @@ public class Round3Controller extends AbstractRoundController implements Initial
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        init(backImageView, pane, 3, category1Label, category2Label, category3Label, category4Label);
+        init(pane, 3, category1Label, category2Label, category3Label, category4Label);
     }
 
     @FXML
