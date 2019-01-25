@@ -17,8 +17,8 @@
     <Label fx:id="gameLabel" text="Игра"
            styleClass="mainLabel" onMouseClicked="#gameLabelClick">
         <fx:script>
-            gameLabel.layoutX = 0.6 * screen.visualBounds.width;
-            gameLabel.layoutY = 0.3 * screen.visualBounds.height;
+            gameLabel.setLayoutX(0.6 * screen.getVisualBounds().getWidth());
+            gameLabel.setLayoutY(0.3 * screen.getVisualBounds().getHeight());
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
@@ -28,8 +28,8 @@
     <Label fx:id="settingsLabel" text="Настройки"
            styleClass="mainLabel" onMouseClicked="#settingsLabelClick">
         <fx:script>
-            settingsLabel.layoutX = 0.6 * screen.visualBounds.width;
-            settingsLabel.layoutY = 0.4 * screen.visualBounds.height;
+            settingsLabel.setLayoutX(0.6 * screen.getVisualBounds().getWidth());
+            settingsLabel.setLayoutY(0.4 * screen.getVisualBounds().getHeight());
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
@@ -39,8 +39,8 @@
     <Label fx:id="exitLabel" text="Выход"
            styleClass="mainLabel" onMouseClicked="#exitLabelClick">
         <fx:script>
-            exitLabel.layoutX = 0.6 * screen.visualBounds.width;
-            exitLabel.layoutY = 0.5 * screen.visualBounds.height;
+            exitLabel.setLayoutX(0.6 * screen.getVisualBounds().getWidth());
+            exitLabel.setLayoutY(0.5 * screen.getVisualBounds().getHeight());
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
