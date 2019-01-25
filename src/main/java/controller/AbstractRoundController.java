@@ -14,7 +14,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.text.Font;
 import javafx.util.Duration;
 import util.FileUtil;
 import util.UIUtil;
@@ -131,7 +130,8 @@ abstract class AbstractRoundController {
                     Media media = new Media(file.toURI().toString());
                     mediaPlayers[t] = new MediaPlayer(media);
                     notesLabels[t].setDisable(false);
-                } else { ;
+                } else {
+                    ;
                     mediaPlayers[t] = null;
                     notesLabels[t].setDisable(true);
                 }
