@@ -1,27 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?language javascript?>
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.stage.Screen?>
 <Pane xmlns:fx="http://javafx.com/fxml"
       xmlns="http://javafx.com/javafx"
       fx:controller="controller.SettingsRound1Controller"
       stylesheets="@../css/style.css" styleClass="settingsRoundBackground"
       fx:id="pane">
 
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen"/>
+    </fx:define>
+
     <Label fx:id="category1Label" styleClass="settingsRoundLabel" onMouseClicked="#category1LabelClick">
+        <fx:script>
+            category1Label.setLayoutX(0.01 * screen.getVisualBounds().getWidth());
+            category1Label.setLayoutY(0.1 * screen.getVisualBounds().getHeight());
+             </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Label>
 
     <Label fx:id="category2Label" styleClass="settingsRoundLabel" onMouseClicked="#category2LabelClick">
+        <fx:script>
+            category2Label.setLayoutX(0.01 * screen.getVisualBounds().getWidth());
+            category2Label.setLayoutY(0.2 * screen.getVisualBounds().getHeight());
+             </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Label>
 
     <Label fx:id="category3Label" styleClass="settingsRoundLabel" onMouseClicked="#category3LabelClick">
+        <fx:script>
+            category3Label.setLayoutX(0.01 * screen.getVisualBounds().getWidth());
+            category3Label.setLayoutY(0.3 * screen.getVisualBounds().getHeight());
+             </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -29,12 +47,20 @@
 
     <Label fx:id="category4Label" styleClass="settingsRoundLabel"
            onMouseClicked="#category4LabelClick">
+        <fx:script>
+            category4Label.setLayoutX(0.01 * screen.getVisualBounds().getWidth());
+            category4Label.setLayoutY(0.4 * screen.getVisualBounds().getHeight());
+             </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Label>
 
     <Label fx:id="backLabel" text="Назад" styleClass="settingsRoundLabel" onMouseClicked="#backLabelClick">
+        <fx:script>
+            backLabel.setLayoutX(0.01 * screen.getVisualBounds().getWidth());
+            backLabel.setLayoutY(0.5 * screen.getVisualBounds().getHeight());
+             </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>

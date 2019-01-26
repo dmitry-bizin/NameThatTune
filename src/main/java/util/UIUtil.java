@@ -1,17 +1,24 @@
 package util;
 
+import dao.CategoryDAO;
+import dao.DAO;
+import entity.Category;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.awt.*;
 import java.io.IOException;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class UIUtil {
 
     private static final Dimension SCREEN_SIZE = Toolkit.getDefaultToolkit().getScreenSize();
+    private static final DAO<Category> CATEGORY_DAO = new CategoryDAO();
 
     private UIUtil() {
     }
@@ -85,6 +92,15 @@ public class UIUtil {
             UIUtil.changeScene(root, getStage(pane), "Настройки " + roundNumber + "го тура");
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static void fillCategoryLabels(Label[] categoryLabels, int roundNumber) {
+        List<Category> categoryList = CATEGORY_DAO.readAll().stream()
+                .filter(category -> category.getRoundId() == roundNumber)
+                .collect(Collectors.toList());
+        for (int i = 0; i < categoryLabels.length; i++) {
+            categoryLabels[i].setText(categoryList.get(i).getTitle());
         }
     }
 

@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?language javascript?>
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.stage.Screen?>
 <Pane xmlns:fx="http://javafx.com/fxml"
       xmlns="http://javafx.com/javafx"
       fx:controller="controller.SettingsRound1Category1Controller"
       stylesheets="@../css/style.css" styleClass="settingsCategoryBackground"
       fx:id="pane">
+
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen"/>
+    </fx:define>
 
     <Label onMouseClicked="#play1LabelClick">
         <cursor>
@@ -17,6 +23,10 @@
         <graphic>
             <ImageView fx:id="play1ImageView">
                 <Image url="@../images/play.png"/>
+                <fx:script>
+                    play1ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
+                    play1ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                     </fx:script>
             </ImageView>
         </graphic>
     </Label>
@@ -28,6 +38,10 @@
         <graphic>
             <ImageView fx:id="pause1ImageView">
                 <Image url="@../images/pause.png"/>
+                <fx:script>
+                    pause1ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
+                    pause1ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                     </fx:script>
             </ImageView>
         </graphic>
     </Label>
@@ -39,6 +53,10 @@
         <graphic>
             <ImageView fx:id="play2ImageView">
                 <Image url="@../images/play.png"/>
+                <fx:script>
+                    play2ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
+                    play2ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                     </fx:script>
             </ImageView>
         </graphic>
     </Label>
@@ -50,6 +68,10 @@
         <graphic>
             <ImageView fx:id="pause2ImageView">
                 <Image url="@../images/pause.png"/>
+                <fx:script>
+                    pause2ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
+                    pause2ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                     </fx:script>
             </ImageView>
         </graphic>
     </Label>
@@ -61,6 +83,10 @@
         <graphic>
             <ImageView fx:id="play3ImageView">
                 <Image url="@../images/play.png"/>
+                <fx:script>
+                    play3ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
+                    play3ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                     </fx:script>
             </ImageView>
         </graphic>
     </Label>
@@ -72,6 +98,10 @@
         <graphic>
             <ImageView fx:id="pause3ImageView">
                 <Image url="@../images/pause.png"/>
+                <fx:script>
+                    pause3ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
+                    pause3ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                     </fx:script>
             </ImageView>
         </graphic>
     </Label>
@@ -83,6 +113,10 @@
         <graphic>
             <ImageView fx:id="play4ImageView">
                 <Image url="@../images/play.png"/>
+                <fx:script>
+                    play4ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
+                    play4ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                     </fx:script>
             </ImageView>
         </graphic>
     </Label>
@@ -94,11 +128,21 @@
         <graphic>
             <ImageView fx:id="pause4ImageView">
                 <Image url="@../images/pause.png"/>
+                <fx:script>
+                    pause4ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
+                    pause4ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                     </fx:script>
             </ImageView>
         </graphic>
     </Label>
 
-    <TextField promptText="Название категории" fx:id="categoryTextField"/>
+    <TextField promptText="Название категории" fx:id="categoryTextField">
+        <fx:script>
+            categoryTextField.setLayoutX(0.1 * screen.getVisualBounds().getWidth());
+            categoryTextField.setLayoutY(0.1 * screen.getVisualBounds().getHeight());
+            categoryTextField.setPrefWidth(0.2 * screen.getVisualBounds().getWidth());
+             </fx:script>
+    </TextField>
 
     <Button text="Сохранить" styleClass="saveCategoryButton">
         <cursor>

@@ -1,8 +1,5 @@
 package controller;
 
-import dao.CategoryDAO;
-import dao.DAO;
-import entity.Category;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -19,16 +16,12 @@ import util.FileUtil;
 import util.UIUtil;
 
 import java.io.File;
-import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static util.FileUtil.CATEGORIES_IN_ROUND_COUNT;
 import static util.FileUtil.TUNES_IN_CATEGORY_COUNT;
 
 abstract class AbstractRoundController {
-
-    private static final DAO<Category> CATEGORY_DAO = new CategoryDAO();
 
     private Label[] notesLabels;
     private MediaPlayer[] mediaPlayers;
@@ -39,7 +32,8 @@ abstract class AbstractRoundController {
         initGlowsAndTimelines();
         initMedia();
         Stream.of(notesLabels).forEach(label -> pane.getChildren().add(label));
-        initData(roundNumber, categoryLabels);
+        UIUtil.fillCategoryLabels(categoryLabels, roundNumber);
+        initMP3(roundNumber);
     }
 
     private ImageView[] createImageViews() {
@@ -114,14 +108,7 @@ abstract class AbstractRoundController {
         }
     }
 
-    private void initData(int roundNumber, Label... categoryLabels) {
-        List<Category> categoryList = CATEGORY_DAO.readAll().stream()
-                .filter(category -> category.getRoundId() == roundNumber)
-                .collect(Collectors.toList());
-        for (int i = 0; i < categoryLabels.length; i++) {
-            categoryLabels[i].setText(categoryList.get(i).getTitle());
-        }
-
+    private void initMP3(int roundNumber) {
         for (int i = 0; i < CATEGORIES_IN_ROUND_COUNT; i++) {
             for (int j = 0; j < TUNES_IN_CATEGORY_COUNT; j++) {
                 File file = FileUtil.getMP3File(roundNumber, i + 1, j + 1);
@@ -131,7 +118,6 @@ abstract class AbstractRoundController {
                     mediaPlayers[t] = new MediaPlayer(media);
                     notesLabels[t].setDisable(false);
                 } else {
-                    ;
                     mediaPlayers[t] = null;
                     notesLabels[t].setDisable(true);
                 }

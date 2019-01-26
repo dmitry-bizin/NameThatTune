@@ -27,12 +27,9 @@ public class SettingsRound1Controller extends AbstractSettingsRoundController im
     @FXML
     private Label category4Label;
 
-    @FXML
-    private Label backLabel;
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        init(backLabel, 1, category1Label, category2Label, category3Label, category4Label);
+        init(1, category1Label, category2Label, category3Label, category4Label);
     }
 
     @FXML

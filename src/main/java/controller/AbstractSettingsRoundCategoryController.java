@@ -3,11 +3,8 @@ package controller;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
-import javafx.scene.control.TextField;
 import javafx.scene.effect.Glow;
-import javafx.scene.image.ImageView;
 import javafx.util.Duration;
-import util.UIUtil;
 
 import static util.FileUtil.TUNES_IN_CATEGORY_COUNT;
 
@@ -16,24 +13,8 @@ class AbstractSettingsRoundCategoryController {
     private Glow[] glows;
     private Timeline[] timelines;
 
-    void init(TextField categoryTextField, ImageView... playPauseImageViews) {
-        initPlayPauseImageView(playPauseImageViews);
-        initCategoryTextField(categoryTextField);
+    void init() {
         initGlowsAndTimelines();
-
-    }
-
-    private void initPlayPauseImageView(ImageView... playPauseImageViews) {
-        for (ImageView imageView : playPauseImageViews) {
-            imageView.setFitHeight(0.04 * UIUtil.getHeight());
-            imageView.setFitWidth(0.04 * UIUtil.getHeight());
-        }
-    }
-
-    private void initCategoryTextField(TextField categoryTextField) {
-        categoryTextField.setLayoutX(UIUtil.getWidth() * 0.1);
-        categoryTextField.setLayoutY(UIUtil.getHeight() * 0.1);
-        categoryTextField.setPrefWidth(UIUtil.getWidth() * 0.2);
     }
 
     @SuppressWarnings("Duplicates")
