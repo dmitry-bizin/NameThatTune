@@ -1,8 +1,6 @@
 package controller;
 
 import javafx.animation.Animation;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.scene.Cursor;
 import javafx.scene.control.Label;
@@ -11,7 +9,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.util.Duration;
 import util.FileUtil;
 import util.UIUtil;
 
@@ -47,18 +44,10 @@ abstract class AbstractRoundController {
         return imageViews;
     }
 
-    @SuppressWarnings("Duplicates")
     private void initGlowsAndTimelines() {
         glows = new Glow[CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT];
         timelines = new Timeline[CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT];
-        for (int i = 0; i < CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT; i++) {
-            glows[i] = new Glow();
-            timelines[i] = new Timeline();
-            timelines[i].setCycleCount(Timeline.INDEFINITE);
-            timelines[i].setAutoReverse(true);
-            timelines[i].getKeyFrames().add(new KeyFrame(Duration.millis(500), new KeyValue(glows[i].levelProperty(), 1.0)));
-
-        }
+        UIUtil.initGlowsAndTimelines(glows, timelines);
     }
 
     private ImageView createNoteImageView(String color) {

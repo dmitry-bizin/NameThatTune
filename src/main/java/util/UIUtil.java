@@ -3,17 +3,25 @@ package util;
 import dao.CategoryDAO;
 import dao.DAO;
 import entity.Category;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.effect.Glow;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.awt.*;
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static util.FileUtil.CATEGORIES_IN_ROUND_COUNT;
+import static util.FileUtil.TUNES_IN_CATEGORY_COUNT;
 
 public class UIUtil {
 
@@ -101,6 +109,16 @@ public class UIUtil {
                 .collect(Collectors.toList());
         for (int i = 0; i < categoryLabels.length; i++) {
             categoryLabels[i].setText(categoryList.get(i).getTitle());
+        }
+    }
+
+    public static void initGlowsAndTimelines(Glow[] glows, Timeline[] timelines) {
+        for (int i = 0; i < CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT; i++) {
+            glows[i] = new Glow();
+            timelines[i] = new Timeline();
+            timelines[i].setCycleCount(Timeline.INDEFINITE);
+            timelines[i].setAutoReverse(true);
+            timelines[i].getKeyFrames().add(new KeyFrame(Duration.millis(500), new KeyValue(glows[i].levelProperty(), 1.0)));
         }
     }
 
