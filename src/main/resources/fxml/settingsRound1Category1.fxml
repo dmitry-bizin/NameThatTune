@@ -144,10 +144,25 @@
              </fx:script>
     </TextField>
 
-    <Button text="Сохранить" styleClass="saveCategoryButton">
+    <Button text="Сохранить" styleClass="saveCategoryButton" fx:id="saveCategoryButton"
+            onMouseClicked="#saveCategoryButtonClick">
+        <fx:script>
+            saveCategoryButton.setLayoutX(0.31 * screen.getVisualBounds().getWidth());
+            saveCategoryButton.setLayoutY(0.1 * screen.getVisualBounds().getHeight());
+             </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
+
+    <Label onMouseClicked="#backLabelClick" fx:id="backLabel" text="Назад" styleClass="settingsRoundCategoryBackLabel">
+        <fx:script>
+            backLabel.setLayoutX(0.9 * screen.getVisualBounds().getWidth());
+            backLabel.setLayoutY(0.1 * screen.getVisualBounds().getHeight());
+             </fx:script>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Label>
 
 </Pane>

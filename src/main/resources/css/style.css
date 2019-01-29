@@ -117,12 +117,33 @@
     -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
+.settingsRoundInfoLabel {
+    -fx-text-fill: linear-gradient(to right, green, yellow, red, mediumvioletred);
+    -fx-font-size: 40pt;
+    -fx-font-family: 'Ribbon Heart';
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
 .settingsCategoryBackground {
     -fx-background-image: url('../images/settingsCategory.jpg');
     -fx-background-size: cover;
     -fx-smooth: true;
     -fx-fit-to-height: true;
     -fx-fit-to-width: true;
+}
+
+.settingsRoundCategoryBackLabel {
+    -fx-font-size: 35pt;
+    -fx-font-family: "Ribbon Heart";
+    -fx-text-fill: blue;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
+}
+
+.settingsRoundCategoryBackLabel:hover, .settingsRoundCategoryBackLabel:pressed {
+    -fx-text-fill: red;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-font-smoothing-type: lcd; /*сглаживание*/
 }
 
 .saveCategoryButton {

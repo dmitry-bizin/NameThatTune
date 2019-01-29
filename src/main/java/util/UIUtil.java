@@ -20,9 +20,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static util.FileUtil.CATEGORIES_IN_ROUND_COUNT;
-import static util.FileUtil.TUNES_IN_CATEGORY_COUNT;
-
 public class UIUtil {
 
     private static final Dimension SCREEN_SIZE = Toolkit.getDefaultToolkit().getScreenSize();
@@ -113,7 +110,7 @@ public class UIUtil {
     }
 
     public static void initGlowsAndTimelines(Glow[] glows, Timeline[] timelines) {
-        for (int i = 0; i < CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT; i++) {
+        for (int i = 0; i < glows.length; i++) {
             glows[i] = new Glow();
             timelines[i] = new Timeline();
             timelines[i].setCycleCount(Timeline.INDEFINITE);
