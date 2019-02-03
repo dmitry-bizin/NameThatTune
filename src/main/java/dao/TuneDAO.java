@@ -12,6 +12,7 @@ public class TuneDAO implements DAO<Tune> {
 
     private static final String READ_ALL = "SELECT * FROM tune";
     private static final String READ_BY_ID = "SELECT * FROM tune WHERE id = ?";
+    private static final String READ_BY_CATEGORY_ID = "SELECT * FROM tune WHERE categoryId = ?";
     private static final String UPDATE_BY_ID = "UPDATE tune SET title = ?, author = ?, score = ? WHERE id = ?";
 
     @Override
@@ -46,6 +47,10 @@ public class TuneDAO implements DAO<Tune> {
         preparedStatement.setString(2, tune.getAuthor());
         preparedStatement.setInt(3, tune.getScore());
         preparedStatement.setInt(4, id);
+    }
+
+    public List<Tune> readByCategoryNumber(int categoryNumber) {
+        return readByForeignKey(READ_BY_CATEGORY_ID, categoryNumber);
     }
 
 }

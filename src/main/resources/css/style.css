@@ -1,4 +1,8 @@
 @font-face {
+    src: url('../font/SegoePrint.ttf');
+}
+
+@font-face {
     src: url('../font/RibbonHeart.ttf');
 }
 
@@ -14,14 +18,14 @@
     -fx-font-size: 35pt;
     -fx-font-family: 'Ribbon Heart';
     -fx-text-fill: blue;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
 .mainLabel:hover, .mainLabel:pressed {
     -fx-text-fill: red;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
 .gameBackground {
@@ -36,14 +40,14 @@
     -fx-font-size: 35pt;
     -fx-font-family: 'Ribbon Heart';
     -fx-text-fill: #E52B50;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
 .gameLabel:hover, .gameLabel:pressed {
     -fx-text-fill: blue;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
 .settingsBackground {
@@ -58,14 +62,14 @@
     -fx-font-size: 35pt;
     -fx-font-family: 'Ribbon Heart';
     -fx-text-fill: white;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
 .settingsLabel:hover, .settingsLabel:pressed {
     -fx-text-fill: yellow;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
 .roundBackground {
@@ -77,20 +81,21 @@
 }
 
 .roundLabel {
+    -fx-font-size: 40pt;
     -fx-font-family: 'Ribbon Heart';
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
     -fx-text-fill: blue;
 }
 
 .roundBackLabel:hover, .roundBackLabel:pressed {
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
 .preloaderLabel {
     -fx-font-family: 'Ribbon Heart';
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
     -fx-text-fill: white;
     -fx-font-size: 40pt;
     -fx-padding: 40pt;
@@ -109,19 +114,19 @@
     -fx-text-fill: linear-gradient(to right, green, yellow, red, mediumvioletred);
     -fx-font-size: 35pt;
     -fx-font-family: 'Ribbon Heart';
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
 .settingsRoundLabel:hover, .settingsRoundLabel:pressed {
     -fx-text-fill: white;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
 .settingsRoundInfoLabel {
     -fx-text-fill: linear-gradient(to right, green, yellow, red, mediumvioletred);
     -fx-font-size: 40pt;
     -fx-font-family: 'Ribbon Heart';
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
 .settingsCategoryBackground {
@@ -136,32 +141,32 @@
     -fx-font-size: 35pt;
     -fx-font-family: "Ribbon Heart";
     -fx-text-fill: blue;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
 .settingsRoundCategoryBackLabel:hover, .settingsRoundCategoryBackLabel:pressed {
     -fx-text-fill: red;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
-.saveCategoryButton {
+.saveButton {
     -fx-background-radius: 10;
     -fx-border-radius: 8;
     -fx-background-color: blue;
     -fx-text-fill: white;
     -fx-font-size: 14pt;
-    -fx-font-family: 'Ribbon Heart';
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-family: 'Segoe Print';
+    -fx-font-smoothing-type: lcd;
 }
 
-.saveCategoryButton:pressed {
+.saveButton:pressed {
     -fx-background-color: deepskyblue;
     -fx-border-color: blue;
     -fx-scale-x: 0.9;
     -fx-scale-y: 0.9;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
 .text-field {
@@ -170,22 +175,35 @@
     -fx-border-width: 1pt;
     -fx-border-color: deepskyblue;
     -fx-font-size: 14pt;
-    -fx-font-family: 'Ribbon Heart';
+    -fx-font-family: 'Segoe Print';
     -fx-text-fill: deepskyblue;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
 .text-field:focused {
     -fx-border-color: blue;
     -fx-text-fill: blue;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
-.scoresLabel {
+.tourLabel {
     -fx-font-size: 35pt;
     -fx-font-family: 'Ribbon Heart';
     -fx-text-fill: blue;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
+}
+
+.scoreLabel {
+    -fx-font-size: 40pt;
+    -fx-font-family: 'Ribbon Heart';
+    -fx-text-fill: blue;
+    -fx-font-smoothing-type: lcd;
+}
+
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1 1;
+    -fx-border-color: blue;
 }
 
 .unselectedButton {
@@ -194,8 +212,8 @@
     -fx-background-color: red;
     -fx-text-fill: white;
     -fx-font-size: 14pt;
-    -fx-font-family: 'Ribbon Heart';
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-family: 'Segoe Print';
+    -fx-font-smoothing-type: lcd;
 }
 
 .unselectedButton:pressed {
@@ -203,7 +221,7 @@
     -fx-border-color: red;
     -fx-scale-x: 0.9;
     -fx-scale-y: 0.9;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
 .selectedButton {
@@ -212,8 +230,8 @@
     -fx-background-color: green;
     -fx-text-fill: white;
     -fx-font-size: 14pt;
-    -fx-font-family: 'Ribbon Heart';
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-family: 'Segoe Print';
+    -fx-font-smoothing-type: lcd;
 }
 
 .selectedButton:pressed {
@@ -221,24 +239,16 @@
     -fx-border-color: green;
     -fx-scale-x: 0.9;
     -fx-scale-y: 0.9;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }
 
 .playButton, .pauseButton {
-    -fx-background-color: white;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-background-color: transparent;
+    -fx-font-smoothing-type: lcd;
 }
 
 .playButton:pressed, .pauseButton:pressed {
-    -fx-border-color: blue;
     -fx-scale-x: 0.9;
     -fx-scale-y: 0.9;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
-}
-
-.toursLabel {
-    -fx-font-size: 35pt;
-    -fx-font-family: 'Ribbon Heart';
-    -fx-text-fill: blue;
-    -fx-font-smoothing-type: lcd; /*сглаживание*/
+    -fx-font-smoothing-type: lcd;
 }

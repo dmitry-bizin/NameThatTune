@@ -1,8 +1,9 @@
 package util;
 
 import dao.CategoryDAO;
-import dao.DAO;
+import dao.CurrentDirectoryDAO;
 import entity.Category;
+import entity.CurrentDirectory;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -12,23 +13,28 @@ import javafx.scene.control.Label;
 import javafx.scene.effect.Glow;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.LinkOption;
+import java.nio.file.Paths;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class UIUtil {
 
     private static final Dimension SCREEN_SIZE = Toolkit.getDefaultToolkit().getScreenSize();
-    private static final DAO<Category> CATEGORY_DAO = new CategoryDAO();
+    private static final CategoryDAO CATEGORY_DAO = new CategoryDAO();
+    private static final CurrentDirectoryDAO CURRENT_DIRECTORY_DAO = new CurrentDirectoryDAO();
 
     private UIUtil() {
     }
 
-    public static void addKeyHandler(Scene scene, Stage stage) {
+    public static void addKeyHandlers(Scene scene, Stage stage) {
         scene.setOnKeyPressed(event -> {
             if (event.getCode().equals(KeyCode.ESCAPE)) {
                 stage.close();
@@ -41,7 +47,7 @@ public class UIUtil {
 
     private static void changeScene(Parent root, Stage stage, String title) {
         Scene scene = new Scene(root, SCREEN_SIZE.getWidth(), SCREEN_SIZE.getHeight());
-        addKeyHandler(scene, stage);
+        addKeyHandlers(scene, stage);
         stage.setScene(scene);
         stage.setTitle(title);
     }
@@ -101,9 +107,7 @@ public class UIUtil {
     }
 
     public static void fillCategoryLabels(Label[] categoryLabels, int roundNumber) {
-        List<Category> categoryList = CATEGORY_DAO.readAll().stream()
-                .filter(category -> category.getRoundId() == roundNumber)
-                .collect(Collectors.toList());
+        List<Category> categoryList = CATEGORY_DAO.readByRoundNumber(roundNumber);
         for (int i = 0; i < categoryLabels.length; i++) {
             categoryLabels[i].setText(categoryList.get(i).getTitle());
         }
@@ -115,7 +119,7 @@ public class UIUtil {
             timelines[i] = new Timeline();
             timelines[i].setCycleCount(Timeline.INDEFINITE);
             timelines[i].setAutoReverse(true);
-            timelines[i].getKeyFrames().add(new KeyFrame(Duration.millis(500), new KeyValue(glows[i].levelProperty(), 1.0)));
+            timelines[i].getKeyFrames().add(new KeyFrame(Duration.millis(500), new KeyValue(glows[i].levelProperty(), 1)));
         }
     }
 
@@ -129,6 +133,17 @@ public class UIUtil {
 
     public static Stage getStage(Pane pane) {
         return (Stage) pane.getScene().getWindow();
+    }
+
+    public static FileChooser initFileChooser() {
+        CurrentDirectory currentDirectory = CURRENT_DIRECTORY_DAO.read();
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Выбор мелодии для загрузки");
+        if (currentDirectory != null && Files.exists(Paths.get(currentDirectory.getPath()), LinkOption.NOFOLLOW_LINKS)) {
+            fileChooser.setInitialDirectory(new File(currentDirectory.getPath()));
+        }
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Audio Files", "*.mp3"));
+        return fileChooser;
     }
 
 }

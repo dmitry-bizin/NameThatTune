@@ -6,7 +6,6 @@ import util.UIUtil;
 
 abstract class AbstractSettingsRoundController {
 
-
     void init(int roundNumber, Label... categoryLabels) {
         UIUtil.fillCategoryLabels(categoryLabels, roundNumber);
     }

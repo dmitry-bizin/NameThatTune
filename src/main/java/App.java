@@ -32,7 +32,7 @@ public class App extends Application {
         primaryStage.setMaximized(true);
         primaryStage.setResizable(false);
         primaryStage.show();
-        UIUtil.addKeyHandler(scene, primaryStage);
+        UIUtil.addKeyHandlers(scene, primaryStage);
     }
 
 }

@@ -12,6 +12,7 @@ public class CategoryDAO implements DAO<Category> {
 
     private static final String READ_ALL = "SELECT * FROM category";
     private static final String READ_BY_ID = "SELECT * FROM category WHERE id = ?";
+    private static final String READ_BY_ROUND_ID = "SELECT * FROM category WHERE roundId = ?";
     private static final String UPDATE_BY_ID = "UPDATE category SET title = ? WHERE id = ?";
 
     @Override
@@ -42,6 +43,10 @@ public class CategoryDAO implements DAO<Category> {
     public void fillPreparedStatement(PreparedStatement preparedStatement, int id, Category category) throws SQLException {
         preparedStatement.setString(1, category.getTitle());
         preparedStatement.setInt(2, id);
+    }
+
+    public List<Category> readByRoundNumber(int roundNumber) {
+        return readByForeignKey(READ_BY_ROUND_ID, roundNumber);
     }
 
 }

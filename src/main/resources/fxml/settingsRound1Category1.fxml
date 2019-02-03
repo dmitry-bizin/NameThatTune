@@ -16,7 +16,7 @@
         <Screen fx:factory="getPrimary" fx:id="screen"/>
     </fx:define>
 
-    <Label onMouseClicked="#play1LabelClick">
+    <Button fx:id="play1Button" onMouseClicked="#play1ButtonClick" styleClass="playButton">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -26,12 +26,14 @@
                 <fx:script>
                     play1ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
                     play1ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                    play1Button.setLayoutX(0.01 * screen.getVisualBounds().getWidth());
+                    play1Button.setLayoutY(0.43 * screen.getVisualBounds().getHeight());
                      </fx:script>
             </ImageView>
         </graphic>
-    </Label>
+    </Button>
 
-    <Label onMouseClicked="#pause1LabelClick">
+    <Button fx:id="pause1Button" onMouseClicked="#pause1ButtonClick" styleClass="pauseButton">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -41,12 +43,14 @@
                 <fx:script>
                     pause1ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
                     pause1ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                    pause1Button.setLayoutX(0.04 * screen.getVisualBounds().getWidth() + play1ImageView.getFitWidth());
+                    pause1Button.setLayoutY(0.43 * screen.getVisualBounds().getHeight());
                      </fx:script>
             </ImageView>
         </graphic>
-    </Label>
+    </Button>
 
-    <Label onMouseClicked="#play2LabelClick">
+    <Button fx:id="play2Button" onMouseClicked="#play2ButtonClick" styleClass="playButton">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -56,12 +60,14 @@
                 <fx:script>
                     play2ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
                     play2ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                    play2Button.setLayoutX(0.26 * screen.getVisualBounds().getWidth());
+                    play2Button.setLayoutY(0.43 * screen.getVisualBounds().getHeight());
                      </fx:script>
             </ImageView>
         </graphic>
-    </Label>
+    </Button>
 
-    <Label onMouseClicked="#pause2LabelClick">
+    <Button fx:id="pause2Button" onMouseClicked="#pause2ButtonClick" styleClass="pauseButton">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -71,12 +77,14 @@
                 <fx:script>
                     pause2ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
                     pause2ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                    pause2Button.setLayoutX(0.29 * screen.getVisualBounds().getWidth() + play1ImageView.getFitWidth());
+                    pause2Button.setLayoutY(0.43 * screen.getVisualBounds().getHeight());
                      </fx:script>
             </ImageView>
         </graphic>
-    </Label>
+    </Button>
 
-    <Label onMouseClicked="#play3LabelClick">
+    <Button fx:id="play3Button" onMouseClicked="#play3ButtonClick" styleClass="playButton">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -86,12 +94,14 @@
                 <fx:script>
                     play3ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
                     play3ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                    play3Button.setLayoutX(0.51 * screen.getVisualBounds().getWidth());
+                    play3Button.setLayoutY(0.43 * screen.getVisualBounds().getHeight());
                      </fx:script>
             </ImageView>
         </graphic>
-    </Label>
+    </Button>
 
-    <Label onMouseClicked="#pause3LabelClick">
+    <Button fx:id="pause3Button" onMouseClicked="#pause3ButtonClick" styleClass="pauseButton">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -101,12 +111,14 @@
                 <fx:script>
                     pause3ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
                     pause3ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                    pause3Button.setLayoutX(0.54 * screen.getVisualBounds().getWidth() + play1ImageView.getFitWidth());
+                    pause3Button.setLayoutY(0.43 * screen.getVisualBounds().getHeight());
                      </fx:script>
             </ImageView>
         </graphic>
-    </Label>
+    </Button>
 
-    <Label onMouseClicked="#play4LabelClick">
+    <Button fx:id="play4Button" onMouseClicked="#play4ButtonClick" styleClass="playButton">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -116,12 +128,14 @@
                 <fx:script>
                     play4ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
                     play4ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                    play4Button.setLayoutX(0.76 * screen.getVisualBounds().getWidth());
+                    play4Button.setLayoutY(0.43 * screen.getVisualBounds().getHeight());
                      </fx:script>
             </ImageView>
         </graphic>
-    </Label>
+    </Button>
 
-    <Label onMouseClicked="#pause4LabelClick">
+    <Button fx:id="pause4Button" onMouseClicked="#pause4ButtonClick" styleClass="pauseButton">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -131,20 +145,22 @@
                 <fx:script>
                     pause4ImageView.setFitWidth(0.04 * screen.getVisualBounds().getHeight());
                     pause4ImageView.setFitHeight(0.04 * screen.getVisualBounds().getHeight());
+                    pause4Button.setLayoutX(0.79 * screen.getVisualBounds().getWidth() + play1ImageView.getFitWidth());
+                    pause4Button.setLayoutY(0.43 * screen.getVisualBounds().getHeight());
                      </fx:script>
             </ImageView>
         </graphic>
-    </Label>
+    </Button>
 
-    <TextField promptText="Название категории" fx:id="categoryTextField">
+    <TextField promptText="Название категории" fx:id="categoryTextField" focusTraversable="false">
         <fx:script>
-            categoryTextField.setLayoutX(0.1 * screen.getVisualBounds().getWidth());
+            categoryTextField.setLayoutX(0.05 * screen.getVisualBounds().getWidth());
             categoryTextField.setLayoutY(0.1 * screen.getVisualBounds().getHeight());
-            categoryTextField.setPrefWidth(0.2 * screen.getVisualBounds().getWidth());
+            categoryTextField.setPrefWidth(0.25 * screen.getVisualBounds().getWidth());
              </fx:script>
     </TextField>
 
-    <Button text="Сохранить" styleClass="saveCategoryButton" fx:id="saveCategoryButton"
+    <Button text="Сохранить" styleClass="saveButton" fx:id="saveCategoryButton"
             onMouseClicked="#saveCategoryButtonClick">
         <fx:script>
             saveCategoryButton.setLayoutX(0.31 * screen.getVisualBounds().getWidth());
@@ -164,5 +180,216 @@
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Label>
+
+    <Label fx:id="tourLabel" text="1 тур" styleClass="tourLabel">
+        <fx:script>
+            tourLabel.setLayoutX(0.6 * screen.getVisualBounds().getWidth());
+            tourLabel.setLayoutY(0.1 * screen.getVisualBounds().getHeight());
+             </fx:script>
+    </Label>
+
+    <Label fx:id="tune1Label" text="10" styleClass="scoreLabel">
+        <fx:script>
+            tune1Label.setLayoutX(0.25 * screen.getVisualBounds().getWidth() / 2);
+            tune1Label.setLayoutY(0.3 * screen.getVisualBounds().getHeight());
+             </fx:script>
+    </Label>
+
+    <Separator fx:id="separatorV1" orientation="VERTICAL">
+        <fx:script>
+            separatorV1.setLayoutX(0.25 * screen.getVisualBounds().getWidth());
+            separatorV1.setLayoutY(0.3 * screen.getVisualBounds().getHeight());
+            separatorV1.setPrefHeight(0.7 * screen.getVisualBounds().getHeight());
+             </fx:script>
+    </Separator>
+
+    <Label fx:id="tune2Label" text="20" styleClass="scoreLabel">
+        <fx:script>
+            tune2Label.setLayoutX(0.25 * screen.getVisualBounds().getWidth() + 0.25 * screen.getVisualBounds().getWidth() / 2);
+            tune2Label.setLayoutY(0.3 * screen.getVisualBounds().getHeight());
+             </fx:script>
+    </Label>
+
+    <Separator fx:id="separatorV2" orientation="VERTICAL">
+        <fx:script>
+            separatorV2.setLayoutX(0.5 * screen.getVisualBounds().getWidth());
+            separatorV2.setLayoutY(0.3 * screen.getVisualBounds().getHeight());
+            separatorV2.setPrefHeight(0.7 * screen.getVisualBounds().getHeight());
+             </fx:script>
+    </Separator>
+
+    <Label fx:id="tune3Label" text="30" styleClass="scoreLabel">
+        <fx:script>
+            tune3Label.setLayoutX(0.5 * screen.getVisualBounds().getWidth() + 0.25 * screen.getVisualBounds().getWidth() / 2);
+            tune3Label.setLayoutY(0.3 * screen.getVisualBounds().getHeight());
+             </fx:script>
+    </Label>
+
+    <Separator fx:id="separatorV3" orientation="VERTICAL">
+        <fx:script>
+            separatorV3.setLayoutX(0.75 * screen.getVisualBounds().getWidth());
+            separatorV3.setLayoutY(0.3 * screen.getVisualBounds().getHeight());
+            separatorV3.setPrefHeight(0.7 * screen.getVisualBounds().getHeight());
+             </fx:script>
+    </Separator>
+
+    <Label fx:id="tune4Label" text="40" styleClass="scoreLabel">
+        <fx:script>
+            tune4Label.setLayoutX(0.75 * screen.getVisualBounds().getWidth() + 0.25 * screen.getVisualBounds().getWidth() / 2);
+            tune4Label.setLayoutY(0.3 * screen.getVisualBounds().getHeight());
+             </fx:script>
+    </Label>
+
+    <Separator fx:id="separatorH">
+        <fx:script>
+            separatorH.setLayoutY(0.4 * screen.getVisualBounds().getHeight());
+            separatorH.setPrefWidth(screen.getVisualBounds().getWidth());
+             </fx:script>
+    </Separator>
+
+    <Button fx:id="openTune1Button" text="Выбрать" styleClass="unselectedButton" onMouseClicked="#openTune1ButtonClick">
+        <fx:script>
+            openTune1Button.setLayoutX(0.01 * screen.getVisualBounds().getWidth());
+            openTune1Button.setLayoutY(0.5 * screen.getVisualBounds().getHeight());
+             </fx:script>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+
+    <Button fx:id="openTune2Button" text="Выбрать" styleClass="unselectedButton" onMouseClicked="#openTune2ButtonClick">
+        <fx:script>
+            openTune2Button.setLayoutX(0.26 * screen.getVisualBounds().getWidth());
+            openTune2Button.setLayoutY(0.5 * screen.getVisualBounds().getHeight());
+             </fx:script>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+
+    <Button fx:id="openTune3Button" text="Выбрать" styleClass="unselectedButton" onMouseClicked="#openTune3ButtonClick">
+        <fx:script>
+            openTune3Button.setLayoutX(0.51 * screen.getVisualBounds().getWidth());
+            openTune3Button.setLayoutY(0.5 * screen.getVisualBounds().getHeight());
+             </fx:script>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+
+
+    <Button fx:id="openTune4Button" text="Выбрать" styleClass="unselectedButton" onMouseClicked="#openTune4ButtonClick">
+        <fx:script>
+            openTune4Button.setLayoutX(0.76 * screen.getVisualBounds().getWidth());
+            openTune4Button.setLayoutY(0.5 * screen.getVisualBounds().getHeight());
+             </fx:script>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+
+    <TextField fx:id="title1" promptText="Название песни">
+        <fx:script>
+            title1.setLayoutX(0.01 * screen.getVisualBounds().getWidth());
+            title1.setLayoutY(0.6 * screen.getVisualBounds().getHeight());
+            title1.setPrefWidth(0.2 * screen.getVisualBounds().getWidth());
+             </fx:script>
+    </TextField>
+
+    <TextField fx:id="author1" promptText="Автор песни">
+        <fx:script>
+            author1.setLayoutX(0.01 * screen.getVisualBounds().getWidth());
+            author1.setLayoutY(0.7 * screen.getVisualBounds().getHeight());
+            author1.setPrefWidth(0.2 * screen.getVisualBounds().getWidth());
+             </fx:script>
+    </TextField>
+
+    <TextField fx:id="title2" promptText="Название песни">
+        <fx:script>
+            title2.setLayoutX(0.26 * screen.getVisualBounds().getWidth());
+            title2.setLayoutY(0.6 * screen.getVisualBounds().getHeight());
+            title2.setPrefWidth(0.2 * screen.getVisualBounds().getWidth());
+             </fx:script>
+    </TextField>
+
+    <TextField fx:id="author2" promptText="Автор песни">
+        <fx:script>
+            author2.setLayoutX(0.26 * screen.getVisualBounds().getWidth());
+            author2.setLayoutY(0.7 * screen.getVisualBounds().getHeight());
+            author2.setPrefWidth(0.2 * screen.getVisualBounds().getWidth());
+             </fx:script>
+    </TextField>
+
+    <TextField fx:id="title3" promptText="Название песни">
+        <fx:script>
+            title3.setLayoutX(0.51 * screen.getVisualBounds().getWidth());
+            title3.setLayoutY(0.6 * screen.getVisualBounds().getHeight());
+            title3.setPrefWidth(0.2 * screen.getVisualBounds().getWidth());
+             </fx:script>
+    </TextField>
+
+    <TextField fx:id="author3" promptText="Автор песни">
+        <fx:script>
+            author3.setLayoutX(0.51 * screen.getVisualBounds().getWidth());
+            author3.setLayoutY(0.7 * screen.getVisualBounds().getHeight());
+            author3.setPrefWidth(0.2 * screen.getVisualBounds().getWidth());
+             </fx:script>
+    </TextField>
+
+    <TextField fx:id="title4" promptText="Название песни">
+        <fx:script>
+            title4.setLayoutX(0.76 * screen.getVisualBounds().getWidth());
+            title4.setLayoutY(0.6 * screen.getVisualBounds().getHeight());
+            title4.setPrefWidth(0.2 * screen.getVisualBounds().getWidth());
+             </fx:script>
+    </TextField>
+
+    <TextField fx:id="author4" promptText="Автор песни">
+        <fx:script>
+            author4.setLayoutX(0.76 * screen.getVisualBounds().getWidth());
+            author4.setLayoutY(0.7 * screen.getVisualBounds().getHeight());
+            author4.setPrefWidth(0.2 * screen.getVisualBounds().getWidth());
+             </fx:script>
+    </TextField>
+
+    <Button fx:id="save1Button" text="Сохранить" styleClass="saveButton" onMouseClicked="#save1ButtonClick">
+        <fx:script>
+            save1Button.setLayoutX(0.01 * screen.getVisualBounds().getWidth());
+            save1Button.setLayoutY(0.8 * screen.getVisualBounds().getHeight());
+             </fx:script>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+
+    <Button fx:id="save2Button" text="Сохранить" styleClass="saveButton" onMouseClicked="#save2ButtonClick">
+        <fx:script>
+            save2Button.setLayoutX(0.26 * screen.getVisualBounds().getWidth());
+            save2Button.setLayoutY(0.8 * screen.getVisualBounds().getHeight());
+             </fx:script>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+
+    <Button fx:id="save3Button" text="Сохранить" styleClass="saveButton" onMouseClicked="#save3ButtonClick">
+        <fx:script>
+            save3Button.setLayoutX(0.51 * screen.getVisualBounds().getWidth());
+            save3Button.setLayoutY(0.8 * screen.getVisualBounds().getHeight());
+             </fx:script>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+
+    <Button fx:id="save4Button" text="Сохранить" styleClass="saveButton" onMouseClicked="#save4ButtonClick">
+        <fx:script>
+            save4Button.setLayoutX(0.76 * screen.getVisualBounds().getWidth());
+            save4Button.setLayoutY(0.8 * screen.getVisualBounds().getHeight());
+             </fx:script>
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
 
 </Pane>

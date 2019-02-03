@@ -63,4 +63,20 @@ public interface DAO<T extends Identifiable> {
         }
     }
 
+    default List<T> readByForeignKey(String sql, int foreignKey) {
+        List<T> result = new ArrayList<>();
+        try (Connection connection = JDBC.getJdbcDataSource().getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setInt(1, foreignKey);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    result.add(readFromResultSet(resultSet));
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
 }

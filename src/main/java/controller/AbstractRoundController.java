@@ -72,23 +72,22 @@ abstract class AbstractRoundController {
                 notesLabels[t].setLayoutY((0.025 + (0.25 * i)) * UIUtil.getHeight());
                 notesLabels[t].setOnMouseClicked(event -> {
                     mediaPlayers[t].setVolume(1);
-                    mediaPlayers[t].setCycleCount(Integer.MAX_VALUE);
                     MediaPlayer.Status status = mediaPlayers[t].getStatus();
                     if (status.equals(MediaPlayer.Status.PLAYING)) {
                         timelines[t].pause();
-                        glows[t].setLevel(1.0);
+                        glows[t].setLevel(1);
                         mediaPlayers[t].pause();
                     }
                     if (status.equals(MediaPlayer.Status.PAUSED) || status.equals(MediaPlayer.Status.READY)) {
                         for (int k = 0; k < 16; k++) {
                             if (k != t && mediaPlayers[k] != null && mediaPlayers[k].getStatus().equals(MediaPlayer.Status.PLAYING)) {
                                 timelines[k].pause();
-                                glows[k].setLevel(1.0);
+                                glows[k].setLevel(1);
                                 mediaPlayers[k].pause();
                             }
                         }
                         notesLabels[t].setEffect(glows[t]);
-                        glows[t].setLevel(0.0);
+                        glows[t].setLevel(0);
                         timelines[t].play();
                         mediaPlayers[t].play();
                     }
@@ -121,7 +120,7 @@ abstract class AbstractRoundController {
                 mediaPlayers[i] = null;
             }
             if (!notesLabels[i].isDisable()) {
-                glows[i].setLevel(0.0);
+                glows[i].setLevel(0);
                 if (timelines[i].getStatus().equals(Animation.Status.RUNNING)) {
                     timelines[i].stop();
                 }

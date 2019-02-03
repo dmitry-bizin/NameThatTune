@@ -5,6 +5,8 @@ import javafx.scene.Parent;
 import javafx.scene.image.Image;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class FileUtil {
@@ -57,6 +59,19 @@ public class FileUtil {
 
     public static File getMP3File(int roundNumber, int categoryNumber, int tuneNumber) {
         return new File(TUNES + "/" + ROUND + roundNumber + "/" + CATEGORY + categoryNumber + "/" + TUNE + tuneNumber + "/" + tuneNumber + ".mp3");
+    }
+
+    public static void saveMP3File(File mp3File, int roundNumber, int categoryNumber, int tuneNumber) {
+        try (FileInputStream fileInputStream = new FileInputStream(mp3File);
+             FileOutputStream fileOutputStream = new FileOutputStream(TUNES + "/" + ROUND + roundNumber + "/" + CATEGORY + categoryNumber + "/" + TUNE + tuneNumber + "/" + tuneNumber + ".mp3")) {
+            byte[] bytes = new byte[1024];
+            while (fileInputStream.read(bytes) != -1) {
+                fileOutputStream.write(bytes);
+                fileOutputStream.flush();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static Image getNoteImage(String color) {
