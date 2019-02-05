@@ -49,7 +49,7 @@ public class TuneDAO implements DAO<Tune> {
         preparedStatement.setInt(4, id);
     }
 
-    public List<Tune> readByCategoryNumber(int categoryNumber) {
+    public List<Tune> readByCategoryId(int categoryNumber) {
         return readByForeignKey(READ_BY_CATEGORY_ID, categoryNumber);
     }
 

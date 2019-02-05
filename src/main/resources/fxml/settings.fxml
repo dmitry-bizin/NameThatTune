@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?language javascript?>
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.stage.Screen?>
+<?import java.awt.*?>
 <Pane xmlns:fx="http://javafx.com/fxml"
       xmlns="http://javafx.com/javafx"
       fx:controller="controller.SettingsController"
@@ -13,14 +14,14 @@
       fx:id="pane">
 
     <fx:define>
-        <Screen fx:factory="getPrimary" fx:id="screen"/>
+        <Toolkit fx:factory="getDefaultToolkit" fx:id="screen"/>
     </fx:define>
 
     <Label fx:id="round1SettingsLabel" text="Настройки 1го тура" styleClass="settingsLabel"
            onMouseClicked="#round1SettingsLabelClick">
         <fx:script>
-            round1SettingsLabel.layoutX = 0.03 * screen.visualBounds.width;
-            round1SettingsLabel.layoutY = 0.1 * screen.visualBounds.height;
+            round1SettingsLabel.layoutX = 0.03 * screen.getScreenSize().getWidth();
+            round1SettingsLabel.layoutY = 0.1 * screen.getScreenSize().getHeight();
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
@@ -30,8 +31,8 @@
     <Label fx:id="round2SettingsLabel" text="Настройки 2го тура" styleClass="settingsLabel"
            onMouseClicked="#round2SettingsLabelClick">
         <fx:script>
-            round2SettingsLabel.layoutX = 0.03 * screen.visualBounds.width;
-            round2SettingsLabel.layoutY = 0.2 * screen.visualBounds.height;
+            round2SettingsLabel.layoutX = 0.03 * screen.getScreenSize().getWidth();
+            round2SettingsLabel.layoutY = 0.2 * screen.getScreenSize().getHeight();
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
@@ -41,8 +42,8 @@
     <Label fx:id="round3SettingsLabel" text="Настройки 3го тура" styleClass="settingsLabel"
            onMouseClicked="#round3SettingsLabelClick">
         <fx:script>
-            round3SettingsLabel.layoutX = 0.03 * screen.visualBounds.width;
-            round3SettingsLabel.layoutY = 0.3 * screen.visualBounds.height;
+            round3SettingsLabel.layoutX = 0.03 * screen.getScreenSize().getWidth();
+            round3SettingsLabel.layoutY = 0.3 * screen.getScreenSize().getHeight();
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
@@ -52,8 +53,8 @@
     <Label fx:id="supergameSettingsLabel" text="Настройки суперигры" styleClass="settingsLabel"
            onMouseClicked="#supergameSettingsLabelClick">
         <fx:script>
-            supergameSettingsLabel.layoutX = 0.03 * screen.visualBounds.width;
-            supergameSettingsLabel.layoutY = 0.4 * screen.visualBounds.height;
+            supergameSettingsLabel.layoutX = 0.03 * screen.getScreenSize().getWidth();
+            supergameSettingsLabel.layoutY = 0.4 * screen.getScreenSize().getHeight();
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
@@ -63,8 +64,8 @@
     <Label fx:id="currentDirectorySettings" text="Выбрать директорию с мелодиями" styleClass="settingsLabel"
            onMouseClicked="#currentDirectorySettingsClick">
         <fx:script>
-            currentDirectorySettings.layoutX = 0.03 * screen.visualBounds.width;
-            currentDirectorySettings.layoutY = 0.5 * screen.visualBounds.height;
+            currentDirectorySettings.layoutX = 0.03 * screen.getScreenSize().getWidth();
+            currentDirectorySettings.layoutY = 0.5 * screen.getScreenSize().getHeight();
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
@@ -73,8 +74,8 @@
 
     <Label fx:id="backLabel" text="Назад" styleClass="settingsLabel" onMouseClicked="#backLabelClick">
         <fx:script>
-            backLabel.layoutX = 0.03 * screen.visualBounds.width;
-            backLabel.layoutY = 0.6 * screen.visualBounds.height;
+            backLabel.layoutX = 0.03 * screen.getScreenSize().getWidth();
+            backLabel.layoutY = 0.6 * screen.getScreenSize().getHeight();
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>

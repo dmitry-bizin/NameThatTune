@@ -45,7 +45,7 @@ public class CategoryDAO implements DAO<Category> {
         preparedStatement.setInt(2, id);
     }
 
-    public List<Category> readByRoundNumber(int roundNumber) {
+    public List<Category> readByRoundId(int roundNumber) {
         return readByForeignKey(READ_BY_ROUND_ID, roundNumber);
     }
 

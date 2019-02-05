@@ -3,7 +3,6 @@ package controller.common;
 import dao.CategoryDAO;
 import dao.DAO;
 import dao.TuneDAO;
-import dto.TuneRecord;
 import entity.Category;
 import entity.Tune;
 import javafx.animation.Animation;
@@ -16,6 +15,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.FileChooser;
+import record.TuneRecord;
 import util.FileUtil;
 import util.UIUtil;
 
@@ -36,17 +36,18 @@ public class AbstractSettingsRoundCategoryController {
     private MediaPlayer[] mediaPlayers;
     private File[] tuneFiles;
 
-    protected void init(int roundNumber, int categoryNumber, TextField categoryTextField, TuneRecord... tuneRecords) {
+    protected void init(int roundNumber, int categoryNumber, TextField categoryTextField, Label roundLabel, TuneRecord... tuneRecords) {
         tuneFiles = new File[TUNES_IN_CATEGORY_COUNT];
         medias = new Media[TUNES_IN_CATEGORY_COUNT];
         mediaPlayers = new MediaPlayer[TUNES_IN_CATEGORY_COUNT];
         initGlowsAndTimelines();
-        initData(roundNumber, categoryNumber, categoryTextField, tuneRecords);
+        initData(roundNumber, categoryNumber, categoryTextField, roundLabel, tuneRecords);
     }
 
-    private void initData(int roundNumber, int categoryNumber, TextField categoryTextField, TuneRecord... tuneRecords) {
-        initCategoryTextField(categoryTextField, categoryNumber);
-        List<Tune> tunes = TUNE_DAO.readByCategoryNumber(categoryNumber);
+    private void initData(int roundNumber, int categoryNumber, TextField categoryTextField, Label roundLabel, TuneRecord... tuneRecords) {
+        roundLabel.setText(roundNumber + " тур");
+        initCategoryTextField(categoryTextField, roundNumber, categoryNumber);
+        List<Tune> tunes = TUNE_DAO.readByCategoryId((roundNumber - 1) * CATEGORIES_IN_ROUND_COUNT + categoryNumber);
         for (int i = 0; i < tunes.size(); i++) {
             Tune tune = tunes.get(i);
             TuneRecord tuneRecord = tuneRecords[i];
@@ -73,17 +74,18 @@ public class AbstractSettingsRoundCategoryController {
         UIUtil.initGlowsAndTimelines(glows, timelines);
     }
 
-    protected void handleSaveCategoryClick(TextField categoryTextField, int categoryNumber, int roundNumber) {
+    protected void handleSaveCategoryClick(TextField categoryTextField, int roundNumber, int categoryNumber) {
         if (categoryTextField.getText().isEmpty()) {
-            initCategoryTextField(categoryTextField, categoryNumber);
+            initCategoryTextField(categoryTextField, roundNumber, categoryNumber);
         } else {
-            Category category = new Category(categoryNumber, categoryTextField.getText(), roundNumber);
-            CATEGORY_DAO.updateById(categoryNumber, category);
+            int categoryId = (roundNumber - 1) * CATEGORIES_IN_ROUND_COUNT + categoryNumber;
+            Category category = new Category(categoryId, categoryTextField.getText(), roundNumber);
+            CATEGORY_DAO.updateById(categoryId, category);
         }
     }
 
-    private void initCategoryTextField(TextField categoryTextField, int categoryNumber) {
-        Category category = CATEGORY_DAO.readById(categoryNumber);
+    private void initCategoryTextField(TextField categoryTextField, int roundNumber, int categoryNumber) {
+        Category category = CATEGORY_DAO.readById((roundNumber - 1) * CATEGORIES_IN_ROUND_COUNT + categoryNumber);
         if (category != null) {
             categoryTextField.setText(category.getTitle());
         } else {
@@ -126,12 +128,13 @@ public class AbstractSettingsRoundCategoryController {
             tuneRecord.playButton.setDisable(false);
             tuneRecord.pauseButton.setDisable(false);
         }
-        Tune tune = new Tune((roundNumber - 1) * CATEGORIES_IN_ROUND_COUNT + (categoryNumber - 1) * TUNES_IN_CATEGORY_COUNT + tuneNumber,
+        int tuneId = (roundNumber - 1) * CATEGORIES_IN_ROUND_COUNT + (categoryNumber - 1) * TUNES_IN_CATEGORY_COUNT + tuneNumber;
+        Tune tune = new Tune(tuneId,
                 tuneRecord.titleTextField.getText(),
                 tuneRecord.authorTextField.getText(),
                 10 * tuneNumber,
                 (roundNumber - 1) * CATEGORIES_IN_ROUND_COUNT + categoryNumber);
-        TUNE_DAO.updateById(tuneNumber, tune);
+        TUNE_DAO.updateById(tuneId, tune);
     }
 
     protected void handlePlayButton(int tuneNumber, Label tuneLabel) {

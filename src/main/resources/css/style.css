@@ -123,7 +123,7 @@
 }
 
 .settingsRoundInfoLabel {
-    -fx-text-fill: linear-gradient(to right, green, yellow, red, mediumvioletred);
+    -fx-text-fill: white;
     -fx-font-size: 40pt;
     -fx-font-family: 'Ribbon Heart';
     -fx-font-smoothing-type: lcd;
@@ -186,7 +186,7 @@
     -fx-font-smoothing-type: lcd;
 }
 
-.tourLabel {
+.roundLabel {
     -fx-font-size: 35pt;
     -fx-font-family: 'Ribbon Heart';
     -fx-text-fill: blue;

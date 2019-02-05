@@ -7,14 +7,14 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SettingsRound1Category1Controller implements Initializable {
+public class SettingsRound2Category2Controller implements Initializable {
 
     @FXML
     private SettingsRoundCategoryController settingsRoundCategoryController;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        settingsRoundCategoryController.init(1, 1);
+        settingsRoundCategoryController.init(2, 2);
     }
 
 }

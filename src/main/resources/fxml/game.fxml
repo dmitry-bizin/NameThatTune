@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?language javascript?>
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.stage.Screen?>
+<?import java.awt.*?>
 <Pane xmlns:fx="http://javafx.com/fxml"
       xmlns="http://javafx.com/javafx"
       fx:controller="controller.GameController"
@@ -13,13 +14,13 @@
       fx:id="pane">
 
     <fx:define>
-        <Screen fx:factory="getPrimary" fx:id="screen"/>
+        <Toolkit fx:factory="getDefaultToolkit" fx:id="screen"/>
     </fx:define>
 
     <Label fx:id="round1Label" text="1 тур" styleClass="gameLabel" onMouseClicked="#round1LabelClick">
         <fx:script>
-            round1Label.setLayoutX(0.03 * screen.getVisualBounds().getWidth());
-            round1Label.setLayoutY(0.1 * screen.getVisualBounds().getHeight());
+            round1Label.setLayoutX(0.03 * screen.getScreenSize().getWidth());
+            round1Label.setLayoutY(0.1 * screen.getScreenSize().getHeight());
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
@@ -28,8 +29,8 @@
 
     <Label fx:id="round2Label" text="2 тур" styleClass="gameLabel" onMouseClicked="#round2LabelClick">
         <fx:script>
-            round2Label.setLayoutX(0.03 * screen.getVisualBounds().getWidth());
-            round2Label.setLayoutY(0.2 * screen.getVisualBounds().getHeight());
+            round2Label.setLayoutX(0.03 * screen.getScreenSize().getWidth());
+            round2Label.setLayoutY(0.2 * screen.getScreenSize().getHeight());
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
@@ -38,8 +39,8 @@
 
     <Label fx:id="round3Label" text="3 тур" styleClass="gameLabel" onMouseClicked="#round3LabelClick">
         <fx:script>
-            round3Label.setLayoutX(0.03 * screen.getVisualBounds().getWidth());
-            round3Label.setLayoutY(0.3 * screen.getVisualBounds().getHeight());
+            round3Label.setLayoutX(0.03 * screen.getScreenSize().getWidth());
+            round3Label.setLayoutY(0.3 * screen.getScreenSize().getHeight());
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
@@ -48,8 +49,8 @@
 
     <Label fx:id="supergameLabel" text="Суперигра" styleClass="gameLabel" onMouseClicked="#supergameLabelClick">
         <fx:script>
-            supergameLabel.setLayoutX(0.03 * screen.getVisualBounds().getWidth());
-            supergameLabel.setLayoutY(0.4 * screen.getVisualBounds().getHeight());
+            supergameLabel.setLayoutX(0.03 * screen.getScreenSize().getWidth());
+            supergameLabel.setLayoutY(0.4 * screen.getScreenSize().getHeight());
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
@@ -58,8 +59,8 @@
 
     <Label fx:id="backLabel" text="Назад" styleClass="gameLabel" onMouseClicked="#backLabelClick">
         <fx:script>
-            backLabel.setLayoutX(0.03 * screen.getVisualBounds().getWidth());
-            backLabel.setLayoutY(0.5 * screen.getVisualBounds().getHeight());
+            backLabel.setLayoutX(0.03 * screen.getScreenSize().getWidth());
+            backLabel.setLayoutY(0.5 * screen.getScreenSize().getHeight());
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>

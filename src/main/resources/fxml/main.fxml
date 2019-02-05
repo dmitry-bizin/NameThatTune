@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?language javascript?>
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.stage.Screen?>
+<?import java.awt.*?>
 <Pane xmlns:fx="http://javafx.com/fxml/1"
       stylesheets="@../css/style.css" styleClass="mainBackground"
       xmlns="http://javafx.com/javafx/8.0.172-ea"
       fx:controller="controller.MainController" fx:id="pane">
 
     <fx:define>
-        <Screen fx:factory="getPrimary" fx:id="screen"/>
+        <Toolkit fx:factory="getDefaultToolkit" fx:id="screen"/>
     </fx:define>
 
     <Label fx:id="gameLabel" text="Игра"
            styleClass="mainLabel" onMouseClicked="#gameLabelClick">
         <fx:script>
-            gameLabel.setLayoutX(0.6 * screen.getVisualBounds().getWidth());
-            gameLabel.setLayoutY(0.3 * screen.getVisualBounds().getHeight());
+            gameLabel.setLayoutX(0.6 * screen.getScreenSize().getWidth());
+            gameLabel.setLayoutY(0.3 * screen.getScreenSize().getHeight());
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
@@ -28,8 +29,8 @@
     <Label fx:id="settingsLabel" text="Настройки"
            styleClass="mainLabel" onMouseClicked="#settingsLabelClick">
         <fx:script>
-            settingsLabel.setLayoutX(0.6 * screen.getVisualBounds().getWidth());
-            settingsLabel.setLayoutY(0.4 * screen.getVisualBounds().getHeight());
+            settingsLabel.setLayoutX(0.6 * screen.getScreenSize().getWidth());
+            settingsLabel.setLayoutY(0.4 * screen.getScreenSize().getHeight());
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
@@ -39,8 +40,8 @@
     <Label fx:id="exitLabel" text="Выход"
            styleClass="mainLabel" onMouseClicked="#exitLabelClick">
         <fx:script>
-            exitLabel.setLayoutX(0.6 * screen.getVisualBounds().getWidth());
-            exitLabel.setLayoutY(0.5 * screen.getVisualBounds().getHeight());
+            exitLabel.setLayoutX(0.6 * screen.getScreenSize().getWidth());
+            exitLabel.setLayoutY(0.5 * screen.getScreenSize().getHeight());
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>

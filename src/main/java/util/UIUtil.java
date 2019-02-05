@@ -107,7 +107,7 @@ public class UIUtil {
     }
 
     public static void fillCategoryLabels(Label[] categoryLabels, int roundNumber) {
-        List<Category> categoryList = CATEGORY_DAO.readByRoundNumber(roundNumber);
+        List<Category> categoryList = CATEGORY_DAO.readByRoundId(roundNumber);
         for (int i = 0; i < categoryLabels.length; i++) {
             categoryLabels[i].setText(categoryList.get(i).getTitle());
         }
