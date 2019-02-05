@@ -1,71 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?language javascript?>
-
-<?import javafx.scene.control.*?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.stage.Screen?>
 <Pane xmlns:fx="http://javafx.com/fxml"
       xmlns="http://javafx.com/javafx"
-      fx:controller="controller.Round1Controller"
-      stylesheets="@../css/style.css" styleClass="roundBackground"
-      fx:id="pane">
+      fx:controller="controller.Round1Controller">
 
-    <fx:define>
-        <Screen fx:factory="getPrimary" fx:id="screen"/>
-    </fx:define>
-
-    <Label fx:id="category1Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER">
-        <fx:script>
-            category1Label.setMaxSize(0.3 * screen.getVisualBounds().getWidth(), 0.25 * screen.getVisualBounds().getHeight());
-            category1Label.setMinSize(0.3 * screen.getVisualBounds().getWidth(), 0.25 * screen.getVisualBounds().getHeight());
-            category1Label.setFont(javafx.scene.text.Font.font(0.045 * screen.getVisualBounds().getHeight()));
-             </fx:script>
-    </Label>
-
-    <Label fx:id="category2Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER">
-        <fx:script>
-            category2Label.setLayoutY(0.25 * screen.getVisualBounds().getHeight());
-            category2Label.setMaxSize(0.3 * screen.getVisualBounds().getWidth(), 0.25 * screen.getVisualBounds().getHeight());
-            category2Label.setMinSize(0.3 * screen.getVisualBounds().getWidth(), 0.25 * screen.getVisualBounds().getHeight());
-            category2Label.setFont(javafx.scene.text.Font.font(0.045 * screen.getVisualBounds().getHeight()));
-             </fx:script>
-    </Label>
-
-    <Label fx:id="category3Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER">
-        <fx:script>
-            category3Label.setLayoutY(0.5 * screen.getVisualBounds().getHeight());
-            category3Label.setMaxSize(0.3 * screen.getVisualBounds().getWidth(), 0.25 * screen.getVisualBounds().getHeight());
-            category3Label.setMinSize(0.3 * screen.getVisualBounds().getWidth(), 0.25 * screen.getVisualBounds().getHeight());
-            category3Label.setFont(javafx.scene.text.Font.font(0.045 * screen.getVisualBounds().getHeight()));
-             </fx:script>
-    </Label>
-
-    <Label fx:id="category4Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER">
-        <fx:script>
-            category4Label.setLayoutY(0.75 * screen.getVisualBounds().getHeight());
-            category4Label.setMaxSize(0.3 * screen.getVisualBounds().getWidth(), 0.25 * screen.getVisualBounds().getHeight());
-            category4Label.setMinSize(0.3 * screen.getVisualBounds().getWidth(), 0.25 * screen.getVisualBounds().getHeight());
-            category4Label.setFont(javafx.scene.text.Font.font(0.045 * screen.getVisualBounds().getHeight()));
-             </fx:script>
-    </Label>
-
-    <Label onMouseClicked="#backLabelClick" styleClass="roundBackLabel">
-        <cursor>
-            <Cursor fx:constant="HAND"/>
-        </cursor>
-        <graphic>
-            <ImageView fx:id="backImageView">
-                <Image url="@../images/back.png"/>
-                <fx:script>
-                    backImageView.setFitWidth(0.05 * screen.getVisualBounds().getHeight());
-                    backImageView.setFitHeight(0.05 * screen.getVisualBounds().getHeight());
-                     </fx:script>
-            </ImageView>
-        </graphic>
-    </Label>
+    <fx:include source="include/round.fxml" fx:id="round"/>
 
 </Pane>

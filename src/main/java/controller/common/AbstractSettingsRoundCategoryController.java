@@ -1,4 +1,4 @@
-package controller;
+package controller.common;
 
 import dao.CategoryDAO;
 import dao.DAO;
@@ -25,7 +25,7 @@ import java.util.List;
 import static util.FileUtil.CATEGORIES_IN_ROUND_COUNT;
 import static util.FileUtil.TUNES_IN_CATEGORY_COUNT;
 
-class AbstractSettingsRoundCategoryController {
+public class AbstractSettingsRoundCategoryController {
 
     private static final DAO<Category> CATEGORY_DAO = new CategoryDAO();
     private static final TuneDAO TUNE_DAO = new TuneDAO();
@@ -36,7 +36,7 @@ class AbstractSettingsRoundCategoryController {
     private MediaPlayer[] mediaPlayers;
     private File[] tuneFiles;
 
-    void init(int roundNumber, int categoryNumber, TextField categoryTextField, TuneRecord... tuneRecords) {
+    protected void init(int roundNumber, int categoryNumber, TextField categoryTextField, TuneRecord... tuneRecords) {
         tuneFiles = new File[TUNES_IN_CATEGORY_COUNT];
         medias = new Media[TUNES_IN_CATEGORY_COUNT];
         mediaPlayers = new MediaPlayer[TUNES_IN_CATEGORY_COUNT];
@@ -73,7 +73,7 @@ class AbstractSettingsRoundCategoryController {
         UIUtil.initGlowsAndTimelines(glows, timelines);
     }
 
-    void handleSaveCategoryClick(TextField categoryTextField, int categoryNumber, int roundNumber) {
+    protected void handleSaveCategoryClick(TextField categoryTextField, int categoryNumber, int roundNumber) {
         if (categoryTextField.getText().isEmpty()) {
             initCategoryTextField(categoryTextField, categoryNumber);
         } else {
@@ -91,7 +91,7 @@ class AbstractSettingsRoundCategoryController {
         }
     }
 
-    void handleBackLabelClick(Pane pane, int roundNumber) {
+    protected void handleBackLabelClick(Pane pane, int roundNumber) {
         UIUtil.changeSceneToSettingsRound(pane, roundNumber);
     }
 
@@ -103,13 +103,13 @@ class AbstractSettingsRoundCategoryController {
         }
     }
 
-    void handleChooseMP3Click(Pane pane, Button button, int tuneNumber) {
+    protected void handleChooseMP3Click(Pane pane, Button button, int tuneNumber) {
         FileChooser fileChooser = UIUtil.initFileChooser();
         tuneFiles[tuneNumber - 1] = fileChooser.showOpenDialog(UIUtil.getStage(pane));
         handleOpenTuneButtonClick(tuneFiles[tuneNumber - 1], button);
     }
 
-    void handleSaveTuneClick(int roundNumber, int categoryNumber, int tuneNumber, Button openTuneButton, TuneRecord tuneRecord) {
+    protected void handleSaveTuneClick(int roundNumber, int categoryNumber, int tuneNumber, Button openTuneButton, TuneRecord tuneRecord) {
         if (tuneFiles[tuneNumber - 1] != null) {
             if (mediaPlayers[tuneNumber - 1] != null) {
                 if (timelines[tuneNumber - 1].getStatus().equals(Animation.Status.RUNNING)) {
@@ -134,7 +134,7 @@ class AbstractSettingsRoundCategoryController {
         TUNE_DAO.updateById(tuneNumber, tune);
     }
 
-    void handlePlayButton(int tuneNumber, Label tuneLabel) {
+    protected void handlePlayButton(int tuneNumber, Label tuneLabel) {
         mediaPlayers[tuneNumber - 1].setVolume(1);
         for (int i = 0; i < mediaPlayers.length; i++) {
             if (i != tuneNumber - 1) {
@@ -153,7 +153,7 @@ class AbstractSettingsRoundCategoryController {
         mediaPlayers[tuneNumber - 1].play();
     }
 
-    void handlePauseButton(int tuneNumber) {
+    protected void handlePauseButton(int tuneNumber) {
         timelines[tuneNumber - 1].pause();
         glows[tuneNumber - 1].setLevel(0);
         mediaPlayers[tuneNumber - 1].pause();

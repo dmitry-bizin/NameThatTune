@@ -1,4 +1,4 @@
-package controller;
+package controller.common;
 
 import javafx.animation.Animation;
 import javafx.animation.Timeline;
@@ -18,14 +18,14 @@ import java.util.stream.Stream;
 import static util.FileUtil.CATEGORIES_IN_ROUND_COUNT;
 import static util.FileUtil.TUNES_IN_CATEGORY_COUNT;
 
-abstract class AbstractRoundController {
+public abstract class AbstractRoundController {
 
     private Label[] notesLabels;
     private MediaPlayer[] mediaPlayers;
     private Glow[] glows;
     private Timeline[] timelines;
 
-    void init(Pane pane, int roundNumber, Label... categoryLabels) {
+    protected void init(Pane pane, int roundNumber, Label... categoryLabels) {
         initGlowsAndTimelines();
         initMedia();
         Stream.of(notesLabels).forEach(label -> pane.getChildren().add(label));
@@ -128,7 +128,7 @@ abstract class AbstractRoundController {
         }
     }
 
-    void handleBackLabelClick(Pane pane) {
+    protected void handleBackLabelClick(Pane pane) {
         disposeResources();
         UIUtil.changeSceneToGame(pane);
     }
