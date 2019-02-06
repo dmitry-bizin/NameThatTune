@@ -96,10 +96,18 @@
 .preloaderLabel {
     -fx-font-family: 'Ribbon Heart';
     -fx-font-smoothing-type: lcd;
-    -fx-text-fill: white;
+    -fx-text-fill: linear-gradient(to right, silver, white);
     -fx-font-size: 40pt;
-    -fx-padding: 40pt;
-    -fx-background-color: radial-gradient(focus-distance 0%, center 50% 50%, radius 50%, #5e96ff, #6e96ff, #7e96ff, #8e96ff, #9e96ff, #Ae96ff, #Be96ff);
+    -fx-padding: 20pt;
+}
+
+.preloaderBackground {
+    -fx-background-image: url('../images/preloader.png');
+    -fx-background-color: linear-gradient(to right, #5e96ff, #6e96ff, #7e96ff, #8e96ff, #9e96ff, #Ae96ff, #Be96ff);
+    -fx-background-size: cover;
+    -fx-smooth: true;
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
 }
 
 .settingsRoundBackground {

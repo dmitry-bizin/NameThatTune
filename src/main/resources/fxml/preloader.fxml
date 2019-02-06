@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.Pane?>
-<Pane xmlns="http://javafx.com/javafx"
-      stylesheets="@../css/style.css">
+<?language javascript?>
 
-    <Label text="Пожалуйста, подождите..." styleClass="preloaderLabel" textAlignment="CENTER"
-           alignment="CENTER"/>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.Pane?>
+<?import java.awt.*?>
+<Pane xmlns:fx="http://www.w3.org/1999/xhtml" xmlns="http://javafx.com/javafx"
+      stylesheets="@../css/style.css" styleClass="preloaderBackground" fx:id="pane">
+
+    <fx:define>
+        <Toolkit fx:factory="getDefaultToolkit" fx:id="screen"/>
+    </fx:define>
+
+    <Label fx:id="label" text="Угадай мелодию!" styleClass="preloaderLabel" textAlignment="CENTER"
+           alignment="BOTTOM_LEFT">
+        <effect>
+            <Glow level="1.0"/>
+        </effect>
+    </Label>
+
+    <fx:script>
+        pane.setMinWidth(0.3 * screen.getScreenSize().getWidth());
+        pane.setMinHeight(0.3 * screen.getScreenSize().getHeight());
+        label.setLayoutY(0.5 * pane.getMinHeight());
+         </fx:script>
 
 </Pane>
