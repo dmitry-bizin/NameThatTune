@@ -1,11 +1,11 @@
 import dao.DAO;
-import dao.SupergameDAO;
-import entity.Supergame;
+import dao.SuperGameDAO;
+import entity.SuperGame;
 import org.junit.jupiter.api.Test;
 
-public class SupergameDAOTest implements DAOTest<Supergame> {
+public class SuperGameDAOTest implements DAOTest<SuperGame> {
 
-    private static final DAO<Supergame> DAO = new SupergameDAO();
+    private static final DAO<SuperGame> DAO = new SuperGameDAO();
 
     @Override
     @Test
@@ -26,8 +26,8 @@ public class SupergameDAOTest implements DAOTest<Supergame> {
     }
 
     @Override
-    public Supergame getNewEntity(Supergame supergame) {
-        return new Supergame(supergame.getId(), UPDATE_STRING, UPDATE_STRING);
+    public SuperGame getNewEntity(SuperGame superGame) {
+        return new SuperGame(superGame.getId(), UPDATE_STRING, UPDATE_STRING);
     }
 
 }

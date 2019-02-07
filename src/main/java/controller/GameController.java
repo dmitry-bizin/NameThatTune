@@ -30,7 +30,7 @@ public class GameController implements Initializable {
     }
 
     @FXML
-    private void supergameLabelClick(MouseEvent mouseEvent) {
+    private void superGameLabelClick(MouseEvent mouseEvent) {
 
     }
 

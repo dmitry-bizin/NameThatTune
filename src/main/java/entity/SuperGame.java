@@ -2,13 +2,13 @@ package entity;
 
 import java.util.Objects;
 
-public class Supergame implements Identifiable {
+public class SuperGame implements Identifiable {
 
     private int id;
     private String title;
     private String author;
 
-    public Supergame(int id, String title, String author) {
+    public SuperGame(int id, String title, String author) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -29,7 +29,7 @@ public class Supergame implements Identifiable {
 
     @Override
     public String toString() {
-        return "Supergame{" +
+        return "SuperGame{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
@@ -44,10 +44,10 @@ public class Supergame implements Identifiable {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Supergame supergame = (Supergame) o;
-        return id == supergame.id &&
-                title.equals(supergame.title) &&
-                author.equals(supergame.author);
+        SuperGame superGame = (SuperGame) o;
+        return id == superGame.id &&
+                title.equals(superGame.title) &&
+                author.equals(superGame.author);
     }
 
     @Override

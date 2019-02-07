@@ -47,10 +47,10 @@
         </cursor>
     </Label>
 
-    <Label fx:id="supergameLabel" text="Суперигра" styleClass="gameLabel" onMouseClicked="#supergameLabelClick">
+    <Label fx:id="superGameLabel" text="Суперигра" styleClass="gameLabel" onMouseClicked="#superGameLabelClick">
         <fx:script>
-            supergameLabel.setLayoutX(0.03 * screen.getScreenSize().getWidth());
-            supergameLabel.setLayoutY(0.4 * screen.getScreenSize().getHeight());
+            superGameLabel.setLayoutX(0.03 * screen.getScreenSize().getWidth());
+            superGameLabel.setLayoutY(0.4 * screen.getScreenSize().getHeight());
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>

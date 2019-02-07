@@ -50,11 +50,11 @@
         </cursor>
     </Label>
 
-    <Label fx:id="supergameSettingsLabel" text="Настройки суперигры" styleClass="settingsLabel"
-           onMouseClicked="#supergameSettingsLabelClick">
+    <Label fx:id="superGameSettingsLabel" text="Настройки суперигры" styleClass="settingsLabel"
+           onMouseClicked="#superGameSettingsLabelClick">
         <fx:script>
-            supergameSettingsLabel.layoutX = 0.03 * screen.getScreenSize().getWidth();
-            supergameSettingsLabel.layoutY = 0.4 * screen.getScreenSize().getHeight();
+            superGameSettingsLabel.layoutX = 0.03 * screen.getScreenSize().getWidth();
+            superGameSettingsLabel.layoutY = 0.4 * screen.getScreenSize().getHeight();
              </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>

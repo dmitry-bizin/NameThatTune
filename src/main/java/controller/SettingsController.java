@@ -36,7 +36,7 @@ public class SettingsController implements Initializable {
     }
 
     @FXML
-    private void supergameSettingsLabelClick(MouseEvent mouseEvent) {
+    private void superGameSettingsLabelClick(MouseEvent mouseEvent) {
 
     }
 
