@@ -260,3 +260,19 @@
     -fx-scale-y: 0.9;
     -fx-font-smoothing-type: lcd;
 }
+
+.superGameBackground {
+    -fx-background-image: url('../images/supergame.png');
+    -fx-background-color: linear-gradient(to right, silver, #Be96ff);
+    -fx-background-size: cover;
+    -fx-smooth: true;
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+}
+
+.timeLabel {
+    -fx-font-size: 100pt;
+    -fx-font-family: 'Ribbon Heart';
+    -fx-text-fill: red;
+    -fx-font-smoothing-type: lcd;
+}

@@ -106,6 +106,15 @@ public class UIUtil {
         }
     }
 
+    public static void changeSceneToSuperGame(Pane pane) {
+        try {
+            Parent root = FileUtil.loadSuperGameFromFXML();
+            UIUtil.changeScene(root, getStage(pane), "Суперигра");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void fillCategoryLabels(Label[] categoryLabels, int roundNumber) {
         List<Category> categoryList = CATEGORY_DAO.readByRoundId(roundNumber);
         for (int i = 0; i < categoryLabels.length; i++) {

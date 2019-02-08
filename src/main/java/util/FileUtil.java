@@ -25,6 +25,7 @@ public class FileUtil {
     private static final String FXML = "/fxml/";
     private static final String MAIN_FXML = FXML + "main.fxml";
     private static final String GAME_FXML = FXML + "game.fxml";
+    private static final String SUPERGAME_FXML = FXML + "superGame.fxml";
     private static final String SETTINGS_FXML = FXML + "settings.fxml";
     private static final String PRELOADER = FXML + "preloader.fxml";
     private static final String FXML_EXT = ".fxml";
@@ -108,6 +109,10 @@ public class FileUtil {
 
     public static Parent loadSettingsRoundCategoryFromFXML(int roundNumber, int categoryNumber) throws IOException {
         return FXMLLoader.load(FileUtil.class.getResource(FXML + SETTINGS_ROUND + roundNumber + _C_ATEGORY + categoryNumber + FXML_EXT));
+    }
+
+    public static Parent loadSuperGameFromFXML() throws IOException {
+        return FXMLLoader.load(FileUtil.class.getResource(SUPERGAME_FXML));
     }
 
 }

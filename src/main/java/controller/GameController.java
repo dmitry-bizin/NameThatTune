@@ -31,7 +31,7 @@ public class GameController implements Initializable {
 
     @FXML
     private void superGameLabelClick(MouseEvent mouseEvent) {
-
+        UIUtil.changeSceneToSuperGame(pane);
     }
 
     @FXML
