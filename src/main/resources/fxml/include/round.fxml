@@ -58,7 +58,7 @@
              </fx:script>
     </Label>
 
-    <Label onMouseClicked="#backLabelClick" styleClass="roundBackLabel">
+    <Label onMouseClicked="#backLabelClick" styleClass="backLabel">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>

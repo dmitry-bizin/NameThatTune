@@ -13,6 +13,7 @@ public class FileUtil {
 
     public static final int CATEGORIES_IN_ROUND_COUNT = 4;
     public static final int TUNES_IN_CATEGORY_COUNT = 4;
+    public static final int TUNES_IN_SUPER_GAME_COUNT = 7;
     private static final String TUNES = "tunes";
     private static final String ROUND = "round";
     private static final String CATEGORY = "category";

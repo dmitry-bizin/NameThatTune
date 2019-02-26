@@ -87,7 +87,7 @@
     -fx-text-fill: blue;
 }
 
-.roundBackLabel:hover, .roundBackLabel:pressed {
+.backLabel:hover, .backLabel:pressed {
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
     -fx-font-smoothing-type: lcd;
@@ -263,7 +263,6 @@
 
 .superGameBackground {
     -fx-background-image: url('../images/supergame.png');
-    -fx-background-color: linear-gradient(to right, silver, #Be96ff);
     -fx-background-size: cover;
     -fx-smooth: true;
     -fx-fit-to-height: true;
@@ -271,7 +270,7 @@
 }
 
 .timeLabel {
-    -fx-font-size: 100pt;
+    -fx-font-size: 150pt;
     -fx-font-family: 'Ribbon Heart';
     -fx-text-fill: red;
     -fx-font-smoothing-type: lcd;

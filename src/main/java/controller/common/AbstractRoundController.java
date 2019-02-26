@@ -79,7 +79,7 @@ public abstract class AbstractRoundController {
                         mediaPlayers[t].pause();
                     }
                     if (status.equals(MediaPlayer.Status.PAUSED) || status.equals(MediaPlayer.Status.READY)) {
-                        for (int k = 0; k < 16; k++) {
+                        for (int k = 0; k < CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT; k++) {
                             if (k != t && mediaPlayers[k] != null && mediaPlayers[k].getStatus().equals(MediaPlayer.Status.PLAYING)) {
                                 timelines[k].pause();
                                 glows[k].setLevel(1);
