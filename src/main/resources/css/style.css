@@ -145,31 +145,37 @@
     -fx-fit-to-width: true;
 }
 
-.settingsRoundCategoryBackLabel {
-    -fx-font-size: 35pt;
+.settingsRoundCategoryBackLabel, .superGameSettingsBackLabel {
     -fx-font-family: "Ribbon Heart";
     -fx-text-fill: blue;
     -fx-font-smoothing-type: lcd;
 }
 
-.settingsRoundCategoryBackLabel:hover, .settingsRoundCategoryBackLabel:pressed {
+.settingsRoundCategoryBackLabel {
+    -fx-font-size: 35pt;
+}
+
+.settingsRoundCategoryBackLabel:hover, .settingsRoundCategoryBackLabel:pressed, .superGameSettingsBackLabel:hover, .superGameSettingsBackLabel:pressed {
     -fx-text-fill: red;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
     -fx-font-smoothing-type: lcd;
 }
 
-.saveButton {
+.saveButton, .saveSuperGameSettingsButton {
     -fx-background-radius: 10;
     -fx-border-radius: 8;
     -fx-background-color: blue;
     -fx-text-fill: white;
-    -fx-font-size: 14pt;
     -fx-font-family: 'Segoe Print';
     -fx-font-smoothing-type: lcd;
 }
 
-.saveButton:pressed {
+.saveButton {
+    -fx-font-size: 14pt;
+}
+
+.saveButton:pressed, .saveSuperGameSettingsButton:pressed {
     -fx-background-color: deepskyblue;
     -fx-border-color: blue;
     -fx-scale-x: 0.9;
@@ -177,18 +183,21 @@
     -fx-font-smoothing-type: lcd;
 }
 
-.text-field {
+.text-field, .superGameSettingsTextField {
     -fx-background-radius: 10;
     -fx-border-radius: 8;
     -fx-border-width: 1pt;
     -fx-border-color: deepskyblue;
-    -fx-font-size: 14pt;
     -fx-font-family: 'Segoe Print';
     -fx-text-fill: deepskyblue;
     -fx-font-smoothing-type: lcd;
 }
 
-.text-field:focused {
+.text-field {
+    -fx-font-size: 14pt;
+}
+
+.text-field:focused, .superGameSettingsTextField:focused {
     -fx-border-color: blue;
     -fx-text-fill: blue;
     -fx-font-smoothing-type: lcd;
@@ -201,11 +210,14 @@
     -fx-font-smoothing-type: lcd;
 }
 
-.scoreLabel {
-    -fx-font-size: 40pt;
+.scoreLabel, .superGameSettingsTuneLabel {
     -fx-font-family: 'Ribbon Heart';
     -fx-text-fill: blue;
     -fx-font-smoothing-type: lcd;
+}
+
+.scoreLabel {
+    -fx-font-size: 40pt;
 }
 
 .separator *.line {
@@ -214,17 +226,20 @@
     -fx-border-color: blue;
 }
 
-.unselectedButton {
+.unselectedButton, .unselectedSuperGameSettingsButton {
     -fx-background-radius: 10;
     -fx-border-radius: 8;
     -fx-background-color: red;
     -fx-text-fill: white;
-    -fx-font-size: 14pt;
     -fx-font-family: 'Segoe Print';
     -fx-font-smoothing-type: lcd;
 }
 
-.unselectedButton:pressed {
+.unselectedButton {
+    -fx-font-size: 14pt;
+}
+
+.unselectedButton:pressed, .unselectedSuperGameSettingsButton:pressed {
     -fx-background-color: orangered;
     -fx-border-color: red;
     -fx-scale-x: 0.9;
@@ -232,17 +247,20 @@
     -fx-font-smoothing-type: lcd;
 }
 
-.selectedButton {
+.selectedButton, .selectedSuperGameSettingsButton {
     -fx-background-radius: 10;
     -fx-border-radius: 8;
     -fx-background-color: green;
     -fx-text-fill: white;
-    -fx-font-size: 14pt;
     -fx-font-family: 'Segoe Print';
     -fx-font-smoothing-type: lcd;
 }
 
-.selectedButton:pressed {
+.selectedButton {
+    -fx-font-size: 14pt;
+}
+
+.selectedButton:pressed, .selectedSuperGameSettingsButton:pressed {
     -fx-background-color: limegreen;
     -fx-border-color: green;
     -fx-scale-x: 0.9;
@@ -274,4 +292,28 @@
     -fx-font-family: 'Ribbon Heart';
     -fx-text-fill: red;
     -fx-font-smoothing-type: lcd;
+}
+
+.superGameSettingsTuneLabel {
+    -fx-font-size: 30pt;
+}
+
+.unselectedSuperGameSettingsButton {
+    -fx-font-size: 12pt;
+}
+
+.selectedSuperGameSettingsButton {
+    -fx-font-size: 12pt;
+}
+
+.superGameSettingsTextField {
+    -fx-font-size: 12pt;
+}
+
+.saveSuperGameSettingsButton {
+    -fx-font-size: 12pt;
+}
+
+.superGameSettingsBackLabel {
+    -fx-font-size: 30pt;
 }

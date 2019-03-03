@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 public class SettingsRoundCategoryController extends AbstractSettingsRoundCategoryController implements Initializable {
 
     @FXML
-    public Label roundLabel;
+    private Label roundLabel;
 
     @FXML
     private Label tune1Label;
@@ -159,37 +159,37 @@ public class SettingsRoundCategoryController extends AbstractSettingsRoundCatego
     }
 
     @FXML
-    public void saveCategoryButtonClick(MouseEvent mouseEvent) {
+    private void saveCategoryButtonClick(MouseEvent mouseEvent) {
         handleSaveCategoryClick(categoryTextField, roundNumber, categoryNumber);
     }
 
     @FXML
-    public void backLabelClick(MouseEvent mouseEvent) {
+    private void backLabelClick(MouseEvent mouseEvent) {
         handleBackLabelClick(pane, roundNumber);
     }
 
     @FXML
-    public void openTune1ButtonClick(MouseEvent mouseEvent) {
+    private void openTune1ButtonClick(MouseEvent mouseEvent) {
         handleChooseMP3Click(pane, openTune1Button, 1);
     }
 
     @FXML
-    public void openTune2ButtonClick(MouseEvent mouseEvent) {
+    private void openTune2ButtonClick(MouseEvent mouseEvent) {
         handleChooseMP3Click(pane, openTune2Button, 2);
     }
 
     @FXML
-    public void openTune3ButtonClick(MouseEvent mouseEvent) {
+    private void openTune3ButtonClick(MouseEvent mouseEvent) {
         handleChooseMP3Click(pane, openTune3Button, 3);
     }
 
     @FXML
-    public void openTune4ButtonClick(MouseEvent mouseEvent) {
+    private void openTune4ButtonClick(MouseEvent mouseEvent) {
         handleChooseMP3Click(pane, openTune4Button, 4);
     }
 
     @FXML
-    public void save1ButtonClick(MouseEvent mouseEvent) {
+    private void save1ButtonClick(MouseEvent mouseEvent) {
         handleSaveTuneClick(
                 roundNumber,
                 categoryNumber,
@@ -200,7 +200,7 @@ public class SettingsRoundCategoryController extends AbstractSettingsRoundCatego
     }
 
     @FXML
-    public void save2ButtonClick(MouseEvent mouseEvent) {
+    private void save2ButtonClick(MouseEvent mouseEvent) {
         handleSaveTuneClick(
                 roundNumber,
                 categoryNumber,
@@ -211,7 +211,7 @@ public class SettingsRoundCategoryController extends AbstractSettingsRoundCatego
     }
 
     @FXML
-    public void save3ButtonClick(MouseEvent mouseEvent) {
+    private void save3ButtonClick(MouseEvent mouseEvent) {
         handleSaveTuneClick(
                 roundNumber,
                 categoryNumber,
@@ -222,7 +222,7 @@ public class SettingsRoundCategoryController extends AbstractSettingsRoundCatego
     }
 
     @FXML
-    public void save4ButtonClick(MouseEvent mouseEvent) {
+    private void save4ButtonClick(MouseEvent mouseEvent) {
         handleSaveTuneClick(
                 roundNumber,
                 categoryNumber,

@@ -26,7 +26,8 @@ public class FileUtil {
     private static final String FXML = "/fxml/";
     private static final String MAIN_FXML = FXML + "main.fxml";
     private static final String GAME_FXML = FXML + "game.fxml";
-    private static final String SUPERGAME_FXML = FXML + "superGame.fxml";
+    private static final String SUPER_GAME_FXML = FXML + "superGame.fxml";
+    private static final String SUPER_GAME_SETTINGS_FXML = FXML + "superGameSettings.fxml";
     private static final String SETTINGS_FXML = FXML + "settings.fxml";
     private static final String PRELOADER = FXML + "preloader.fxml";
     private static final String FXML_EXT = ".fxml";
@@ -113,7 +114,11 @@ public class FileUtil {
     }
 
     public static Parent loadSuperGameFromFXML() throws IOException {
-        return FXMLLoader.load(FileUtil.class.getResource(SUPERGAME_FXML));
+        return FXMLLoader.load(FileUtil.class.getResource(SUPER_GAME_FXML));
+    }
+
+    public static Parent loadSuperGameSettingsFromFXML() throws IOException {
+        return FXMLLoader.load(FileUtil.class.getResource(SUPER_GAME_SETTINGS_FXML));
     }
 
 }

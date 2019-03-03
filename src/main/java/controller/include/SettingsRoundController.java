@@ -17,7 +17,7 @@ public class SettingsRoundController extends AbstractSettingsRoundController imp
     private Pane pane;
 
     @FXML
-    public Label infoLabel;
+    private Label infoLabel;
 
     @FXML
     private Label category1Label;

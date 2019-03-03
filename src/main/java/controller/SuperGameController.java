@@ -100,7 +100,7 @@ public class SuperGameController implements Initializable {
     }
 
     @FXML
-    public void backLabelClick(MouseEvent mouseEvent) {
+    private void backLabelClick(MouseEvent mouseEvent) {
         UIUtil.changeSceneToGame(pane);
     }
 

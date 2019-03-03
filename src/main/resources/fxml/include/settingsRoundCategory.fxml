@@ -78,7 +78,7 @@
                 <fx:script>
                     pause2ImageView.setFitWidth(0.04 * screen.getScreenSize().getHeight());
                     pause2ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
-                    pause2Button.setLayoutX(0.29 * screen.getScreenSize().getWidth() + play1ImageView.getFitWidth());
+                    pause2Button.setLayoutX(0.29 * screen.getScreenSize().getWidth() + play2ImageView.getFitWidth());
                     pause2Button.setLayoutY(0.43 * screen.getScreenSize().getHeight());
                      </fx:script>
             </ImageView>
@@ -112,7 +112,7 @@
                 <fx:script>
                     pause3ImageView.setFitWidth(0.04 * screen.getScreenSize().getHeight());
                     pause3ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
-                    pause3Button.setLayoutX(0.54 * screen.getScreenSize().getWidth() + play1ImageView.getFitWidth());
+                    pause3Button.setLayoutX(0.54 * screen.getScreenSize().getWidth() + play3ImageView.getFitWidth());
                     pause3Button.setLayoutY(0.43 * screen.getScreenSize().getHeight());
                      </fx:script>
             </ImageView>
@@ -146,7 +146,7 @@
                 <fx:script>
                     pause4ImageView.setFitWidth(0.04 * screen.getScreenSize().getHeight());
                     pause4ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
-                    pause4Button.setLayoutX(0.79 * screen.getScreenSize().getWidth() + play1ImageView.getFitWidth());
+                    pause4Button.setLayoutX(0.79 * screen.getScreenSize().getWidth() + play4ImageView.getFitWidth());
                     pause4Button.setLayoutY(0.43 * screen.getScreenSize().getHeight());
                      </fx:script>
             </ImageView>

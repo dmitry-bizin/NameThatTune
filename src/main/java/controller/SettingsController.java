@@ -37,7 +37,7 @@ public class SettingsController implements Initializable {
 
     @FXML
     private void superGameSettingsLabelClick(MouseEvent mouseEvent) {
-
+        UIUtil.changeSceneToSuperGameSettings(pane);
     }
 
     @FXML
