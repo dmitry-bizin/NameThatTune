@@ -5,7 +5,6 @@ import dao.DAO;
 import dao.TuneDAO;
 import entity.Category;
 import entity.Tune;
-import javafx.animation.Animation;
 import javafx.animation.Timeline;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -14,7 +13,6 @@ import javafx.scene.effect.Glow;
 import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.stage.FileChooser;
 import record.TuneRecord;
 import util.FileUtil;
 import util.UIUtil;
@@ -29,6 +27,7 @@ public class AbstractSettingsRoundCategoryController {
 
     private static final DAO<Category> CATEGORY_DAO = new CategoryDAO();
     private static final TuneDAO TUNE_DAO = new TuneDAO();
+    private static final String SELECTED_BUTTON_STYLE = "selectedButton";
 
     private Glow[] glows;
     private Timeline[] timelines;
@@ -54,17 +53,13 @@ public class AbstractSettingsRoundCategoryController {
             tuneRecord.authorTextField.setText(tune.getAuthor());
             tuneRecord.titleTextField.setText(tune.getTitle());
             tuneFiles[i] = FileUtil.getMP3File(roundNumber, categoryNumber, i + 1);
-            if (tuneFiles[i].exists()) {
-                medias[i] = new Media(tuneFiles[i].toURI().toString());
-                mediaPlayers[i] = new MediaPlayer(medias[i]);
-                tuneRecord.playButton.setDisable(false);
-                tuneRecord.pauseButton.setDisable(false);
-            } else {
-                medias[i] = null;
-                mediaPlayers[i] = null;
-                tuneRecord.playButton.setDisable(true);
-                tuneRecord.pauseButton.setDisable(true);
-            }
+            UIUtil.initSettingsData(
+                    tuneRecord,
+                    tuneFiles,
+                    medias,
+                    mediaPlayers,
+                    i
+            );
         }
     }
 
@@ -94,40 +89,28 @@ public class AbstractSettingsRoundCategoryController {
     }
 
     protected void handleBackLabelClick(Pane pane, int roundNumber) {
+        UIUtil.disposeResources(mediaPlayers, glows, timelines, TUNES_IN_CATEGORY_COUNT);
         UIUtil.changeSceneToSettingsRound(pane, roundNumber);
     }
 
-    private void handleOpenTuneButtonClick(File tuneFile, Button openTuneButton) {
-        if (tuneFile != null) {
-            openTuneButton.getStyleClass().replaceAll(s -> s.equals("unselectedButton") ? "selectedButton" : s);
-        } else {
-            openTuneButton.getStyleClass().replaceAll(s -> s.equals("selectedButton") ? "unselectedButton" : s);
-        }
-    }
-
-    protected void handleChooseMP3Click(Pane pane, Button button, int tuneNumber) {
-        FileChooser fileChooser = UIUtil.initFileChooser();
-        tuneFiles[tuneNumber - 1] = fileChooser.showOpenDialog(UIUtil.getStage(pane));
-        handleOpenTuneButtonClick(tuneFiles[tuneNumber - 1], button);
+    protected void handleChooseMP3Click(Pane pane, Button openTuneButton, Button saveButton, int tuneNumber) {
+        UIUtil.handleChooseMP3Click(pane, openTuneButton, saveButton, tuneNumber, tuneFiles, SELECTED_BUTTON_STYLE);
     }
 
     protected void handleSaveTuneClick(int roundNumber, int categoryNumber, int tuneNumber, Button openTuneButton, TuneRecord tuneRecord) {
-        if (tuneFiles[tuneNumber - 1] != null) {
-            if (mediaPlayers[tuneNumber - 1] != null) {
-                if (timelines[tuneNumber - 1].getStatus().equals(Animation.Status.RUNNING)) {
-                    timelines[tuneNumber - 1].pause();
-                    glows[tuneNumber - 1].setLevel(0);
-                }
-                mediaPlayers[tuneNumber - 1].dispose();
-            }
-            FileUtil.saveMP3File(tuneFiles[tuneNumber - 1], roundNumber, categoryNumber, tuneNumber);
-            tuneFiles[tuneNumber - 1] = null;
-            medias[tuneNumber - 1] = new Media(FileUtil.getMP3File(roundNumber, categoryNumber, tuneNumber).toURI().toString());
-            mediaPlayers[tuneNumber - 1] = new MediaPlayer(medias[tuneNumber - 1]);
-            openTuneButton.getStyleClass().replaceAll(s -> s.equals("selectedButton") ? "unselectedButton" : s);
-            tuneRecord.playButton.setDisable(false);
-            tuneRecord.pauseButton.setDisable(false);
-        }
+        UIUtil.handleSaveTuneClick(
+                tuneFiles,
+                tuneNumber,
+                mediaPlayers,
+                timelines,
+                glows,
+                medias,
+                openTuneButton,
+                tuneRecord,
+                () -> FileUtil.saveMP3File(tuneFiles[tuneNumber - 1], roundNumber, categoryNumber, tuneNumber),
+                () -> FileUtil.getMP3File(roundNumber, categoryNumber, tuneNumber),
+                SELECTED_BUTTON_STYLE
+        );
         int tuneId = (roundNumber - 1) * CATEGORIES_IN_ROUND_COUNT + (categoryNumber - 1) * TUNES_IN_CATEGORY_COUNT + tuneNumber;
         Tune tune = new Tune(tuneId,
                 tuneRecord.titleTextField.getText(),
@@ -138,28 +121,11 @@ public class AbstractSettingsRoundCategoryController {
     }
 
     protected void handlePlayButton(int tuneNumber, Label tuneLabel) {
-        mediaPlayers[tuneNumber - 1].setVolume(1);
-        for (int i = 0; i < mediaPlayers.length; i++) {
-            if (i != tuneNumber - 1) {
-                if (mediaPlayers[i] != null && mediaPlayers[i].getStatus().equals(MediaPlayer.Status.PLAYING)) {
-                    if (timelines[i].getStatus().equals(Animation.Status.RUNNING)) {
-                        timelines[i].pause();
-                        glows[i].setLevel(0);
-                    }
-                    mediaPlayers[i].pause();
-                }
-            }
-        }
-        tuneLabel.setEffect(glows[tuneNumber - 1]);
-        glows[tuneNumber - 1].setLevel(0);
-        timelines[tuneNumber - 1].play();
-        mediaPlayers[tuneNumber - 1].play();
+        UIUtil.handlePlayButton(tuneNumber, tuneLabel, mediaPlayers, timelines, glows);
     }
 
     protected void handlePauseButton(int tuneNumber) {
-        timelines[tuneNumber - 1].pause();
-        glows[tuneNumber - 1].setLevel(0);
-        mediaPlayers[tuneNumber - 1].pause();
+        UIUtil.handlePauseButton(tuneNumber, timelines, glows, mediaPlayers);
     }
 
 }

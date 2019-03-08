@@ -9,12 +9,14 @@ public class TuneRecord {
     public TextField authorTextField;
     public Button playButton;
     public Button pauseButton;
+    public Button saveButton;
 
-    public TuneRecord(TextField titleTextField, TextField authorTextField, Button playButton, Button pauseButton) {
+    public TuneRecord(TextField titleTextField, TextField authorTextField, Button playButton, Button pauseButton, Button saveButton) {
         this.titleTextField = titleTextField;
         this.authorTextField = authorTextField;
         this.playButton = playButton;
         this.pauseButton = pauseButton;
+        this.saveButton = saveButton;
     }
 
 }

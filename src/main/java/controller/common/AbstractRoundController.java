@@ -1,6 +1,5 @@
 package controller.common;
 
-import javafx.animation.Animation;
 import javafx.animation.Timeline;
 import javafx.scene.Cursor;
 import javafx.scene.control.Label;
@@ -113,23 +112,8 @@ public abstract class AbstractRoundController {
         }
     }
 
-    private void disposeResources() {
-        for (int i = 0; i < CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT; i++) {
-            if (mediaPlayers[i] != null) {
-                mediaPlayers[i].dispose();
-                mediaPlayers[i] = null;
-            }
-            if (!notesLabels[i].isDisable()) {
-                glows[i].setLevel(0);
-                if (timelines[i].getStatus().equals(Animation.Status.RUNNING)) {
-                    timelines[i].stop();
-                }
-            }
-        }
-    }
-
     protected void handleBackLabelClick(Pane pane) {
-        disposeResources();
+        UIUtil.disposeResources(mediaPlayers, glows, timelines, CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT);
         UIUtil.changeSceneToGame(pane);
     }
 

@@ -64,9 +64,21 @@ public class FileUtil {
         return new File(TUNES + "/" + ROUND + roundNumber + "/" + CATEGORY + categoryNumber + "/" + TUNE + tuneNumber + "/" + tuneNumber + ".mp3");
     }
 
+    public static File getMP3File(int tuneNumber) {
+        return new File(TUNES + "/" + SUPERGAME + "/" + tuneNumber + ".mp3");
+    }
+
     public static void saveMP3File(File mp3File, int roundNumber, int categoryNumber, int tuneNumber) {
+        saveMP3File(mp3File, TUNES + "/" + ROUND + roundNumber + "/" + CATEGORY + categoryNumber + "/" + TUNE + tuneNumber + "/" + tuneNumber + ".mp3");
+    }
+
+    public static void saveMP3File(File mp3File, int tuneNumber) {
+        saveMP3File(mp3File, TUNES + "/" + SUPERGAME + "/" + tuneNumber + ".mp3");
+    }
+
+    private static void saveMP3File(File mp3File, String path) {
         try (FileInputStream fileInputStream = new FileInputStream(mp3File);
-             FileOutputStream fileOutputStream = new FileOutputStream(TUNES + "/" + ROUND + roundNumber + "/" + CATEGORY + categoryNumber + "/" + TUNE + tuneNumber + "/" + tuneNumber + ".mp3")) {
+             FileOutputStream fileOutputStream = new FileOutputStream(path)) {
             byte[] bytes = new byte[1024];
             while (fileInputStream.read(bytes) != -1) {
                 fileOutputStream.write(bytes);
