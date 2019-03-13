@@ -3,6 +3,9 @@ package util;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.image.Image;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
+import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -33,11 +36,16 @@ public class FileUtil {
     private static final String FXML_EXT = ".fxml";
     private static final String SETTINGS_ROUND = "settingsRound";
     private static final int ROUNDS_COUNT = 3;
+    private static final Logger LOGGER = Logger.getLogger(FileUtil.class);
+
+    static {
+        Thread.setDefaultUncaughtExceptionHandler(new UncaughtExceptionHandler());
+    }
 
     private FileUtil() {
     }
 
-    public static void createDirectories() {
+    public static void createDirectories() throws IOException {
         createDir(TUNES);
         for (int roundNumber = 1; roundNumber <= ROUNDS_COUNT; roundNumber++) {
             String roundPath = TUNES + "/" + ROUND + roundNumber;
@@ -53,10 +61,10 @@ public class FileUtil {
         createDir(TUNES + "/" + SUPERGAME);
     }
 
-    private static void createDir(String path) {
+    private static void createDir(String path) throws IOException {
         File dir = new File(path);
         if (!dir.exists()) {
-            dir.mkdir();
+            FileUtils.forceMkdir(dir);
         }
     }
 
@@ -69,23 +77,25 @@ public class FileUtil {
     }
 
     public static void saveMP3File(File mp3File, int roundNumber, int categoryNumber, int tuneNumber) {
-        saveMP3File(mp3File, TUNES + "/" + ROUND + roundNumber + "/" + CATEGORY + categoryNumber + "/" + TUNE + tuneNumber + "/" + tuneNumber + ".mp3");
+        File to = new File(TUNES + "/" + ROUND + roundNumber + "/" + CATEGORY + categoryNumber + "/" + TUNE + tuneNumber + "/" + tuneNumber + ".mp3");
+        if (!to.equals(mp3File)) {
+            saveMP3File(mp3File, to);
+        }
     }
 
     public static void saveMP3File(File mp3File, int tuneNumber) {
-        saveMP3File(mp3File, TUNES + "/" + SUPERGAME + "/" + tuneNumber + ".mp3");
+        File to = new File(TUNES + "/" + SUPERGAME + "/" + tuneNumber + ".mp3");
+        if (!to.equals(mp3File)) {
+            saveMP3File(mp3File, to);
+        }
     }
 
-    private static void saveMP3File(File mp3File, String path) {
-        try (FileInputStream fileInputStream = new FileInputStream(mp3File);
-             FileOutputStream fileOutputStream = new FileOutputStream(path)) {
-            byte[] bytes = new byte[1024];
-            while (fileInputStream.read(bytes) != -1) {
-                fileOutputStream.write(bytes);
-                fileOutputStream.flush();
-            }
+    private static void saveMP3File(File from, File to) {
+        try (FileInputStream fileInputStream = new FileInputStream(from);
+             FileOutputStream fileOutputStream = new FileOutputStream(to)) {
+            IOUtils.copy(fileInputStream, fileOutputStream);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
     }
 

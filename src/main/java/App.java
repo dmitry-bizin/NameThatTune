@@ -6,6 +6,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import util.FileUtil;
 import util.UIUtil;
+import util.UncaughtExceptionHandler;
 
 import java.io.IOException;
 
@@ -16,7 +17,8 @@ public class App extends Application {
     }
 
     @Override
-    public void init() {
+    public void init() throws IOException {
+        Thread.setDefaultUncaughtExceptionHandler(new UncaughtExceptionHandler());
         FileUtil.createDirectories();
         JDBC.init();
     }

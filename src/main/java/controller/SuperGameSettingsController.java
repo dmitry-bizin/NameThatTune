@@ -30,27 +30,6 @@ public class SuperGameSettingsController implements Initializable {
     private static final String SELECTED_BUTTON_STYLE = "selectedSuperGameSettingsButton";
 
     @FXML
-    private Button save1Button;
-
-    @FXML
-    private Button save2Button;
-
-    @FXML
-    private Button save3Button;
-
-    @FXML
-    private Button save4Button;
-
-    @FXML
-    private Button save5Button;
-
-    @FXML
-    private Button save6Button;
-
-    @FXML
-    private Button save7Button;
-
-    @FXML
     private Label tune1Label;
 
     @FXML
@@ -194,13 +173,13 @@ public class SuperGameSettingsController implements Initializable {
         timelines = new Timeline[TUNES_IN_SUPER_GAME_COUNT];
         UIUtil.initGlowsAndTimelines(glows, timelines);
         initData(
-                new TuneRecord(title1, author1, play1Button, pause1Button, save1Button),
-                new TuneRecord(title2, author2, play2Button, pause2Button, save2Button),
-                new TuneRecord(title3, author3, play3Button, pause3Button, save3Button),
-                new TuneRecord(title4, author4, play4Button, pause4Button, save4Button),
-                new TuneRecord(title5, author5, play5Button, pause5Button, save5Button),
-                new TuneRecord(title6, author6, play6Button, pause6Button, save6Button),
-                new TuneRecord(title7, author7, play7Button, pause7Button, save7Button)
+                new TuneRecord(title1, author1, play1Button, pause1Button),
+                new TuneRecord(title2, author2, play2Button, pause2Button),
+                new TuneRecord(title3, author3, play3Button, pause3Button),
+                new TuneRecord(title4, author4, play4Button, pause4Button),
+                new TuneRecord(title5, author5, play5Button, pause5Button),
+                new TuneRecord(title6, author6, play6Button, pause6Button),
+                new TuneRecord(title7, author7, play7Button, pause7Button)
         );
     }
 
@@ -322,37 +301,37 @@ public class SuperGameSettingsController implements Initializable {
 
     @FXML
     private void openTune1ButtonClick(MouseEvent mouseEvent) {
-        UIUtil.handleChooseMP3Click(pane, openTune1Button, save1Button, 1, tuneFiles, SELECTED_BUTTON_STYLE);
+        UIUtil.handleChooseMP3Click(pane, openTune1Button, 1, tuneFiles, SELECTED_BUTTON_STYLE);
     }
 
     @FXML
     private void openTune2ButtonClick(MouseEvent mouseEvent) {
-        UIUtil.handleChooseMP3Click(pane, openTune2Button, save2Button, 2, tuneFiles, SELECTED_BUTTON_STYLE);
+        UIUtil.handleChooseMP3Click(pane, openTune2Button, 2, tuneFiles, SELECTED_BUTTON_STYLE);
     }
 
     @FXML
     private void openTune3ButtonClick(MouseEvent mouseEvent) {
-        UIUtil.handleChooseMP3Click(pane, openTune3Button, save3Button, 3, tuneFiles, SELECTED_BUTTON_STYLE);
+        UIUtil.handleChooseMP3Click(pane, openTune3Button, 3, tuneFiles, SELECTED_BUTTON_STYLE);
     }
 
     @FXML
     private void openTune4ButtonClick(MouseEvent mouseEvent) {
-        UIUtil.handleChooseMP3Click(pane, openTune4Button, save4Button, 4, tuneFiles, SELECTED_BUTTON_STYLE);
+        UIUtil.handleChooseMP3Click(pane, openTune4Button, 4, tuneFiles, SELECTED_BUTTON_STYLE);
     }
 
     @FXML
     private void openTune5ButtonClick(MouseEvent mouseEvent) {
-        UIUtil.handleChooseMP3Click(pane, openTune5Button, save5Button, 5, tuneFiles, SELECTED_BUTTON_STYLE);
+        UIUtil.handleChooseMP3Click(pane, openTune5Button, 5, tuneFiles, SELECTED_BUTTON_STYLE);
     }
 
     @FXML
     private void openTune6ButtonClick(MouseEvent mouseEvent) {
-        UIUtil.handleChooseMP3Click(pane, openTune6Button, save6Button, 6, tuneFiles, SELECTED_BUTTON_STYLE);
+        UIUtil.handleChooseMP3Click(pane, openTune6Button, 6, tuneFiles, SELECTED_BUTTON_STYLE);
     }
 
     @FXML
     private void openTune7ButtonClick(MouseEvent mouseEvent) {
-        UIUtil.handleChooseMP3Click(pane, openTune7Button, save7Button, 7, tuneFiles, SELECTED_BUTTON_STYLE);
+        UIUtil.handleChooseMP3Click(pane, openTune7Button, 7, tuneFiles, SELECTED_BUTTON_STYLE);
     }
 
     @FXML
@@ -360,7 +339,7 @@ public class SuperGameSettingsController implements Initializable {
         handleSaveTuneClick(
                 1,
                 openTune1Button,
-                new TuneRecord(title1, author1, play1Button, pause1Button, save1Button)
+                new TuneRecord(title1, author1, play1Button, pause1Button)
         );
     }
 
@@ -369,7 +348,7 @@ public class SuperGameSettingsController implements Initializable {
         handleSaveTuneClick(
                 2,
                 openTune2Button,
-                new TuneRecord(title2, author2, play2Button, pause2Button, save2Button)
+                new TuneRecord(title2, author2, play2Button, pause2Button)
         );
     }
 
@@ -378,7 +357,7 @@ public class SuperGameSettingsController implements Initializable {
         handleSaveTuneClick(
                 3,
                 openTune3Button,
-                new TuneRecord(title3, author3, play3Button, pause3Button, save3Button)
+                new TuneRecord(title3, author3, play3Button, pause3Button)
         );
     }
 
@@ -387,7 +366,7 @@ public class SuperGameSettingsController implements Initializable {
         handleSaveTuneClick(
                 4,
                 openTune4Button,
-                new TuneRecord(title4, author4, play4Button, pause4Button, save4Button)
+                new TuneRecord(title4, author4, play4Button, pause4Button)
         );
     }
 
@@ -396,7 +375,7 @@ public class SuperGameSettingsController implements Initializable {
         handleSaveTuneClick(
                 5,
                 openTune5Button,
-                new TuneRecord(title5, author5, play5Button, pause5Button, save5Button)
+                new TuneRecord(title5, author5, play5Button, pause5Button)
         );
     }
 
@@ -405,7 +384,7 @@ public class SuperGameSettingsController implements Initializable {
         handleSaveTuneClick(
                 6,
                 openTune6Button,
-                new TuneRecord(title6, author6, play6Button, pause6Button, save6Button)
+                new TuneRecord(title6, author6, play6Button, pause6Button)
         );
     }
 
@@ -414,7 +393,7 @@ public class SuperGameSettingsController implements Initializable {
         handleSaveTuneClick(
                 7,
                 openTune7Button,
-                new TuneRecord(title7, author7, play7Button, pause7Button, save7Button)
+                new TuneRecord(title7, author7, play7Button, pause7Button)
         );
     }
 

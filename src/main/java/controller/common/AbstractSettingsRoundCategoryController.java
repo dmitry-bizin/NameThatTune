@@ -93,8 +93,8 @@ public class AbstractSettingsRoundCategoryController {
         UIUtil.changeSceneToSettingsRound(pane, roundNumber);
     }
 
-    protected void handleChooseMP3Click(Pane pane, Button openTuneButton, Button saveButton, int tuneNumber) {
-        UIUtil.handleChooseMP3Click(pane, openTuneButton, saveButton, tuneNumber, tuneFiles, SELECTED_BUTTON_STYLE);
+    protected void handleChooseMP3Click(Pane pane, Button openTuneButton, int tuneNumber) {
+        UIUtil.handleChooseMP3Click(pane, openTuneButton, tuneNumber, tuneFiles, SELECTED_BUTTON_STYLE);
     }
 
     protected void handleSaveTuneClick(int roundNumber, int categoryNumber, int tuneNumber, Button openTuneButton, TuneRecord tuneRecord) {

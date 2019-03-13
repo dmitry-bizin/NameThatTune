@@ -1,6 +1,7 @@
 package db;
 
 import org.apache.commons.io.IOUtils;
+import org.apache.log4j.Logger;
 import org.h2.jdbcx.JdbcDataSource;
 
 import java.io.IOException;
@@ -26,6 +27,7 @@ public class JDBC {
             CHECK_TUNE_TABLE,
             CHECK_SUPERGAME_TABLE
     };
+    private static final Logger LOGGER = Logger.getLogger(JDBC.class);
     private static JdbcDataSource jdbcDataSource;
 
     private JDBC() {
@@ -47,7 +49,7 @@ public class JDBC {
              Statement statement = connection.createStatement()) {
             statement.execute(getSQLScriptAsString(INIT_TABLES_SQL_SCRIPT_FILENAME));
         } catch (SQLException | IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
@@ -57,7 +59,7 @@ public class JDBC {
                  Statement statement = connection.createStatement()) {
                 statement.execute(getSQLScriptAsString(INIT_DATA_SQL_SCRIPT_FILENAME));
             } catch (SQLException | IOException e) {
-                e.printStackTrace();
+                LOGGER.error(e.getMessage(), e);
             }
         }
         if (isEmptyTables(CHECK_CURRENT_DIRECTORY_TABLE)) {
@@ -66,7 +68,7 @@ public class JDBC {
                 preparedStatement.setString(1, System.getProperty("user.home"));
                 preparedStatement.execute();
             } catch (SQLException e) {
-                e.printStackTrace();
+                LOGGER.error(e.getMessage(), e);
             }
         }
     }
@@ -83,7 +85,7 @@ public class JDBC {
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
         return emptyTables;
     }

@@ -2,6 +2,7 @@ package dao;
 
 import db.JDBC;
 import entity.Identifiable;
+import org.apache.log4j.Logger;
 import org.jetbrains.annotations.Nullable;
 
 import java.sql.*;
@@ -9,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface DAO<T extends Identifiable> {
+
+    Logger LOGGER = Logger.getLogger(DAO.class);
 
     List<T> readAll();
 
@@ -31,7 +34,7 @@ public interface DAO<T extends Identifiable> {
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
         return result;
     }
@@ -48,7 +51,7 @@ public interface DAO<T extends Identifiable> {
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
         return result;
     }
@@ -59,7 +62,7 @@ public interface DAO<T extends Identifiable> {
             fillPreparedStatement(preparedStatement, id, t);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
@@ -74,7 +77,7 @@ public interface DAO<T extends Identifiable> {
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
         return result;
     }

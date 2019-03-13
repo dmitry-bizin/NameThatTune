@@ -18,7 +18,7 @@
         <Toolkit fx:factory="getDefaultToolkit" fx:id="screen"/>
     </fx:define>
 
-    <Label fx:id="timerLabel" text="30.0" styleClass="timeLabel">
+    <Label fx:id="timerLabel" styleClass="timeLabel">
         <fx:script>
             timerLabel.setLayoutX(0.1 * screen.getScreenSize().getWidth());
              </fx:script>

@@ -123,10 +123,10 @@ public class SettingsRoundCategoryController extends AbstractSettingsRoundCatego
                 categoryNumber,
                 categoryTextField,
                 roundLabel,
-                new TuneRecord(title1, author1, play1Button, pause1Button, save1Button),
-                new TuneRecord(title2, author2, play2Button, pause2Button, save2Button),
-                new TuneRecord(title3, author3, play3Button, pause3Button, save3Button),
-                new TuneRecord(title4, author4, play4Button, pause4Button, save4Button)
+                new TuneRecord(title1, author1, play1Button, pause1Button),
+                new TuneRecord(title2, author2, play2Button, pause2Button),
+                new TuneRecord(title3, author3, play3Button, pause3Button),
+                new TuneRecord(title4, author4, play4Button, pause4Button)
         );
     }
 
@@ -182,22 +182,22 @@ public class SettingsRoundCategoryController extends AbstractSettingsRoundCatego
 
     @FXML
     private void openTune1ButtonClick(MouseEvent mouseEvent) {
-        handleChooseMP3Click(pane, openTune1Button, save1Button, 1);
+        handleChooseMP3Click(pane, openTune1Button, 1);
     }
 
     @FXML
     private void openTune2ButtonClick(MouseEvent mouseEvent) {
-        handleChooseMP3Click(pane, openTune2Button, save2Button, 2);
+        handleChooseMP3Click(pane, openTune2Button, 2);
     }
 
     @FXML
     private void openTune3ButtonClick(MouseEvent mouseEvent) {
-        handleChooseMP3Click(pane, openTune3Button, save3Button, 3);
+        handleChooseMP3Click(pane, openTune3Button, 3);
     }
 
     @FXML
     private void openTune4ButtonClick(MouseEvent mouseEvent) {
-        handleChooseMP3Click(pane, openTune4Button, save4Button, 4);
+        handleChooseMP3Click(pane, openTune4Button, 4);
     }
 
     @FXML
@@ -207,7 +207,7 @@ public class SettingsRoundCategoryController extends AbstractSettingsRoundCatego
                 categoryNumber,
                 1,
                 openTune1Button,
-                new TuneRecord(title1, author1, play1Button, pause1Button, save1Button)
+                new TuneRecord(title1, author1, play1Button, pause1Button)
         );
     }
 
@@ -218,7 +218,7 @@ public class SettingsRoundCategoryController extends AbstractSettingsRoundCatego
                 categoryNumber,
                 2,
                 openTune2Button,
-                new TuneRecord(title2, author2, play2Button, pause2Button, save2Button)
+                new TuneRecord(title2, author2, play2Button, pause2Button)
         );
     }
 
@@ -229,7 +229,7 @@ public class SettingsRoundCategoryController extends AbstractSettingsRoundCatego
                 categoryNumber,
                 3,
                 openTune3Button,
-                new TuneRecord(title3, author3, play3Button, pause3Button, save3Button)
+                new TuneRecord(title3, author3, play3Button, pause3Button)
         );
     }
 
@@ -240,7 +240,7 @@ public class SettingsRoundCategoryController extends AbstractSettingsRoundCatego
                 categoryNumber,
                 4,
                 openTune4Button,
-                new TuneRecord(title4, author4, play4Button, pause4Button, save4Button)
+                new TuneRecord(title4, author4, play4Button, pause4Button)
         );
     }
 

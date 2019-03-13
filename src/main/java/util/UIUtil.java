@@ -20,6 +20,7 @@ import javafx.scene.media.MediaPlayer;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import org.apache.log4j.Logger;
 import record.TuneRecord;
 
 import java.awt.*;
@@ -36,6 +37,11 @@ public class UIUtil {
     private static final Dimension SCREEN_SIZE = Toolkit.getDefaultToolkit().getScreenSize();
     private static final CategoryDAO CATEGORY_DAO = new CategoryDAO();
     private static final CurrentDirectoryDAO CURRENT_DIRECTORY_DAO = new CurrentDirectoryDAO();
+    private static final Logger LOGGER = Logger.getLogger(UIUtil.class);
+
+    static {
+        Thread.setDefaultUncaughtExceptionHandler(new UncaughtExceptionHandler());
+    }
 
     private UIUtil() {
     }
@@ -63,7 +69,7 @@ public class UIUtil {
             Parent root = FileUtil.loadMainFromFXML();
             changeScene(root, getStage(pane), "Угадай мелодию!");
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
@@ -72,7 +78,7 @@ public class UIUtil {
             Parent root = FileUtil.loadGameFromFXML();
             changeScene(root, getStage(pane), "Игра");
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
@@ -81,7 +87,7 @@ public class UIUtil {
             Parent root = FileUtil.loadRoundFromFXML(roundNumber);
             changeScene(root, getStage(pane), roundNumber + " тур");
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
@@ -90,7 +96,7 @@ public class UIUtil {
             Parent root = FileUtil.loadSettingsFromFXML();
             changeScene(root, getStage(pane), "Настройки");
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
@@ -99,7 +105,7 @@ public class UIUtil {
             Parent root = FileUtil.loadSettingsRoundFromFXML(roundNumber);
             changeScene(root, getStage(pane), "Настройки " + roundNumber + "го тура");
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
@@ -108,7 +114,7 @@ public class UIUtil {
             Parent root = FileUtil.loadSettingsRoundCategoryFromFXML(roundNumber, categoryNumber);
             changeScene(root, getStage(pane), "Настройки " + roundNumber + "го тура");
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
@@ -117,7 +123,7 @@ public class UIUtil {
             Parent root = FileUtil.loadSuperGameFromFXML();
             changeScene(root, getStage(pane), "Суперигра");
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
@@ -126,7 +132,7 @@ public class UIUtil {
             Parent root = FileUtil.loadSuperGameSettingsFromFXML();
             changeScene(root, getStage(pane), "Настройки суперигры");
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
@@ -175,7 +181,7 @@ public class UIUtil {
                                         Media[] medias,
                                         MediaPlayer[] mediaPlayers,
                                         int number) {
-        if (tuneFiles[number].exists()) {
+        if (tuneFiles[number] != null && tuneFiles[number].exists()) {
             medias[number] = new Media(tuneFiles[number].toURI().toString());
             mediaPlayers[number] = new MediaPlayer(medias[number]);
             tuneRecord.playButton.setDisable(false);
@@ -186,7 +192,6 @@ public class UIUtil {
             tuneRecord.playButton.setDisable(true);
             tuneRecord.pauseButton.setDisable(true);
         }
-        tuneRecord.saveButton.setDisable(true);
     }
 
     public static void handlePlayButton(int tuneNumber,
@@ -229,10 +234,10 @@ public class UIUtil {
                                            Media[] medias,
                                            Button openTuneButton,
                                            TuneRecord tuneRecord,
-                                           Runnable runnable,
+                                           Action action,
                                            Supplier<File> supplier,
                                            String style) {
-        if (tuneFiles[tuneNumber - 1] != null) {
+        if (tuneFiles[tuneNumber - 1] != null && tuneFiles[tuneNumber - 1].exists()) {
             if (mediaPlayers[tuneNumber - 1] != null) {
                 if (timelines[tuneNumber - 1].getStatus().equals(Animation.Status.RUNNING)) {
                     timelines[tuneNumber - 1].pause();
@@ -240,30 +245,26 @@ public class UIUtil {
                 }
                 mediaPlayers[tuneNumber - 1].dispose();
             }
-            runnable.run();
+            action.execute();
             tuneFiles[tuneNumber - 1] = null;
             medias[tuneNumber - 1] = new Media(supplier.get().toURI().toString());
             mediaPlayers[tuneNumber - 1] = new MediaPlayer(medias[tuneNumber - 1]);
             openTuneButton.getStyleClass().replaceAll(s -> s.equals(style) ? "un" + style : s);
             tuneRecord.playButton.setDisable(false);
             tuneRecord.pauseButton.setDisable(false);
-            tuneRecord.saveButton.setDisable(true);
         }
     }
 
     public static void handleChooseMP3Click(Pane pane,
                                             Button openTuneButton,
-                                            Button saveButton,
                                             int tuneNumber,
                                             File[] tuneFiles,
                                             String style) {
         FileChooser fileChooser = initFileChooser();
         tuneFiles[tuneNumber - 1] = fileChooser.showOpenDialog(getStage(pane));
         if (tuneFiles[tuneNumber - 1] != null) {
-            saveButton.setDisable(false);
             openTuneButton.getStyleClass().replaceAll(s -> s.equals("un" + style) ? style : s);
         } else {
-            saveButton.setDisable(true);
             openTuneButton.getStyleClass().replaceAll(s -> s.equals(style) ? "un" + style : s);
         }
     }
@@ -283,6 +284,48 @@ public class UIUtil {
             if (timelines[i] != null && timelines[i].getStatus().equals(Animation.Status.RUNNING)) {
                 timelines[i].stop();
             }
+        }
+    }
+
+    public static void clickNoteHandler(MediaPlayer[] mediaPlayers,
+                                        Timeline[] timelines,
+                                        Glow[] glows,
+                                        Label[] noteLabels,
+                                        int i,
+                                        int count) {
+        mediaPlayers[i].setVolume(1);
+        MediaPlayer.Status status = mediaPlayers[i].getStatus();
+        if (status.equals(MediaPlayer.Status.PLAYING)) {
+            timelines[i].pause();
+            glows[i].setLevel(1);
+            mediaPlayers[i].pause();
+        }
+        if (status.equals(MediaPlayer.Status.PAUSED) || status.equals(MediaPlayer.Status.READY)) {
+            for (int k = 0; k < count; k++) {
+                if (k != i && mediaPlayers[k] != null && mediaPlayers[k].getStatus().equals(MediaPlayer.Status.PLAYING)) {
+                    timelines[k].pause();
+                    glows[k].setLevel(1);
+                    mediaPlayers[k].pause();
+                }
+            }
+            noteLabels[i].setEffect(glows[i]);
+            glows[i].setLevel(0);
+            timelines[i].play();
+            mediaPlayers[i].play();
+        }
+    }
+
+    public static void initMP3(File mp3File,
+                               MediaPlayer[] mediaPlayers,
+                               Label[] noteLabels,
+                               int i) {
+        if (mp3File.exists()) {
+            Media media = new Media(mp3File.toURI().toString());
+            mediaPlayers[i] = new MediaPlayer(media);
+            noteLabels[i].setDisable(false);
+        } else {
+            mediaPlayers[i] = null;
+            noteLabels[i].setDisable(true);
         }
     }
 

@@ -2,6 +2,7 @@ package dao;
 
 import db.JDBC;
 import entity.CurrentDirectory;
+import org.apache.log4j.Logger;
 import org.jetbrains.annotations.Nullable;
 
 import java.sql.*;
@@ -10,6 +11,7 @@ public class CurrentDirectoryDAO {
 
     private static final String READ = "SELECT path FROM currentDirectory";
     private static final String UPDATE = "UPDATE currentDirectory SET path = ?";
+    private static final Logger LOGGER = Logger.getLogger(CurrentDirectoryDAO.class);
 
     @Nullable
     public CurrentDirectory read() {
@@ -23,7 +25,7 @@ public class CurrentDirectoryDAO {
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
         return result;
     }
@@ -34,7 +36,7 @@ public class CurrentDirectoryDAO {
             preparedStatement.setString(1, currentDirectory.getPath());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOGGER.error(e.getMessage(), e);
         }
     }
 
