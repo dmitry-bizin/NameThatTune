@@ -19,6 +19,7 @@ import util.UIUtil;
 import java.io.File;
 import java.net.URL;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.stream.Stream;
 
@@ -26,7 +27,7 @@ import static util.FileUtil.TUNES_IN_SUPER_GAME_COUNT;
 
 public class SuperGameController implements Initializable {
 
-    private static final double TOTAL_SECONDS = 30;
+    private static final double TOTAL_SECONDS = 30;// todo: вынести в БД как настройку. На UI сделать spinner
     private static final double STEP = 0.1;// in seconds
 
     @FXML
@@ -65,10 +66,16 @@ public class SuperGameController implements Initializable {
                     if (currentSeconds <= 0) {
                         timerTimeline.stop();
                         currentSeconds = 0;
+                        stopAll();
                     }
                     timerLabel.setText(String.format(Locale.ENGLISH, "%.1f", currentSeconds));
                 }));
         timerTimeline.playFromStart();
+    }
+
+    private void stopAll() {
+        Stream.of(noteLabels).filter(Objects::nonNull).forEach(label -> label.setDisable(true));
+        dispose();
     }
 
     private void initGlowsAndTimelines() {
@@ -120,7 +127,7 @@ public class SuperGameController implements Initializable {
                 if (mediaPlayers[t].getStatus().equals(MediaPlayer.Status.PLAYING)) {
                     timerTimeline.pause();
                 }
-                if (mediaPlayers[t].getStatus().equals(MediaPlayer.Status.PAUSED) ||
+                if (mediaPlayers[t].getStatus().equals(MediaPlayer.Status.STOPPED) ||
                         mediaPlayers[t].getStatus().equals(MediaPlayer.Status.READY)) {
                     timerTimeline.play();
                 }
@@ -130,7 +137,8 @@ public class SuperGameController implements Initializable {
                         glows,
                         noteLabels,
                         t,
-                        TUNES_IN_SUPER_GAME_COUNT
+                        TUNES_IN_SUPER_GAME_COUNT,
+                        false
                 );
             });
         }

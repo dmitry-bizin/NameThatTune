@@ -12,4 +12,8 @@ public class CurrentDirectory {
         return path;
     }
 
+    public void setPath(String path) {
+        this.path = path;
+    }
+
 }

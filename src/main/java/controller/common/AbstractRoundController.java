@@ -75,7 +75,8 @@ public abstract class AbstractRoundController {
                                 glows,
                                 noteLabels,
                                 t,
-                                CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT
+                                CATEGORIES_IN_ROUND_COUNT * TUNES_IN_CATEGORY_COUNT,
+                                true
                         )
                 );
             }

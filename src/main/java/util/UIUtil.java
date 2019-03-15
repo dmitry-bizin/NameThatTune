@@ -38,6 +38,7 @@ public class UIUtil {
     private static final CategoryDAO CATEGORY_DAO = new CategoryDAO();
     private static final CurrentDirectoryDAO CURRENT_DIRECTORY_DAO = new CurrentDirectoryDAO();
     private static final Logger LOGGER = Logger.getLogger(UIUtil.class);
+    private static CurrentDirectory currentDirectory;
 
     static {
         Thread.setDefaultUncaughtExceptionHandler(new UncaughtExceptionHandler());
@@ -166,7 +167,9 @@ public class UIUtil {
     }
 
     private static FileChooser initFileChooser() {
-        CurrentDirectory currentDirectory = CURRENT_DIRECTORY_DAO.read();
+        if (currentDirectory == null) {
+            currentDirectory = CURRENT_DIRECTORY_DAO.read();
+        }
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Выбор мелодии для загрузки");
         if (currentDirectory != null && Files.exists(Paths.get(currentDirectory.getPath()), LinkOption.NOFOLLOW_LINKS)) {
@@ -264,6 +267,11 @@ public class UIUtil {
         tuneFiles[tuneNumber - 1] = fileChooser.showOpenDialog(getStage(pane));
         if (tuneFiles[tuneNumber - 1] != null) {
             openTuneButton.getStyleClass().replaceAll(s -> s.equals("un" + style) ? style : s);
+            if (currentDirectory == null) {
+                currentDirectory = new CurrentDirectory(tuneFiles[tuneNumber - 1].getParent());
+            } else {
+                currentDirectory.setPath(tuneFiles[tuneNumber - 1].getParent());
+            }
         } else {
             openTuneButton.getStyleClass().replaceAll(s -> s.equals(style) ? "un" + style : s);
         }
@@ -292,26 +300,51 @@ public class UIUtil {
                                         Glow[] glows,
                                         Label[] noteLabels,
                                         int i,
-                                        int count) {
+                                        int count,
+                                        boolean pause) {
         mediaPlayers[i].setVolume(1);
         MediaPlayer.Status status = mediaPlayers[i].getStatus();
         if (status.equals(MediaPlayer.Status.PLAYING)) {
-            timelines[i].pause();
+            pauseCheck(pause, timelines[i]);
             glows[i].setLevel(1);
-            mediaPlayers[i].pause();
+            pauseCheck(pause, mediaPlayers[i]);
         }
-        if (status.equals(MediaPlayer.Status.PAUSED) || status.equals(MediaPlayer.Status.READY)) {
+        if (status.equals(pause ? MediaPlayer.Status.PAUSED : MediaPlayer.Status.STOPPED) || status.equals(MediaPlayer.Status.READY)) {
             for (int k = 0; k < count; k++) {
                 if (k != i && mediaPlayers[k] != null && mediaPlayers[k].getStatus().equals(MediaPlayer.Status.PLAYING)) {
-                    timelines[k].pause();
+                    pauseCheck(pause, timelines[k]);
                     glows[k].setLevel(1);
-                    mediaPlayers[k].pause();
+                    pauseCheck(pause, mediaPlayers[k]);
                 }
             }
             noteLabels[i].setEffect(glows[i]);
             glows[i].setLevel(0);
-            timelines[i].play();
+            playCheck(pause, timelines[i]);
             mediaPlayers[i].play();
+        }
+    }
+
+    private static void pauseCheck(boolean pause, Timeline timeline) {
+        if (pause) {
+            timeline.pause();
+        } else {
+            timeline.stop();
+        }
+    }
+
+    private static void playCheck(boolean pause, Timeline timeline) {
+        if (pause) {
+            timeline.play();
+        } else {
+            timeline.playFromStart();
+        }
+    }
+
+    private static void pauseCheck(boolean pause, MediaPlayer mediaPlayer) {
+        if (pause) {
+            mediaPlayer.pause();
+        } else {
+            mediaPlayer.stop();
         }
     }
 
