@@ -1,12 +1,13 @@
 package controller;
 
-import dao.CurrentDirectoryDAO;
-import entity.CurrentDirectory;
+import dao.SettingsDAO;
+import entity.Setting;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.DirectoryChooser;
+import util.SettingsUtil;
 import util.UIUtil;
 
 import java.io.File;
@@ -15,7 +16,7 @@ import java.util.ResourceBundle;
 
 public class SettingsController implements Initializable {
 
-    private static final CurrentDirectoryDAO CURRENT_DIRECTORY_DAO = new CurrentDirectoryDAO();
+    private static final SettingsDAO CURRENT_DIRECTORY_DAO = new SettingsDAO();
 
     @FXML
     private Pane pane;
@@ -44,14 +45,14 @@ public class SettingsController implements Initializable {
     private void currentDirectorySettingsClick(MouseEvent mouseEvent) {
         DirectoryChooser directoryChooser = new DirectoryChooser();
         directoryChooser.setTitle("Выбор директории с мелодиями");
-        CurrentDirectory currentDirectory = CURRENT_DIRECTORY_DAO.read();
+        String currentDirectory = CURRENT_DIRECTORY_DAO.readByKey(SettingsUtil.CURRENT_DIRECTORY_KEY);
         if (currentDirectory != null) {
-            directoryChooser.setInitialDirectory(new File(currentDirectory.getPath()));
+            directoryChooser.setInitialDirectory(new File(currentDirectory));
         }
         File selectedDirectory = directoryChooser.showDialog(UIUtil.getStage(pane));
         if (selectedDirectory != null) {
-            currentDirectory = new CurrentDirectory(selectedDirectory.toString());
-            CURRENT_DIRECTORY_DAO.update(currentDirectory);
+            Setting currentDirectorySetting = new Setting(SettingsUtil.CURRENT_DIRECTORY_KEY, selectedDirectory.toString());
+            CURRENT_DIRECTORY_DAO.update(currentDirectorySetting);
         }
     }
 

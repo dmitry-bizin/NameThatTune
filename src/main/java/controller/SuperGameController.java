@@ -1,5 +1,6 @@
 package controller;
 
+import dao.SettingsDAO;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -14,12 +15,14 @@ import javafx.scene.layout.Pane;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
 import util.FileUtil;
+import util.SettingsUtil;
 import util.UIUtil;
 
 import java.io.File;
 import java.net.URL;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.stream.Stream;
 
@@ -27,8 +30,8 @@ import static util.FileUtil.TUNES_IN_SUPER_GAME_COUNT;
 
 public class SuperGameController implements Initializable {
 
-    private static final double TOTAL_SECONDS = 30;// todo: вынести в БД как настройку. На UI сделать spinner
     private static final double STEP = 0.1;// in seconds
+    private static final SettingsDAO SETTINGS_DAO = new SettingsDAO();
 
     @FXML
     private Pane pane;
@@ -53,7 +56,8 @@ public class SuperGameController implements Initializable {
     }
 
     private void initTimerLabel() {
-        currentSeconds = TOTAL_SECONDS;
+        currentSeconds = Integer.parseInt(Optional.ofNullable(SETTINGS_DAO.readByKey(SettingsUtil.COUNT_SECONDS_KEY))
+                .orElse(SettingsUtil.COUNT_SECONDS_DEFAULT_VALUE));
         timerLabel.setText(String.format(Locale.ENGLISH, "%.1f", currentSeconds));
     }
 

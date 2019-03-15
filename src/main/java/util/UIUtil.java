@@ -1,9 +1,8 @@
 package util;
 
 import dao.CategoryDAO;
-import dao.CurrentDirectoryDAO;
+import dao.SettingsDAO;
 import entity.Category;
-import entity.CurrentDirectory;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -36,9 +35,9 @@ public class UIUtil {
 
     private static final Dimension SCREEN_SIZE = Toolkit.getDefaultToolkit().getScreenSize();
     private static final CategoryDAO CATEGORY_DAO = new CategoryDAO();
-    private static final CurrentDirectoryDAO CURRENT_DIRECTORY_DAO = new CurrentDirectoryDAO();
+    private static final SettingsDAO SETTINGS_DAO = new SettingsDAO();
     private static final Logger LOGGER = Logger.getLogger(UIUtil.class);
-    private static CurrentDirectory currentDirectory;
+    private static String currentDirectory;
 
     static {
         Thread.setDefaultUncaughtExceptionHandler(new UncaughtExceptionHandler());
@@ -168,12 +167,12 @@ public class UIUtil {
 
     private static FileChooser initFileChooser() {
         if (currentDirectory == null) {
-            currentDirectory = CURRENT_DIRECTORY_DAO.read();
+            currentDirectory = SETTINGS_DAO.readByKey(SettingsUtil.CURRENT_DIRECTORY_KEY);
         }
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Выбор мелодии для загрузки");
-        if (currentDirectory != null && Files.exists(Paths.get(currentDirectory.getPath()), LinkOption.NOFOLLOW_LINKS)) {
-            fileChooser.setInitialDirectory(new File(currentDirectory.getPath()));
+        if (currentDirectory != null && Files.exists(Paths.get(currentDirectory), LinkOption.NOFOLLOW_LINKS)) {
+            fileChooser.setInitialDirectory(new File(currentDirectory));
         }
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Audio Files", "*.mp3"));
         return fileChooser;
@@ -267,11 +266,7 @@ public class UIUtil {
         tuneFiles[tuneNumber - 1] = fileChooser.showOpenDialog(getStage(pane));
         if (tuneFiles[tuneNumber - 1] != null) {
             openTuneButton.getStyleClass().replaceAll(s -> s.equals("un" + style) ? style : s);
-            if (currentDirectory == null) {
-                currentDirectory = new CurrentDirectory(tuneFiles[tuneNumber - 1].getParent());
-            } else {
-                currentDirectory.setPath(tuneFiles[tuneNumber - 1].getParent());
-            }
+            currentDirectory = tuneFiles[tuneNumber - 1].getParent();
         } else {
             openTuneButton.getStyleClass().replaceAll(s -> s.equals(style) ? "un" + style : s);
         }

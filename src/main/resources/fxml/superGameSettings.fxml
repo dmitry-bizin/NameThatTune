@@ -610,14 +610,19 @@
     </Button>
     <!--Мелодия7-->
 
-    <Label onMouseClicked="#backLabelClick" fx:id="backLabel" text="Назад" styleClass="superGameSettingsBackLabel">
-        <fx:script>
-            backLabel.setLayoutX(0.85 * screen.getScreenSize().getWidth());
-            backLabel.setLayoutY(0.7 * screen.getScreenSize().getHeight());
-             </fx:script>
+    <Label onMouseClicked="#backLabelClick" styleClass="backLabel">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
+        <graphic>
+            <ImageView fx:id="backImageView">
+                <Image url="@../images/back.png"/>
+                <fx:script>
+                    backImageView.setFitWidth(0.05 * screen.getScreenSize().getHeight());
+                    backImageView.setFitHeight(0.05 * screen.getScreenSize().getHeight());
+                     </fx:script>
+            </ImageView>
+        </graphic>
     </Label>
 
 </Pane>

@@ -145,7 +145,7 @@
     -fx-fit-to-width: true;
 }
 
-.settingsRoundCategoryBackLabel, .superGameSettingsBackLabel {
+.settingsRoundCategoryBackLabel {
     -fx-font-family: "Ribbon Heart";
     -fx-text-fill: blue;
     -fx-font-smoothing-type: lcd;
@@ -155,7 +155,7 @@
     -fx-font-size: 35pt;
 }
 
-.settingsRoundCategoryBackLabel:hover, .settingsRoundCategoryBackLabel:pressed, .superGameSettingsBackLabel:hover, .superGameSettingsBackLabel:pressed {
+.settingsRoundCategoryBackLabel:hover, .settingsRoundCategoryBackLabel:pressed {
     -fx-text-fill: red;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
@@ -312,8 +312,4 @@
 
 .saveSuperGameSettingsButton {
     -fx-font-size: 12pt;
-}
-
-.superGameSettingsBackLabel {
-    -fx-font-size: 30pt;
 }
