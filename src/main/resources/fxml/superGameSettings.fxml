@@ -625,4 +625,15 @@
         </graphic>
     </Label>
 
+    <Spinner fx:id="countSecondsSpinner" amountToStepBy="5" min="1" max="300" initialValue="30">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Spinner>
+    <fx:script>
+        countSecondsSpinner.setLayoutX(0.8 * screen.getScreenSize().getWidth());
+        countSecondsSpinner.setLayoutY(0.7 * screen.getScreenSize().getHeight());
+        countSecondsSpinner.setPrefWidth(0.1 * screen.getScreenSize().getWidth());
+         </fx:script>
+
 </Pane>

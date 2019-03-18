@@ -183,7 +183,7 @@
     -fx-font-smoothing-type: lcd;
 }
 
-.text-field, .superGameSettingsTextField {
+.text-field, .superGameSettingsTextField, .spinner {
     -fx-background-radius: 10;
     -fx-border-radius: 8;
     -fx-border-width: 1pt;
@@ -193,7 +193,7 @@
     -fx-font-smoothing-type: lcd;
 }
 
-.text-field {
+.text-field, .spinner {
     -fx-font-size: 14pt;
 }
 
@@ -312,4 +312,16 @@
 
 .saveSuperGameSettingsButton {
     -fx-font-size: 12pt;
+}
+
+.spinner .increment-arrow-button, .spinner .decrement-arrow-button {
+    -fx-body-color: deepskyblue;
+}
+
+.spinner .increment-arrow-button:hover, .spinner .decrement-arrow-button:hover {
+    -fx-body-color: deepskyblue;
+}
+
+.spinner .increment-arrow-button:hover:pressed, .spinner .decrement-arrow-button:hover:pressed, .spinner .increment-arrow-button:pressed, .spinner .decrement-arrow-button:pressed {
+    -fx-body-color: blue;
 }
