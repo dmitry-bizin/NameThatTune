@@ -1,13 +1,13 @@
 package controller;
 
+import dao.SettingsDAO;
 import dao.SuperGameDAO;
+import entity.Setting;
 import entity.SuperGame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.effect.Glow;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -15,6 +15,7 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import record.TuneRecord;
 import util.FileUtil;
+import util.SettingsUtil;
 import util.UIUtil;
 
 import java.io.File;
@@ -27,7 +28,11 @@ import static util.FileUtil.TUNES_IN_SUPER_GAME_COUNT;
 public class SuperGameSettingsController implements Initializable {
 
     private static final SuperGameDAO SUPER_GAME_DAO = new SuperGameDAO();
+    private static final SettingsDAO SETTINGS_DAO = new SettingsDAO();
     private static final String SELECTED_BUTTON_STYLE = "selectedSuperGameSettingsButton";
+
+    @FXML
+    private Spinner<Integer> countSecondsSpinner;
 
     @FXML
     private Label tune1Label;
@@ -180,6 +185,13 @@ public class SuperGameSettingsController implements Initializable {
                 new TuneRecord(title5, author5, play5Button, pause5Button),
                 new TuneRecord(title6, author6, play6Button, pause6Button),
                 new TuneRecord(title7, author7, play7Button, pause7Button)
+        );
+        initSpinner();
+    }
+
+    private void initSpinner() {
+        countSecondsSpinner.setValueFactory(
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 300, SettingsUtil.getCountSeconds(), 5)
         );
     }
 
@@ -395,6 +407,13 @@ public class SuperGameSettingsController implements Initializable {
                 openTune7Button,
                 new TuneRecord(title7, author7, play7Button, pause7Button)
         );
+    }
+
+    @FXML
+    private void countSecondsButtonClick(MouseEvent mouseEvent) {
+        Integer countSeconds = countSecondsSpinner.getValue();
+        Setting setting = new Setting(SettingsUtil.COUNT_SECONDS_KEY, String.valueOf(countSeconds));
+        SETTINGS_DAO.update(setting);
     }
 
 }

@@ -625,15 +625,28 @@
         </graphic>
     </Label>
 
-    <Spinner fx:id="countSecondsSpinner" amountToStepBy="5" min="1" max="300" initialValue="30">
+    <Label fx:id="countSecondsLabel" text="Количество секунд" styleClass="superGameSettingsTuneLabel"/>
+    <Spinner fx:id="countSecondsSpinner">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Spinner>
+    <Button fx:id="countSecondsButton" onMouseClicked="#countSecondsButtonClick" text="Сохранить"
+            styleClass="saveSuperGameSettingsButton">
+        <cursor>
+            <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
     <fx:script>
-        countSecondsSpinner.setLayoutX(0.8 * screen.getScreenSize().getWidth());
-        countSecondsSpinner.setLayoutY(0.7 * screen.getScreenSize().getHeight());
-        countSecondsSpinner.setPrefWidth(0.1 * screen.getScreenSize().getWidth());
+        countSecondsLabel.setLayoutX(0.765 * screen.getScreenSize().getWidth());
+        countSecondsLabel.setLayoutY(0.5 * screen.getScreenSize().getHeight());
+
+        countSecondsSpinner.setLayoutX(0.765 * screen.getScreenSize().getWidth());
+        countSecondsSpinner.setLayoutY(0.6 * screen.getScreenSize().getHeight());
+        countSecondsSpinner.setPrefWidth(0.085 * screen.getScreenSize().getWidth());
+
+        countSecondsButton.setLayoutX(0.765 * screen.getScreenSize().getWidth());
+        countSecondsButton.setLayoutY(0.7 * screen.getScreenSize().getHeight());
          </fx:script>
 
 </Pane>

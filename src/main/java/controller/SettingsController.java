@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 
 public class SettingsController implements Initializable {
 
-    private static final SettingsDAO CURRENT_DIRECTORY_DAO = new SettingsDAO();
+    private static final SettingsDAO SETTINGS_DAO = new SettingsDAO();
 
     @FXML
     private Pane pane;
@@ -45,14 +45,14 @@ public class SettingsController implements Initializable {
     private void currentDirectorySettingsClick(MouseEvent mouseEvent) {
         DirectoryChooser directoryChooser = new DirectoryChooser();
         directoryChooser.setTitle("Выбор директории с мелодиями");
-        String currentDirectory = CURRENT_DIRECTORY_DAO.readByKey(SettingsUtil.CURRENT_DIRECTORY_KEY);
+        String currentDirectory = SETTINGS_DAO.readByKey(SettingsUtil.CURRENT_DIRECTORY_KEY);
         if (currentDirectory != null) {
             directoryChooser.setInitialDirectory(new File(currentDirectory));
         }
         File selectedDirectory = directoryChooser.showDialog(UIUtil.getStage(pane));
         if (selectedDirectory != null) {
             Setting currentDirectorySetting = new Setting(SettingsUtil.CURRENT_DIRECTORY_KEY, selectedDirectory.toString());
-            CURRENT_DIRECTORY_DAO.update(currentDirectorySetting);
+            SETTINGS_DAO.update(currentDirectorySetting);
         }
     }
 
