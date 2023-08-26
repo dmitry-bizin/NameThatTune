@@ -13,8 +13,8 @@ import java.sql.SQLException;
 public class SettingsDAO {
 
     private static final Logger LOGGER = Logger.getLogger(SettingsDAO.class);
-    private static final String READ_BY_KEY = "SELECT value FROM settings WHERE key = ?";
-    private static final String UPDATE_BY_KEY = "UPDATE settings SET value = ? WHERE key = ?";
+    private static final String READ_BY_KEY = "SELECT `value` FROM settings WHERE `key` = ?";
+    private static final String UPDATE_BY_KEY = "UPDATE settings SET `value` = ? WHERE `key` = ?";
 
     @Nullable
     public String readByKey(String key) {

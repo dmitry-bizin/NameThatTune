@@ -20,7 +20,7 @@
         <fx:script>
             gameLabel.setLayoutX(0.65 * screen.getScreenSize().getWidth());
             gameLabel.setLayoutY(0.3 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -31,7 +31,7 @@
         <fx:script>
             settingsLabel.setLayoutX(0.65 * screen.getScreenSize().getWidth());
             settingsLabel.setLayoutY(0.4 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -42,7 +42,7 @@
         <fx:script>
             exitLabel.setLayoutX(0.65 * screen.getScreenSize().getWidth());
             exitLabel.setLayoutY(0.5 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>

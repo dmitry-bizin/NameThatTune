@@ -22,28 +22,28 @@
         <fx:script>
             separatorV1.setLayoutX(0.25 * screen.getScreenSize().getWidth());
             separatorV1.setPrefHeight(screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
     </Separator>
 
     <Separator fx:id="separatorV2" orientation="VERTICAL">
         <fx:script>
             separatorV2.setLayoutX(0.5 * screen.getScreenSize().getWidth());
             separatorV2.setPrefHeight(screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
     </Separator>
 
     <Separator fx:id="separatorV3" orientation="VERTICAL">
         <fx:script>
             separatorV3.setLayoutX(0.75 * screen.getScreenSize().getWidth());
             separatorV3.setPrefHeight(screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
     </Separator>
 
     <Separator fx:id="separatorH">
         <fx:script>
             separatorH.setLayoutY(0.5 * screen.getScreenSize().getHeight());
             separatorH.setPrefWidth(screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </Separator>
     <!-- сетка -->
 
@@ -51,7 +51,7 @@
     <Label fx:id="tune1Label" text="Мелодия 1" styleClass="superGameSettingsTuneLabel">
         <fx:script>
             tune1Label.setLayoutX(0.17 * screen.getScreenSize().getWidth() / 2);
-             </fx:script>
+        </fx:script>
     </Label>
 
     <Button fx:id="play1Button" onMouseClicked="#play1ButtonClick" styleClass="playButton">
@@ -66,7 +66,7 @@
                     play1ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
                     play1Button.setLayoutX(0.01 * screen.getScreenSize().getWidth());
                     play1Button.setLayoutY(0.08 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Button>
@@ -83,7 +83,7 @@
                     pause1ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
                     pause1Button.setLayoutX(0.04 * screen.getScreenSize().getWidth() + play1ImageView.getFitWidth());
                     pause1Button.setLayoutY(0.08 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Button>
@@ -93,7 +93,7 @@
         <fx:script>
             openTune1Button.setLayoutX(0.015 * screen.getScreenSize().getWidth());
             openTune1Button.setLayoutY(0.15 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -104,7 +104,7 @@
             title1.setLayoutX(0.015 * screen.getScreenSize().getWidth());
             title1.setLayoutY(0.24 * screen.getScreenSize().getHeight());
             title1.setPrefWidth(0.2 * screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </TextField>
 
     <TextField fx:id="author1" promptText="Автор песни" styleClass="superGameSettingsTextField">
@@ -112,7 +112,7 @@
             author1.setLayoutX(0.015 * screen.getScreenSize().getWidth());
             author1.setLayoutY(0.32 * screen.getScreenSize().getHeight());
             author1.setPrefWidth(0.2 * screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </TextField>
 
     <Button fx:id="save1Button" text="Сохранить" styleClass="saveSuperGameSettingsButton"
@@ -120,7 +120,7 @@
         <fx:script>
             save1Button.setLayoutX(0.015 * screen.getScreenSize().getWidth());
             save1Button.setLayoutY(0.4 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -130,8 +130,9 @@
     <!--Мелодия2-->
     <Label fx:id="tune2Label" text="Мелодия 2" styleClass="superGameSettingsTuneLabel">
         <fx:script>
-            tune2Label.setLayoutX(0.25 * screen.getScreenSize().getWidth() + 0.17 * screen.getScreenSize().getWidth() / 2);
-             </fx:script>
+            tune2Label.setLayoutX(0.25 * screen.getScreenSize().getWidth() + 0.17 * screen.getScreenSize().getWidth() /
+            2);
+        </fx:script>
     </Label>
 
     <Button fx:id="play2Button" onMouseClicked="#play2ButtonClick" styleClass="playButton">
@@ -146,7 +147,7 @@
                     play2ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
                     play2Button.setLayoutX(0.26 * screen.getScreenSize().getWidth());
                     play2Button.setLayoutY(0.08 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Button>
@@ -163,7 +164,7 @@
                     pause2ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
                     pause2Button.setLayoutX(0.29 * screen.getScreenSize().getWidth() + play2ImageView.getFitWidth());
                     pause2Button.setLayoutY(0.08 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Button>
@@ -173,7 +174,7 @@
         <fx:script>
             openTune2Button.setLayoutX(0.265 * screen.getScreenSize().getWidth());
             openTune2Button.setLayoutY(0.15 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -184,7 +185,7 @@
             title2.setLayoutX(0.265 * screen.getScreenSize().getWidth());
             title2.setLayoutY(0.24 * screen.getScreenSize().getHeight());
             title2.setPrefWidth(0.2 * screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </TextField>
 
     <TextField fx:id="author2" promptText="Автор песни" styleClass="superGameSettingsTextField">
@@ -192,7 +193,7 @@
             author2.setLayoutX(0.265 * screen.getScreenSize().getWidth());
             author2.setLayoutY(0.32 * screen.getScreenSize().getHeight());
             author2.setPrefWidth(0.2 * screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </TextField>
 
     <Button fx:id="save2Button" text="Сохранить" styleClass="saveSuperGameSettingsButton"
@@ -200,7 +201,7 @@
         <fx:script>
             save2Button.setLayoutX(0.265 * screen.getScreenSize().getWidth());
             save2Button.setLayoutY(0.4 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -210,8 +211,9 @@
     <!--Мелодия3-->
     <Label fx:id="tune3Label" text="Мелодия 3" styleClass="superGameSettingsTuneLabel">
         <fx:script>
-            tune3Label.setLayoutX(0.5 * screen.getScreenSize().getWidth() + 0.17 * screen.getScreenSize().getWidth() / 2);
-             </fx:script>
+            tune3Label.setLayoutX(0.5 * screen.getScreenSize().getWidth() + 0.17 * screen.getScreenSize().getWidth() /
+            2);
+        </fx:script>
     </Label>
 
     <Button fx:id="play3Button" onMouseClicked="#play3ButtonClick" styleClass="playButton">
@@ -226,7 +228,7 @@
                     play3ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
                     play3Button.setLayoutX(0.51 * screen.getScreenSize().getWidth());
                     play3Button.setLayoutY(0.08 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Button>
@@ -243,7 +245,7 @@
                     pause3ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
                     pause3Button.setLayoutX(0.54 * screen.getScreenSize().getWidth() + play3ImageView.getFitWidth());
                     pause3Button.setLayoutY(0.08 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Button>
@@ -253,7 +255,7 @@
         <fx:script>
             openTune3Button.setLayoutX(0.515 * screen.getScreenSize().getWidth());
             openTune3Button.setLayoutY(0.15 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -264,7 +266,7 @@
             title3.setLayoutX(0.515 * screen.getScreenSize().getWidth());
             title3.setLayoutY(0.24 * screen.getScreenSize().getHeight());
             title3.setPrefWidth(0.2 * screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </TextField>
 
     <TextField fx:id="author3" promptText="Автор песни" styleClass="superGameSettingsTextField">
@@ -272,7 +274,7 @@
             author3.setLayoutX(0.515 * screen.getScreenSize().getWidth());
             author3.setLayoutY(0.32 * screen.getScreenSize().getHeight());
             author3.setPrefWidth(0.2 * screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </TextField>
 
     <Button fx:id="save3Button" text="Сохранить" styleClass="saveSuperGameSettingsButton"
@@ -280,7 +282,7 @@
         <fx:script>
             save3Button.setLayoutX(0.515 * screen.getScreenSize().getWidth());
             save3Button.setLayoutY(0.4 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -290,8 +292,9 @@
     <!--Мелодия4-->
     <Label fx:id="tune4Label" text="Мелодия 4" styleClass="superGameSettingsTuneLabel">
         <fx:script>
-            tune4Label.setLayoutX(0.75 * screen.getScreenSize().getWidth() + 0.17 * screen.getScreenSize().getWidth() / 2);
-             </fx:script>
+            tune4Label.setLayoutX(0.75 * screen.getScreenSize().getWidth() + 0.17 * screen.getScreenSize().getWidth() /
+            2);
+        </fx:script>
     </Label>
 
     <Button fx:id="play4Button" onMouseClicked="#play4ButtonClick" styleClass="playButton">
@@ -306,7 +309,7 @@
                     play4ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
                     play4Button.setLayoutX(0.76 * screen.getScreenSize().getWidth());
                     play4Button.setLayoutY(0.08 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Button>
@@ -323,7 +326,7 @@
                     pause4ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
                     pause4Button.setLayoutX(0.79 * screen.getScreenSize().getWidth() + play4ImageView.getFitWidth());
                     pause4Button.setLayoutY(0.08 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Button>
@@ -333,7 +336,7 @@
         <fx:script>
             openTune4Button.setLayoutX(0.765 * screen.getScreenSize().getWidth());
             openTune4Button.setLayoutY(0.15 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -344,7 +347,7 @@
             title4.setLayoutX(0.765 * screen.getScreenSize().getWidth());
             title4.setLayoutY(0.24 * screen.getScreenSize().getHeight());
             title4.setPrefWidth(0.2 * screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </TextField>
 
     <TextField fx:id="author4" promptText="Автор песни" styleClass="superGameSettingsTextField">
@@ -352,7 +355,7 @@
             author4.setLayoutX(0.765 * screen.getScreenSize().getWidth());
             author4.setLayoutY(0.32 * screen.getScreenSize().getHeight());
             author4.setPrefWidth(0.2 * screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </TextField>
 
     <Button fx:id="save4Button" text="Сохранить" styleClass="saveSuperGameSettingsButton"
@@ -360,7 +363,7 @@
         <fx:script>
             save4Button.setLayoutX(0.765 * screen.getScreenSize().getWidth());
             save4Button.setLayoutY(0.4 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -372,7 +375,7 @@
         <fx:script>
             tune5Label.setLayoutX(0.17 * screen.getScreenSize().getWidth() / 2);
             tune5Label.setLayoutY(0.5 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
     </Label>
 
     <Button fx:id="play5Button" onMouseClicked="#play5ButtonClick" styleClass="playButton">
@@ -387,7 +390,7 @@
                     play5ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
                     play5Button.setLayoutX(0.01 * screen.getScreenSize().getWidth());
                     play5Button.setLayoutY(0.58 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Button>
@@ -404,7 +407,7 @@
                     pause5ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
                     pause5Button.setLayoutX(0.04 * screen.getScreenSize().getWidth() + play5ImageView.getFitWidth());
                     pause5Button.setLayoutY(0.58 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Button>
@@ -414,7 +417,7 @@
         <fx:script>
             openTune5Button.setLayoutX(0.015 * screen.getScreenSize().getWidth());
             openTune5Button.setLayoutY(0.65 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -425,7 +428,7 @@
             title5.setLayoutX(0.015 * screen.getScreenSize().getWidth());
             title5.setLayoutY(0.74 * screen.getScreenSize().getHeight());
             title5.setPrefWidth(0.2 * screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </TextField>
 
     <TextField fx:id="author5" promptText="Автор песни" styleClass="superGameSettingsTextField">
@@ -433,7 +436,7 @@
             author5.setLayoutX(0.015 * screen.getScreenSize().getWidth());
             author5.setLayoutY(0.82 * screen.getScreenSize().getHeight());
             author5.setPrefWidth(0.2 * screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </TextField>
 
     <Button fx:id="save5Button" text="Сохранить" styleClass="saveSuperGameSettingsButton"
@@ -441,7 +444,7 @@
         <fx:script>
             save5Button.setLayoutX(0.015 * screen.getScreenSize().getWidth());
             save5Button.setLayoutY(0.9 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -451,9 +454,10 @@
     <!--Мелодия6-->
     <Label fx:id="tune6Label" text="Мелодия 6" styleClass="superGameSettingsTuneLabel">
         <fx:script>
-            tune6Label.setLayoutX(0.25 * screen.getScreenSize().getWidth() + 0.17 * screen.getScreenSize().getWidth() / 2);
+            tune6Label.setLayoutX(0.25 * screen.getScreenSize().getWidth() + 0.17 * screen.getScreenSize().getWidth() /
+            2);
             tune6Label.setLayoutY(0.5 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
     </Label>
 
     <Button fx:id="play6Button" onMouseClicked="#play6ButtonClick" styleClass="playButton">
@@ -468,7 +472,7 @@
                     play6ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
                     play6Button.setLayoutX(0.26 * screen.getScreenSize().getWidth());
                     play6Button.setLayoutY(0.58 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Button>
@@ -485,7 +489,7 @@
                     pause6ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
                     pause6Button.setLayoutX(0.29 * screen.getScreenSize().getWidth() + play6ImageView.getFitWidth());
                     pause6Button.setLayoutY(0.58 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Button>
@@ -495,7 +499,7 @@
         <fx:script>
             openTune6Button.setLayoutX(0.265 * screen.getScreenSize().getWidth());
             openTune6Button.setLayoutY(0.65 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -506,7 +510,7 @@
             title6.setLayoutX(0.265 * screen.getScreenSize().getWidth());
             title6.setLayoutY(0.74 * screen.getScreenSize().getHeight());
             title6.setPrefWidth(0.2 * screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </TextField>
 
     <TextField fx:id="author6" promptText="Автор песни" styleClass="superGameSettingsTextField">
@@ -514,7 +518,7 @@
             author6.setLayoutX(0.265 * screen.getScreenSize().getWidth());
             author6.setLayoutY(0.82 * screen.getScreenSize().getHeight());
             author6.setPrefWidth(0.2 * screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </TextField>
 
     <Button fx:id="save6Button" text="Сохранить" styleClass="saveSuperGameSettingsButton"
@@ -522,7 +526,7 @@
         <fx:script>
             save6Button.setLayoutX(0.265 * screen.getScreenSize().getWidth());
             save6Button.setLayoutY(0.9 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -532,9 +536,10 @@
     <!--Мелодия7-->
     <Label fx:id="tune7Label" text="Мелодия 7" styleClass="superGameSettingsTuneLabel">
         <fx:script>
-            tune7Label.setLayoutX(0.5 * screen.getScreenSize().getWidth() + 0.17 * screen.getScreenSize().getWidth() / 2);
+            tune7Label.setLayoutX(0.5 * screen.getScreenSize().getWidth() + 0.17 * screen.getScreenSize().getWidth() /
+            2);
             tune7Label.setLayoutY(0.5 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
     </Label>
 
     <Button fx:id="play7Button" onMouseClicked="#play7ButtonClick" styleClass="playButton">
@@ -549,7 +554,7 @@
                     play7ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
                     play7Button.setLayoutX(0.51 * screen.getScreenSize().getWidth());
                     play7Button.setLayoutY(0.58 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Button>
@@ -566,7 +571,7 @@
                     pause7ImageView.setFitHeight(0.04 * screen.getScreenSize().getHeight());
                     pause7Button.setLayoutX(0.54 * screen.getScreenSize().getWidth() + play7ImageView.getFitWidth());
                     pause7Button.setLayoutY(0.58 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Button>
@@ -576,7 +581,7 @@
         <fx:script>
             openTune7Button.setLayoutX(0.515 * screen.getScreenSize().getWidth());
             openTune7Button.setLayoutY(0.65 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -587,7 +592,7 @@
             title7.setLayoutX(0.515 * screen.getScreenSize().getWidth());
             title7.setLayoutY(0.74 * screen.getScreenSize().getHeight());
             title7.setPrefWidth(0.2 * screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </TextField>
 
     <TextField fx:id="author7" promptText="Автор песни" styleClass="superGameSettingsTextField">
@@ -595,7 +600,7 @@
             author7.setLayoutX(0.515 * screen.getScreenSize().getWidth());
             author7.setLayoutY(0.82 * screen.getScreenSize().getHeight());
             author7.setPrefWidth(0.2 * screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </TextField>
 
     <Button fx:id="save7Button" text="Сохранить" styleClass="saveSuperGameSettingsButton"
@@ -603,7 +608,7 @@
         <fx:script>
             save7Button.setLayoutX(0.515 * screen.getScreenSize().getWidth());
             save7Button.setLayoutY(0.9 * screen.getScreenSize().getHeight());
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -620,7 +625,7 @@
                 <fx:script>
                     backImageView.setFitWidth(0.05 * screen.getScreenSize().getHeight());
                     backImageView.setFitHeight(0.05 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Label>
@@ -647,6 +652,6 @@
 
         countSecondsButton.setLayoutX(0.765 * screen.getScreenSize().getWidth());
         countSecondsButton.setLayoutY(0.7 * screen.getScreenSize().getHeight());
-         </fx:script>
+    </fx:script>
 
 </Pane>

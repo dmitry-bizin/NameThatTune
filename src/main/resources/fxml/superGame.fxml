@@ -21,7 +21,7 @@
     <Label fx:id="timerLabel" styleClass="timeLabel">
         <fx:script>
             timerLabel.setLayoutX(0.1 * screen.getScreenSize().getWidth());
-             </fx:script>
+        </fx:script>
     </Label>
 
     <Label onMouseClicked="#backLabelClick" styleClass="backLabel">
@@ -34,7 +34,7 @@
                 <fx:script>
                     backImageView.setFitWidth(0.05 * screen.getScreenSize().getHeight());
                     backImageView.setFitHeight(0.05 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Label>

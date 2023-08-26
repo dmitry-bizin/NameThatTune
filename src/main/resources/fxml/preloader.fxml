@@ -24,6 +24,6 @@
         pane.setMinWidth(0.3 * screen.getScreenSize().getWidth());
         pane.setMinHeight(0.3 * screen.getScreenSize().getHeight());
         label.setLayoutY(0.5 * pane.getMinHeight());
-         </fx:script>
+    </fx:script>
 
 </Pane>

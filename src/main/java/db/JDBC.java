@@ -21,7 +21,7 @@ public class JDBC {
     private static final String CHECK_TUNE_TABLE = "SELECT count(1) FROM tune";
     private static final String CHECK_SUPER_GAME_TABLE = "SELECT count(1) FROM supergame";
     private static final String CHECK_SETTINGS_TABLE = "SELECT count(1) FROM settings";
-    private static final String INSERT_INTO_SETTINGS_TABLE = "INSERT INTO settings (key, value) VALUES (?, ?), (?, ?)";
+    private static final String INSERT_INTO_SETTINGS_TABLE = "INSERT INTO settings (`key`, `value`) VALUES (?, ?), (?, ?)";
     private static final String[] CHECK_QUERIES = {
             CHECK_ROUND_TABLE,
             CHECK_CATEGORY_TABLE,

@@ -22,7 +22,7 @@
         <fx:script>
             round1SettingsLabel.layoutX = 0.03 * screen.getScreenSize().getWidth();
             round1SettingsLabel.layoutY = 0.1 * screen.getScreenSize().getHeight();
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -33,7 +33,7 @@
         <fx:script>
             round2SettingsLabel.layoutX = 0.03 * screen.getScreenSize().getWidth();
             round2SettingsLabel.layoutY = 0.2 * screen.getScreenSize().getHeight();
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -44,7 +44,7 @@
         <fx:script>
             round3SettingsLabel.layoutX = 0.03 * screen.getScreenSize().getWidth();
             round3SettingsLabel.layoutY = 0.3 * screen.getScreenSize().getHeight();
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -55,7 +55,7 @@
         <fx:script>
             superGameSettingsLabel.layoutX = 0.03 * screen.getScreenSize().getWidth();
             superGameSettingsLabel.layoutY = 0.4 * screen.getScreenSize().getHeight();
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -66,7 +66,7 @@
         <fx:script>
             currentDirectorySettings.layoutX = 0.03 * screen.getScreenSize().getWidth();
             currentDirectorySettings.layoutY = 0.5 * screen.getScreenSize().getHeight();
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
@@ -76,7 +76,7 @@
         <fx:script>
             backLabel.layoutX = 0.03 * screen.getScreenSize().getWidth();
             backLabel.layoutY = 0.6 * screen.getScreenSize().getHeight();
-             </fx:script>
+        </fx:script>
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>

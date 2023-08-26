@@ -21,41 +21,49 @@
     <fx:script>
         pane.setMinWidth(screen.getScreenSize().getWidth());
         pane.setMinHeight(screen.getScreenSize().getHeight());
-         </fx:script>
+    </fx:script>
 
     <Label fx:id="category1Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER">
         <fx:script>
-            category1Label.setMaxSize(0.3 * screen.getScreenSize().getWidth(), 0.25 * screen.getScreenSize().getHeight());
-            category1Label.setMinSize(0.3 * screen.getScreenSize().getWidth(), 0.25 * screen.getScreenSize().getHeight());
+            category1Label.setMaxSize(0.3 * screen.getScreenSize().getWidth(), 0.25 *
+            screen.getScreenSize().getHeight());
+            category1Label.setMinSize(0.3 * screen.getScreenSize().getWidth(), 0.25 *
+            screen.getScreenSize().getHeight());
             category1Label.setFont(javafx.scene.text.Font.font(0.045 * screen.getScreenSize().getHeight()));
-             </fx:script>
+        </fx:script>
     </Label>
 
     <Label fx:id="category2Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER">
         <fx:script>
             category2Label.setLayoutY(0.25 * screen.getScreenSize().getHeight());
-            category2Label.setMaxSize(0.3 * screen.getScreenSize().getWidth(), 0.25 * screen.getScreenSize().getHeight());
-            category2Label.setMinSize(0.3 * screen.getScreenSize().getWidth(), 0.25 * screen.getScreenSize().getHeight());
+            category2Label.setMaxSize(0.3 * screen.getScreenSize().getWidth(), 0.25 *
+            screen.getScreenSize().getHeight());
+            category2Label.setMinSize(0.3 * screen.getScreenSize().getWidth(), 0.25 *
+            screen.getScreenSize().getHeight());
             category2Label.setFont(javafx.scene.text.Font.font(0.045 * screen.getScreenSize().getHeight()));
-             </fx:script>
+        </fx:script>
     </Label>
 
     <Label fx:id="category3Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER">
         <fx:script>
             category3Label.setLayoutY(0.5 * screen.getScreenSize().getHeight());
-            category3Label.setMaxSize(0.3 * screen.getScreenSize().getWidth(), 0.25 * screen.getScreenSize().getHeight());
-            category3Label.setMinSize(0.3 * screen.getScreenSize().getWidth(), 0.25 * screen.getScreenSize().getHeight());
+            category3Label.setMaxSize(0.3 * screen.getScreenSize().getWidth(), 0.25 *
+            screen.getScreenSize().getHeight());
+            category3Label.setMinSize(0.3 * screen.getScreenSize().getWidth(), 0.25 *
+            screen.getScreenSize().getHeight());
             category3Label.setFont(javafx.scene.text.Font.font(0.045 * screen.getScreenSize().getHeight()));
-             </fx:script>
+        </fx:script>
     </Label>
 
     <Label fx:id="category4Label" styleClass="roundLabel" wrapText="true" alignment="CENTER" textAlignment="CENTER">
         <fx:script>
             category4Label.setLayoutY(0.75 * screen.getScreenSize().getHeight());
-            category4Label.setMaxSize(0.3 * screen.getScreenSize().getWidth(), 0.25 * screen.getScreenSize().getHeight());
-            category4Label.setMinSize(0.3 * screen.getScreenSize().getWidth(), 0.25 * screen.getScreenSize().getHeight());
+            category4Label.setMaxSize(0.3 * screen.getScreenSize().getWidth(), 0.25 *
+            screen.getScreenSize().getHeight());
+            category4Label.setMinSize(0.3 * screen.getScreenSize().getWidth(), 0.25 *
+            screen.getScreenSize().getHeight());
             category4Label.setFont(javafx.scene.text.Font.font(0.045 * screen.getScreenSize().getHeight()));
-             </fx:script>
+        </fx:script>
     </Label>
 
     <Label onMouseClicked="#backLabelClick" styleClass="backLabel">
@@ -68,7 +76,7 @@
                 <fx:script>
                     backImageView.setFitWidth(0.05 * screen.getScreenSize().getHeight());
                     backImageView.setFitHeight(0.05 * screen.getScreenSize().getHeight());
-                     </fx:script>
+                </fx:script>
             </ImageView>
         </graphic>
     </Label>
